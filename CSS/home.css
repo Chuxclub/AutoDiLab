@@ -1,0 +1,126 @@
+body
+{
+  background-color: #FFFDF0;
+  font-family: 'Mali', cursive;
+  margin: 0px;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+h1
+{
+  font-family: 'Lobster Two',cursive;
+}
+
+.icon
+{
+  max-width: 40px;
+  margin-left: 20px;
+  height: auto;
+}
+/* ================== NAV ================== */
+
+.cell
+{
+  display: table-cell;
+  padding: 4% 2% 1% 2%;
+  text-align: center;
+}
+
+.cell_hidden
+{
+  display: none;
+}
+
+#cell_next, #cell_previous
+{
+  display: table-cell;
+  padding-left: 5%;
+  padding-right: 15%;
+}
+
+.icon
+{
+  width: 64px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.image_caption
+{
+  display: block;
+}
+
+.row
+{
+  display: table-row;
+}
+
+#table
+{
+  display: table;
+  height: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75vw;
+  margin-top: 50px;
+}
+
+/* ================== HEADER ================== */
+
+header
+{
+  background-color: #acb6e5;
+  border-bottom: outset;
+  border-color: #6A7BCA;
+  color: #FFFDF0;
+  padding : 40px;
+}
+
+header > h1
+{
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+
+/* ================== CONTENT ================== */
+
+article
+{
+  min-height: calc(100vh - 101px);
+}
+
+article h1
+{
+  color: #6A7BCA;
+}
+
+/* ================== FOOTER ================== */
+footer
+{
+  clear: both;
+  position: relative;
+  top: 30px;
+  padding: 30px 0 30px 20px;
+  background-color: #acb6e5;
+  border-top: inset;
+  border-color: #6A7BCA;
+}
+
+li
+{
+  list-style: circle;
+}
+
+
+/* ================== Palette  ================== */
+
+/*#FFEAB7*/
+/*#FFF6E7*/
+/*#BFAAE5;*/
