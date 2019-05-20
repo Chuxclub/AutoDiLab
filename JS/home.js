@@ -1,4 +1,19 @@
 /* ==================== SECUNDARY FUNCTIONS ==================== */
+function add_button(button_image, button_span, table, row_index, cell_index)
+{
+  table.childNodes[row_index].childNodes[cell_index].appendChild(button_span);
+  table.childNodes[row_index].childNodes[cell_index].insertBefore(button_image, button_span);
+
+  return table;
+}
+
+function add_header(header_image, header_caption, table)
+{
+  table.insertBefore(header_caption, table.childNodes[0]);
+  table.insertBefore(header_image, header_caption);
+
+  return table;
+}
 
 function clear_slate(obj, index)
 {
@@ -38,13 +53,50 @@ function create_caption(caption_txt)
   return caption;
 }
 
+function create_cells(type_of_cells, nb_of_cells, table, row_index)
+{
+  let cells = [];
+
+  for(let i = 0; i < nb_of_cells; i++)
+  {
+    switch(type_of_cells)
+    {
+      case "a":
+      cells[i] = create_a();
+      break;
+
+      case "div":
+      cells[i] = create_div();
+      break;
+
+      default:
+      window.alert("Error, element isn't supported or doesn't exist");
+      break;
+    }
+
+    cells[i] = create_a();
+  }
+
+  for(let i = 0; i < cells.length; i++)
+  {
+    cells[i].setAttribute("class", "cell");
+  }
+
+  for(let i = 0; i < cells.length; i++)
+  {
+    table.childNodes[row_index].appendChild(cells[i]);
+  }
+
+  return table;
+}
+
 function create_div()
 {
   let div = document.createElement("div");
   return div;
 }
 
-//Use #table, .row, .cell for this function to work
+//Use #table, .row, .cell in css if you want this function to work
 function create_fake_table(rows)
 {
   let new_table = create_div();
@@ -69,6 +121,14 @@ function create_fake_table(rows)
 
   return new_table;
 
+}
+
+function create_header(header_txt)
+{
+  let header = document.createElement("th");
+  let header_content = document.createTextNode(header_txt);
+  header.appendChild(header_content);
+  return header;
 }
 
 //Use .image_caption in css if you want this function to work
@@ -113,10 +173,16 @@ function create_span(span_txt)
 
 function maths_choices()
 {
-  let nav = document.getElementsByTagName("nav")[0];
+  //Erasing previous nav menu
   clear_slate("nav", 0);
 
+
+  //Creating new_table based on website author's needs
   let new_table = create_fake_table(1);
+  new_table = create_cells ("a", 4, new_table, 0);
+
+
+  //Creating required buttons and elements to add to the table
   let nav_header = create_nav_header("./Icons/icons8-infinity-64.png",
                                      "Image représentant les mathématiques",
                                      "Mathématiques", "Mathématiques");
@@ -134,41 +200,15 @@ function maths_choices()
                                           "Choisir statistiques et probabilités",
                                           "Statistiques et Probabilités");
 
-  let cell0 = create_a();
-  cell0.setAttribute("class", "cell");
 
-  let cell1 = create_a();
-  cell1.setAttribute("class", "cell");
-
-  let cell2 = create_a();
-  cell2.setAttribute("class", "cell");
-
-  let cell3 = create_a();
-  cell3.setAttribute("class", "cell");
+  //Adding created buttons and elements to the table
+  new_table = add_header(nav_header[0], nav_header[1], new_table);
+  new_table = add_button(arithmetic_button[0], arithmetic_button[1], new_table, 2, 0);
+  new_table = add_button(analysis_button[0], analysis_button[1], new_table, 2, 1);
+  new_table = add_button(geometry_button[0], geometry_button[1], new_table, 2, 2);
+  new_table = add_button(prob_sats_button[0], prob_sats_button[1], new_table, 2, 3);
 
 
-  new_table.insertBefore(nav_header[1], new_table.childNodes[0]);
-  new_table.insertBefore(nav_header[0], nav_header[1]);
-
-  new_table.style.border = "solid black 1px";
-  new_table.childNodes[2].style.border = "solid black 1px";
-
-  new_table.childNodes[2].appendChild(cell0);
-  new_table.childNodes[2].childNodes[0].appendChild(arithmetic_button[1]);
-  new_table.childNodes[2].childNodes[0].insertBefore(arithmetic_button[0], arithmetic_button[1]);
-
-  new_table.childNodes[2].appendChild(cell1);
-  new_table.childNodes[2].childNodes[1].appendChild(analysis_button[1]);
-  new_table.childNodes[2].childNodes[1].insertBefore(analysis_button[0], analysis_button[1]);
-
-  new_table.childNodes[2].appendChild(cell2);
-  new_table.childNodes[2].childNodes[2].appendChild(geometry_button[1]);
-  new_table.childNodes[2].childNodes[2].insertBefore(geometry_button[0], geometry_button[1]);
-
-  new_table.childNodes[2].appendChild(cell3);
-  new_table.childNodes[2].childNodes[3].appendChild(prob_sats_button[1]);
-  new_table.childNodes[2].childNodes[3].insertBefore(prob_sats_button[0], prob_sats_button[1]);
-
-  nav.appendChild(new_table);
-
+  //Adding new navigation table to home page
+  document.getElementsByTagName("nav")[0].appendChild(new_table);
 }
