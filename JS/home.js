@@ -190,9 +190,9 @@ function home_choices()
                                           "SVT");
 
   let litterature_button = create_nav_button("./Icons/icons8-book-64.png",
-                                          "Bouton Littérature",
-                                          "Choisir Littérature",
-                                          "Littérature");
+                                          "Bouton statistiques et probabilités",
+                                          "Choisir statistiques et probabilités",
+                                          "Statistiques et Probabilités");
   let languages_button = create_nav_button("./Icons/icons8-language-64.png",
                                       "Bouton Langues",
                                       "Choisir Langues",
@@ -261,9 +261,9 @@ function maths_choices()
 
 
   //Creating required buttons and elements to add to the table
-  // let nav_header = create_nav_header("./Icons/icons8-infinity-64.png",
-  //                                     "Image représentant les mathématiques",
-  //                                     "Mathématiques", "Mathématiques");
+  let math_button = create_nav_button("./Icons/icons8-infinity-64.png",
+                                     "Image représentant les mathématiques",
+                                     "Mathématiques", "");
   let arithmetic_button = create_nav_button("./Icons/icons8-math-64.png",
                                             "Bouton arithmétique", "Choisir arithmétique",
                                             "Arithmétique");
@@ -284,27 +284,19 @@ function maths_choices()
 
 
   //Adding created buttons and elements to the table
-  // new_table = add_header(nav_header[0], nav_header[1], new_table, 0);
-  let header = document.createElement("th");
-  let header_content = document.createTextNode("Mathématiques");
-  header.appendChild(header_content);
-  new_table.childNodes[0].appendChild(header);
-  new_table.childNodes[0].childNodes[0].style.position = "relative";
-  new_table.childNodes[0].childNodes[0].style.left = "155px";
-  new_table.childNodes[0].childNodes[0].style.paddingBottom = "20px";
-
+  new_table = add_header(nav_header[0], nav_header[1], new_table, 0);
   new_table = add_button(arithmetic_button[0], arithmetic_button[1], new_table, 1, 0);
   new_table = add_button(analysis_button[0], analysis_button[1], new_table, 1, 1);
   new_table = add_button(geometry_button[0], geometry_button[1], new_table, 1, 2);
   new_table = add_button(prob_sats_button[0], prob_sats_button[1], new_table, 1, 3);
   new_table = add_button(home_button[0], home_button[1], new_table, 2, 0);
 
-  // new_table.childNodes[0].childNodes[0].style.position = "relative";
-  // new_table.childNodes[0].childNodes[0].style.left = "155px";
-  // new_table.childNodes[0].childNodes[0].style.padding = "0 0 30px 0";
+  new_table.childNodes[0].childNodes[0].style.position = "relative";
+  new_table.childNodes[0].childNodes[0].style.left = "185px";
+  new_table.childNodes[0].childNodes[0].style.padding = "0 0 30px 0";
 
   new_table.childNodes[2].childNodes[0].style.position = "absolute";
-  new_table.childNodes[2].childNodes[0].style.left = "145px";
+  new_table.childNodes[2].childNodes[0].style.left = "165px";
   new_table.childNodes[2].childNodes[0].setAttribute("onclick", "home_choices()");
 
   //Adding new navigation table to home page
