@@ -20,7 +20,7 @@
 
     </head>
 
-    <body>
+    <body> <!-- onload="home_choices()" -->
 
 
       <!-- =============== HEADER =============== -->
@@ -39,9 +39,168 @@
 
 
         <!-- =============== NAV =============== -->
-        <nav>
+        <div id="mainframe_table">
+          <div id="mainframe_row">
 
-          <div id="table">
+            <nav>
+
+                <!-- Sciences Submenu -->
+              <div class="submenu_table grey_border">
+                <figure class="submenu_table_title">
+                  <img src="./Icons/icons8-obelisk-64.png" alt="Section sciences" class="icon"></img>
+                  <figcaption id="sciences_caption"> Sciences </figcaption>
+                </figure>
+
+                    <div class="submenu_row">
+                      <figure class="submenu_choice">
+                        <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"></img>
+                        <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"></img>
+                        <figcaption>Formelles</figcaption>
+                      </figure>
+
+                      <figure class="submenu_choice">
+                        <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"></img>
+                        <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"></img>
+                        <figcaption>Naturelles</figcaption>
+                      </figure>
+                    </div>
+
+                    <div class="submenu_row">
+                      <figure class="submenu_choice">
+                        <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"></img>
+                        <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"></img>
+                        <figcaption>Humaines</figcaption>
+                      </figure>
+
+                      <figure class="submenu_choice">
+                        <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"></img>
+                        <figcaption>Appliquées</figcaption>
+                      </figure>
+                    </div>
+              </div>
+
+                <!-- Daily Life Submenu -->
+              <div class="submenu_table grey_border">
+                <figure class="submenu_table_title">
+                  <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon"></img>
+                  <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
+                </figure>
+
+                <div class="submenu_row">
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"></img>
+                    <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"></img>
+                    <figcaption>Entretiens</figcaption>
+                  </figure>
+
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-talk-64.png" alt="Relations" class="icon_loner"></img>
+                    <figcaption>Relations</figcaption>
+                  </figure>
+                </div>
+
+                <div class="submenu_row">
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"></img>
+                    <figcaption>Orientation</figcaption>
+                  </figure>
+
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-safety-float-64.png" alt="Entraide" class="icon_loner"></img>
+                    <figcaption>Entraide</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+                <!-- Arts Submenu -->
+              <div class="submenu_table">
+                <figure class="submenu_table_title">
+                  <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon"></img>
+                  <figcaption id="arts_caption"> Arts </figcaption>
+                </figure>
+
+                <div class="submenu_row">
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"></img>
+                    <figcaption>Littérature</figcaption>
+                  </figure>
+
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"></img>
+                    <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"></img>
+                    <figcaption>Arts Visuels</figcaption>
+                  </figure>
+                </div>
+
+                <div class="submenu_row">
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"></img>
+                    <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"></img>
+                    <figcaption>Musiques</figcaption>
+                    <figcaption>Et Spectacles</figcaption>
+                  </figure>
+
+                  <figure class="submenu_choice">
+                    <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"></img>
+                    <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"></img>
+                    <figcaption>Arts appliqués</figcaption>
+                  </figure>
+                </div>
+              </div>
+
+            </nav>
+
+            <article id="newsfeed">
+              <h2> L'actualité du site</h2>
+            </article>
+
+          </div>
+      </div>
+
+
+      <!-- =============== CONTENT =============== -->
+
+      <article>
+
+        <h1>Qu'est-ce que AutoDiLab?</h1>
+
+        <img src="./Images/undraw_learning_2q1h.svg" alt="Image reflétant le processus d'apprentissage" class="storyboard"></img>
+
+      </article>
+
+
+
+      <!-- =============== FOOTER =============== -->
+      <footer>
+
+        <ul>
+          <li> <a href="./Content/Misc/site_map.html">Plan du Site</a> </li>
+          <li> <a href="./Content/Misc/synoptic.html">Synoptique</a> </li>
+          <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
+        </ul>
+      </footer>
+
+    </body>
+
+</html>
+
+
+
+
+
+
+<!-- =============== Bunch of previous designs =============== -->
+
+<!-- <a id="cell_previous">
+  <img src="./Icons/icons8-previous-button-64.png" alt="bouton pour dérouler la liste de choix précédente" title="Choix précédents" onclick="previous_selection_list()"></img>
+</a> -->
+
+<!-- <a id="cell_next" onclick="next_selection_list()">
+  <img src="./Icons/icons8-next-button-64.png" alt="bouton pour dérouler la liste de choix suivante" title="Choix suivants"></img>
+</a> -->
+
+
+<!-- <div id="table">
 
             <div class="row">
 
@@ -106,7 +265,7 @@
 
               <a  class="cell">
                 <img src="./Icons/icons8-user-groups-64.png" alt="Social" title="Social" class="icon"></img>
-                <span class="image_caption">Social</span>
+                <span class="image_caption">Sciences Sociales</span>
               </a>
 
               <a class="cell">
@@ -115,53 +274,4 @@
               </a>
 
             </div>
-          </div>
-        </nav>
-
-
-
-      <!-- =============== CONTENT =============== -->
-      <article>
-        <br/><br/><br/><br/>
-        <hr/>
-        <br/>
-        <h1>Qu'est-ce que AutoDiLab?</h1>
-
-
-
-        <br/><br/><br/><br/>
-        <hr/>
-        <br/>
-
-      </article>
-
-
-
-      <!-- =============== FOOTER =============== -->
-      <footer>
-
-        <ul>
-          <li> <a href="./Content/Misc/site_map.html">Plan du Site</a> </li>
-          <li> <a href="./Content/Misc/synoptic.html">Synoptique</a> </li>
-          <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
-        </ul>
-      </footer>
-
-    </body>
-
-</html>
-
-
-
-
-
-
-<!-- =============== Bunch of previous designs =============== -->
-
-<!-- <a id="cell_previous">
-  <img src="./Icons/icons8-previous-button-64.png" alt="bouton pour dérouler la liste de choix précédente" title="Choix précédents" onclick="previous_selection_list()"></img>
-</a> -->
-
-<!-- <a id="cell_next" onclick="next_selection_list()">
-  <img src="./Icons/icons8-next-button-64.png" alt="bouton pour dérouler la liste de choix suivante" title="Choix suivants"></img>
-</a> -->
+          </div> -->

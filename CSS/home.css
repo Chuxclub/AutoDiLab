@@ -15,60 +15,124 @@ h1
   font-family: 'Lobster Two',cursive;
 }
 
-.icon
+h2
+{
+  font-family: 'Lobster Two',cursive;
+  font-size: 24px;
+}
+
+
+/* ================== NAV ================== */
+#arts_caption
+{
+  padding-left: 25px;
+}
+
+#daily_life_caption
+{
+  position: relative;
+  left: -40px;
+}
+
+div[class~="grey_border"]
+{
+  border-bottom: solid lightgrey 1px;
+}
+
+figcaption
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+figure.submenu_table_title
+{
+  display: table-caption;
+  padding-left: 80px;
+}
+
+figure.submenu_table_title figcaption
+{
+  position: relative;
+  left: -16px;
+}
+
+figure.submenu_choice
+{
+  display: table-cell;
+  padding: 20px 0;
+}
+
+img.icon
 {
   max-width: 40px;
-  margin-left: 20px;
   height: auto;
 }
-/* ================== NAV ================== */
 
-.cell
+img.icon_couple
+{
+  display: inline;
+  max-width: 40px;
+  height: auto;
+}
+
+img.icon_loner
+{
+  max-width: 40px;
+  height: auto;
+  padding-left: 20px;
+}
+
+#mainframe
+{
+  display: table;
+}
+
+nav
 {
   display: table-cell;
-  padding: 4% 2% 1% 2%;
+  min-width: 300px;
+  height: auto;
+  border-right: solid lightgrey 1px;
+}
+
+nav div
+{
+  padding-bottom: 50px;
+  width: 270px;
+}
+
+nav div h2
+{
+  padding-left: 70px;
+}
+
+#newsfeed
+{
+  color: #6A7BCA;
+  display: table-cell;
   text-align: center;
+  width: calc(100vw - 300px);
 }
 
-.cell_hidden
+#sciences_caption
 {
-  display: none;
+  padding-left: 12px;
 }
 
-#cell_next, #cell_previous
+.submenu_table
 {
-  display: table-cell;
-  padding-left: 5%;
-  padding-right: 15%;
+  display: table;
+  padding-left: 30px;
 }
 
-.icon
-{
-  width: 64px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.image_caption
-{
-  display: block;
-}
-
-.row
+.submenu_row
 {
   display: table-row;
 }
 
-#table
-{
-  display: table;
-  height: auto;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 75vw;
-  margin-top: 50px;
-}
 
 /* ================== HEADER ================== */
 
@@ -94,11 +158,22 @@ header > h1
 article
 {
   min-height: calc(100vh - 101px);
+  border-top: solid lightgrey 1px;
 }
 
 article h1
 {
   color: #6A7BCA;
+}
+
+.storyboard
+{
+  width: 500px;
+  height: auto;
+  margin-left: calc(100vw - 950px);
+  background-color: white;
+  border-radius: 25px;
+  padding: 50px 50px 50px 50px;
 }
 
 /* ================== FOOTER ================== */
@@ -123,4 +198,6 @@ li
 
 /*#FFEAB7*/
 /*#FFF6E7*/
-/*#BFAAE5;*/
+/*#BFAAE5;
+#FFFDF0;body
+#acb6e5;header*/
