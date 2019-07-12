@@ -43,6 +43,8 @@
           <div id="mainframe_row">
 
             <nav>
+              <img src="./Icons/icons8-collapse-arrow-24.png" alt="Flèche pour replier le menu"
+                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
 
                 <!-- Sciences Submenu -->
               <div class="submenu_table grey_border">
@@ -80,13 +82,16 @@
               </div>
 
                 <!-- Daily Life Submenu -->
+              <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
+                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
+
               <div class="submenu_table grey_border">
                 <figure class="submenu_table_title">
                   <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon"></img>
                   <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
                 </figure>
 
-                <div class="submenu_row">
+                <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
                     <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"></img>
                     <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"></img>
@@ -99,7 +104,7 @@
                   </figure>
                 </div>
 
-                <div class="submenu_row">
+                <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
                     <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"></img>
                     <figcaption>Orientation</figcaption>
@@ -113,13 +118,16 @@
               </div>
 
                 <!-- Arts Submenu -->
+              <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
+                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
+
               <div class="submenu_table">
                 <figure class="submenu_table_title">
                   <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon"></img>
                   <figcaption id="arts_caption"> Arts </figcaption>
                 </figure>
 
-                <div class="submenu_row">
+                <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
                     <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"></img>
                     <figcaption>Littérature</figcaption>
@@ -132,7 +140,7 @@
                   </figure>
                 </div>
 
-                <div class="submenu_row">
+                <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
                     <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"></img>
                     <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"></img>
@@ -152,6 +160,30 @@
 
             <article id="newsfeed">
               <h2> L'actualité du site</h2>
+
+              <h3>Les derniers cours mis en ligne:</h3>
+
+              <p>Aucun cours n'est actuellement en ligne... Mais ça va venir!</p>
+
+              <p>Les premiers cours prévus sont:
+                  <ul>
+                    <li>Les fonctions</li>
+                    <li>Les vecteurs</li>
+                    <li>Les probabilités</li>
+                  </ul>
+              </p>
+
+              <h3>Les dernières fonctionnalités ajoutées au site:</h3>
+
+              <p>La page d'accueil est bientôt prête!</p>
+              <p>Elle a maintenant un menu de navigation avec boutons pour déplier
+                 et replier derniers cris! Les icones ne sont pas encore fonctionnels
+                 mais de nombreuses fonctions javascript permettant de modifier sont déjà
+                 implémantées et fonctionnelles!</p>
+              <p>D'ici la fin du mois de Juillet est prévu: la fin du front-end
+                 afin d'être prêt à poster le premier cours dès le mois d'août.
+                 Après la complétion de trois cours le site sera mis en ligne prêt à servir
+                 les chères petites têtes blondes du lycée Isaac de l'Etoile!</p>
             </article>
 
           </div>
