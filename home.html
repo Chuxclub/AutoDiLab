@@ -16,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="./CSS/home.css" title="main"/>
 
         <!-- Scripts -->
-        <script type="application/javascript" src="./JS/home.js"></script>
+        <script src="./JS/home.js"></script>
 
     </head>
 
@@ -31,7 +31,7 @@
             AutoDiLab
 
             <img src="./Icons/adl_icon2.png" alt="AutoDiLab symbol"
-                 title="Symbole d'AutoDiLab" class="icon"></img>
+                 title="Symbole d'AutoDiLab" class="icon"/>
           </h1>
 
         </header>
@@ -43,114 +43,120 @@
           <div id="mainframe_row">
 
             <nav>
-              <img src="./Icons/icons8-collapse-arrow-24.png" alt="Flèche pour replier le menu"
-                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
+              <figure  class="expand_collapse_arrow">
+                  <img src="./Icons/icons8-collapse-arrow-24.png" alt="Flèche pour déplier le menu"
+                       onclick="expand_submenu(this)"/>
+              </figure>
 
                 <!-- Sciences Submenu -->
               <div class="submenu_table grey_border">
                 <figure class="submenu_table_title">
-                  <img src="./Icons/icons8-obelisk-64.png" alt="Section sciences" class="icon"></img>
+                  <img src="./Icons/icons8-obelisk-64.png" alt="Section sciences" class="icon"/>
                   <figcaption id="sciences_caption"> Sciences </figcaption>
                 </figure>
 
                     <div class="submenu_row">
                       <figure class="submenu_choice">
-                        <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"></img>
-                        <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"></img>
+                        <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
+                        <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
                         <figcaption>Formelles</figcaption>
                       </figure>
 
                       <figure class="submenu_choice">
-                        <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"></img>
-                        <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"></img>
+                        <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"/>
+                        <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"/>
                         <figcaption>Naturelles</figcaption>
                       </figure>
                     </div>
 
                     <div class="submenu_row">
                       <figure class="submenu_choice">
-                        <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"></img>
-                        <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"></img>
+                        <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"/>
+                        <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"/>
                         <figcaption>Humaines</figcaption>
                       </figure>
 
                       <figure class="submenu_choice">
-                        <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"></img>
+                        <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"/>
                         <figcaption>Appliquées</figcaption>
                       </figure>
                     </div>
               </div>
 
                 <!-- Daily Life Submenu -->
-              <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
-                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
+              <figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
+                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
+              </figure>
 
-              <div class="submenu_table grey_border">
+              <div class="submenu_table grey_border" onmouseover="set_unavailable_infobulle(this)"
+                   onmouseout="unset_unavailable_infobulle(this)">
                 <figure class="submenu_table_title">
-                  <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon"></img>
+                  <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon"/>
                   <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
                 </figure>
 
                 <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"></img>
-                    <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"></img>
+                    <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"/>
+                    <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"/>
                     <figcaption>Entretiens</figcaption>
                   </figure>
 
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-talk-64.png" alt="Relations" class="icon_loner"></img>
+                    <img src="./Icons/icons8-talk-64.png" alt="Relations" class="icon_loner"/>
                     <figcaption>Relations</figcaption>
                   </figure>
                 </div>
 
                 <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"></img>
+                    <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"/>
                     <figcaption>Orientation</figcaption>
                   </figure>
 
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-safety-float-64.png" alt="Entraide" class="icon_loner"></img>
+                    <img src="./Icons/icons8-safety-float-64.png" alt="Entraide" class="icon_loner"/>
                     <figcaption>Entraide</figcaption>
                   </figure>
                 </div>
               </div>
 
                 <!-- Arts Submenu -->
-              <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
-                   class="expand_collapse_arrow" onclick="expand_submenu(this)"></img>
+              <figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
+                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
+              </figure>
 
-              <div class="submenu_table">
+              <div class="submenu_table" onmouseover="set_unavailable_infobulle(this)"
+                   onmouseout="unset_unavailable_infobulle(this)">
                 <figure class="submenu_table_title">
-                  <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon"></img>
+                  <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon"/>
                   <figcaption id="arts_caption"> Arts </figcaption>
                 </figure>
 
                 <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"></img>
+                    <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"/>
                     <figcaption>Littérature</figcaption>
                   </figure>
 
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"></img>
-                    <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"></img>
+                    <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"/>
+                    <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"/>
                     <figcaption>Arts Visuels</figcaption>
                   </figure>
                 </div>
 
                 <div class="submenu_row default_collapse">
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"></img>
-                    <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"></img>
+                    <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"/>
+                    <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"/>
                     <figcaption>Musiques</figcaption>
                     <figcaption>Et Spectacles</figcaption>
                   </figure>
 
                   <figure class="submenu_choice">
-                    <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"></img>
-                    <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"></img>
+                    <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"/>
+                    <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"/>
                     <figcaption>Arts appliqués</figcaption>
                   </figure>
                 </div>
@@ -162,18 +168,19 @@
               <h2> L'actualité du site</h2>
 
               <h3>Les derniers cours mis en ligne:</h3>
+              <hr/>
 
               <p>Aucun cours n'est actuellement en ligne... Mais ça va venir!</p>
 
-              <p>Les premiers cours prévus sont:
-                  <ul>
-                    <li>Les fonctions</li>
-                    <li>Les vecteurs</li>
-                    <li>Les probabilités</li>
-                  </ul>
-              </p>
+              <p>Les premiers cours prévus sont:</p>
+              <ul>
+                <li>Les fonctions</li>
+                <li>Les vecteurs</li>
+                <li>Les probabilités</li>
+              </ul>
 
               <h3>Les dernières fonctionnalités ajoutées au site:</h3>
+              <hr/>
 
               <p>La page d'accueil est bientôt prête!</p>
               <p>Elle a maintenant un menu de navigation avec boutons pour déplier
@@ -194,9 +201,9 @@
 
       <article>
 
-        <h1>Qu'est-ce que AutoDiLab?</h1>
+        <h2>Qu'est-ce que AutoDiLab?</h2>
 
-        <img src="./Images/undraw_learning_2q1h.svg" alt="Image reflétant le processus d'apprentissage" class="storyboard"></img>
+        <img src="./Images/undraw_learning_2q1h.svg" alt="Image reflétant le processus d'apprentissage" class="storyboard"/>
 
       </article>
 

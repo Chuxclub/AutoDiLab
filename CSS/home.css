@@ -48,9 +48,13 @@ div[class~="default_collapse"]
   display: none;
 }
 
-.expand_collapse_arrow
+figure.expand_collapse_arrow
 {
-  float: right;
+  position: relative;
+  left: 275px;
+  margin: 0 0 0 0;
+  width: 24px;
+  height: 24px;
 }
 
 figcaption
@@ -98,6 +102,13 @@ img.icon_loner
   height: auto;
   padding-left: 20px;
 }
+
+.infobulle
+{
+  /*display: none;*/
+}
+
+
 
 #mainframe
 {
@@ -199,7 +210,7 @@ article
   border-top: solid lightgrey 1px;
 }
 
-article h1
+article h1, article h2
 {
   color: #6A7BCA;
 }

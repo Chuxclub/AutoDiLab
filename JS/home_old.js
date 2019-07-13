@@ -161,6 +161,8 @@ function create_span(span_txt)
   span.appendChild(span_content);
   return span;
 }
+
+
 /* ==================== MAIN FUNCTIONS ==================== */
 function home_choices()
 {
