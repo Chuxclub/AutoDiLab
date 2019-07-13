@@ -68,13 +68,13 @@ figcaption
 figure.submenu_table_title
 {
   display: table-caption;
-  padding-left: 80px;
+  padding-left: 85px;
 }
 
 figure.submenu_table_title figcaption
 {
   position: relative;
-  left: -16px;
+  left: -19px;
 }
 
 figure.submenu_choice
@@ -102,13 +102,6 @@ img.icon_loner
   height: auto;
   padding-left: 20px;
 }
-
-.infobulle
-{
-  /*display: none;*/
-}
-
-
 
 #mainframe
 {
@@ -174,7 +167,7 @@ nav div h2
 .submenu_table
 {
   display: table;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 .submenu_row
