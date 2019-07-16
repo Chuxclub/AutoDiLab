@@ -1,0 +1,147 @@
+/* ===================== ALL SUBMENUS ===================== */
+
+div[class~="grey_border"] /* Horizontal grey_border, doesn't concern arts submenu */
+{
+  border-bottom: solid lightgrey 1px;
+}
+
+div[class~="default_collapse"] /* Concerns daily_life and arts submenus, are collapsed by default */
+{
+  display: none;
+}
+
+/*figure[class~="selectable"]:hover
+{
+  box-shadow: "0px 5px 40px -10px rgba(0,0,0,0.57)";
+  width: "88px";
+  height: "45px";
+  padding-left: "8px";
+  padding-top: "5px";
+  border-radius: "5px";
+}*/
+
+figure.expand_collapse_arrow
+{
+  position: relative;
+  left: 275px;
+  margin: 0 0 0 0;
+  width: 24px;
+  height: 24px;
+}
+
+figcaption /* Concerns submenus buttons subtitles */
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+figure.submenu_table_title
+{
+  padding-left: 85px;
+}
+
+figure.submenu_table_title figcaption
+{
+  position: relative;
+  left: -19px;
+}
+
+figure.submenu_choice
+{
+  display: table-cell;
+  width: 85.5px;
+  height: 68px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}
+
+img.icon /* Submenu button picture(s) .icon is always followed by a .icon_couple */
+{
+  max-width: 40px;
+  height: auto;
+}
+
+img.icon_couple
+{
+  display: inline;
+  max-width: 40px;
+  height: auto;
+}
+
+img.icon_loner /* If there's a single picture for the button, use .icon_loner */
+{
+  max-width: 40px;
+  height: auto;
+  padding-left: 25px;
+}
+
+#mainframe_table
+{
+  display: table;
+}
+
+#mainframe_row
+{
+  display: table-row;
+}
+
+nav
+{
+  display: table-cell;
+  min-width: 300px;
+  height: auto;
+  border-right: solid lightgrey 1px;
+}
+
+nav div
+{
+  padding-bottom: 10px;
+  width: 300px;
+}
+
+nav div h2
+{
+  padding-left: 70px;
+}
+
+.submenu_table
+{
+  padding-left: 0px;
+}
+
+.submenu_row
+{
+  display: grid;
+  grid-template-columns: 170px 170px;
+  grid-template-rows: 100px;
+  padding-top: 5px;
+}
+
+/* =================== SCIENCES SUBMENU =================== */
+
+#sciences_caption
+{
+  padding-left: 12px;
+}
+
+/* ================== DAILY LIFE SUBMENU ================== */
+
+#daily_life_caption
+{
+  position: relative;
+  left: -40px;
+}
+
+/* ===================== ARTS SUBMENU ===================== */
+
+#arts_caption
+{
+  padding-left: 25px;
+}
+
+figcaption.long_button_caption
+{
+  white-space: pre;
+}

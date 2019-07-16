@@ -14,9 +14,12 @@
 
         <!-- CSS Styles -->
         <link rel="stylesheet" type="text/css" href="./CSS/home.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./CSS/home_nav_bar.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./CSS/home_newsfeed.css" title="main"/>
 
         <!-- Scripts -->
-        <script src="./JS/home.js"></script>
+        <script src="./JS/adl.js"></script>
+        <script src="./JS/home_nav_bar.js"></script>
 
     </head>
 
@@ -56,7 +59,7 @@
                 </figure>
 
                     <div class="submenu_row">
-                      <figure class="submenu_choice">
+                      <figure class="submenu_choice" onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)">
                         <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
                         <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
                         <figcaption>Formelles</figcaption>
@@ -85,7 +88,7 @@
 
                 <!-- Daily Life Submenu -->
               <figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
-                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
+                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu" onclick="expand_submenu(this)"/>
               </figure>
 
               <div class="submenu_table grey_border" onmouseover="set_unavailable_infobulle(this)"
@@ -123,7 +126,7 @@
 
                 <!-- Arts Submenu -->
               <figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
-                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
+                  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu" onclick="expand_submenu(this)"/>
               </figure>
 
               <div class="submenu_table" onmouseover="set_unavailable_infobulle(this)"
@@ -150,8 +153,8 @@
                   <figure class="submenu_choice">
                     <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"/>
                     <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"/>
-                    <figcaption>Musiques</figcaption>
-                    <figcaption>Et Spectacles</figcaption>
+                    <figcaption class="long_button_caption">Musiques
+Et Spectacles </figcaption>
                   </figure>
 
                   <figure class="submenu_choice">

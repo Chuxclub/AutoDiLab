@@ -15,7 +15,7 @@ function set_unavailable_infobulle(obj)
     span.style.position = "relative";
     span.style.display = "block";
     span.style.bottom = "57px";
-    span.style.left = "10px";
+    span.style.left = "8px";
     span.style.width = "86px";
     span.style.height = "0";
     span.style.wordWrap = "break-word";
@@ -25,7 +25,7 @@ function set_unavailable_infobulle(obj)
   else if(obj.tagName == "FIGURE")
   {
     obj.nextElementSibling.children[0].style.filter = "blur(2px)";
-    let span = create_span("infobulle", "        Bientôt disponible! \t");
+    let span = create_span("infobulle", "               Bientôt disponible! \t");
     span.style.whiteSpace = "pre";
     obj.nextElementSibling.appendChild(span);
   }
@@ -33,7 +33,7 @@ function set_unavailable_infobulle(obj)
   else
   {
     obj.children[0].style.filter = "blur(2px)";
-    let span = create_span("infobulle", "        Bientôt disponible! \t");
+    let span = create_span("infobulle", "               Bientôt disponible! \t");
     span.style.whiteSpace = "pre";
     obj.appendChild(span);
   }
