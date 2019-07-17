@@ -103,8 +103,7 @@
 <figure class="expand_collapse_arrow"
         onclick="set_unavailable_infobulle(this)"
         onmouseout="unset_unavailable_infobulle(this)">
-  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
-       onclick="expand_submenu(this)"/>
+  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
 </figure>
 
             <div class="submenu grey_border" onmouseover="set_unavailable_infobulle(this)"
@@ -146,7 +145,7 @@
 <!-- ~~~~~~ Arts Submenu ~~~~~~ -->
 
 <figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
-  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu" onclick="expand_submenu(this)"/>
+  <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"/>
 </figure>
 
             <div class="submenu" onmouseover="set_unavailable_infobulle(this)"
@@ -166,7 +165,7 @@
                             <figure class="button">
                               <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"/>
                               <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"/>
-                              <figcaption class="long_caption"> Visuels</figcaption>
+                              <figcaption class="simple_caption"> Visuels</figcaption>
                             </figure>
                           </div>
 
@@ -180,7 +179,7 @@
                             <figure class="button">
                               <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"/>
                               <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"/>
-                              <figcaption class="long_caption">Appliqués</figcaption>
+                              <figcaption class="simple_caption">Appliqués</figcaption>
                             </figure>
                           </div>
 
@@ -196,31 +195,32 @@
 
     <h2> L'actualité du site</h2>
 
-    <h3>Les derniers cours mis en ligne:</h3>
-    <hr/>
+    <div class="newsfeed_category" id="last_lessons_online">
+      <h3>Les derniers cours mis en ligne:</h3>
 
-        <p>Aucun cours n'est actuellement en ligne... Mais ça va venir!</p>
+          <p>Aucun cours n'est actuellement en ligne... Mais ça va venir!</p>
 
-        <p>Les premiers cours prévus sont:</p>
-        <ul>
-            <li>Les fonctions</li>
-            <li>Les vecteurs</li>
-            <li>Les probabilités</li>
-        </ul>
+          <p>Les premiers cours prévus sont:</p>
+          <ul>
+              <li>Les fonctions</li>
+              <li>Les vecteurs</li>
+              <li>Les probabilités</li>
+          </ul>
+    </div>
 
+    <div class="newsfeed_category" id="last_website_functionalities">
+      <h3>Les dernières fonctionnalités ajoutées au site:</h3>
 
-    <h3>Les dernières fonctionnalités ajoutées au site:</h3>
-    <hr/>
-
-        <p>La page d'accueil est bientôt prête!</p>
-        <p>Elle a maintenant un menu de navigation avec boutons pour déplier
-           et replier derniers cris! Les icones ne sont pas encore fonctionnels
-           mais de nombreuses fonctions javascript permettant de modifier sont déjà
-           implémantées et fonctionnelles!</p>
-        <p>D'ici la fin du mois de Juillet est prévu: la fin du front-end
-           afin d'être prêt à poster le premier cours dès le mois d'août.
-           Après la complétion de trois cours le site sera mis en ligne prêt à servir
-           les chères petites têtes blondes du lycée Isaac de l'Etoile!</p>
+          <p>La page d'accueil est bientôt prête!</p>
+          <p>Elle a maintenant un menu de navigation avec boutons pour déplier
+              et replier derniers cris! Les icones ne sont pas encore fonctionnels
+              mais de nombreuses fonctions javascript permettant de modifier sont déjà
+              implémantées et fonctionnelles!</p>
+          <p>D'ici la fin du mois de Juillet est prévu: la fin du front-end
+              afin d'être prêt à poster le premier cours dès le mois d'août.
+              Après la complétion de trois cours le site sera mis en ligne prêt à servir
+              les chères petites têtes blondes du lycée Isaac de l'Etoile!</p>
+    </div>
 
 </article>
 

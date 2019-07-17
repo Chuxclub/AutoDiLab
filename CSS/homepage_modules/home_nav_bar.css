@@ -51,10 +51,19 @@
 }
 
 
-/* ========================== NAV BAR ======================== */
+/* ~~~~~~~~ Button Captions ~~~~~~~~ */
 
-/* Concerns all captions under icons in the nav bar */
-.button figcaption, .submenu_header figcaption
+/* Concerns all captions under button icons in the nav bar */
+
+.long_caption
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  font-size: 18px;
+  white-space: pre;
+}
+
+.simple_caption
 {
   color: #6A7BCA;
   font-family: "Lobster Two", cursive;
@@ -62,11 +71,8 @@
   padding-left: 10px;
 }
 
-.caption_specific_adjustment
-{
-  padding-left: 0;
-  white-space: pre;
-}
+
+/* ========================== NAV BAR ======================== */
 
 nav
 {
@@ -115,6 +121,14 @@ figure.submenu_header figcaption
 {
   position: relative;
   left: -19px;
+}
+
+.submenu_header > figcaption
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 

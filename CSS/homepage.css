@@ -50,7 +50,7 @@ a
 
 article
 {
-  min-height: calc(100vh - 101px);
+  /*min-height: calc(100vh - 101px);*/
   border-top: solid lightgrey 1px;
 }
 

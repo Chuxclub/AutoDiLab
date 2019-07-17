@@ -17,7 +17,7 @@ article h1, article h2
 {
   width: 500px;
   height: auto;
-  margin-left: calc(100vw - 950px);
+  margin-left: 35%;
   background-color: white;
   border-radius: 25px;
   padding: 50px 50px 50px 50px;
