@@ -1,0 +1,88 @@
+/*
+
+Note to contributors:
+
+Order this CSS code based on this method:
+
+1. Divid several css elements according to the structure of what you're styling
+   Ex. This Nav bar is composed of submenus, those submenus are composed of expand/collapse
+       arrows, headers and rows of buttons. These rows of buttons are composed of... Etc.
+
+2. Organise those categories and inside those categories according to the alphabetical
+   order.
+
+3. Always pick up explicit names for your classes, ids, etc.
+
+4. Comment the scope of your various css styles, what they are for,
+   why you chose this solution, who you are and I can contact you
+
+Any code which doesn't these rules may be discarded.
+
+Thank you very much for your interest in this project! I look forward working with you!
+
+See you!
+
+Florian L.
+*/
+
+
+
+/* ********************************************************* */
+            /* /!\/!\/!\ HOME MODULES /!\/!\/!\ */
+/* ********************************************************* */
+
+@import url(./homepage_modules/home_header.css) screen;
+@import url(./homepage_modules/home_nav_bar.css) screen;
+@import url(./homepage_modules/home_newsfeed.css) screen;
+@import url(./homepage_modules/home_storyboard.css) screen;
+@import url(./homepage_modules/home_footer.css) screen;
+
+
+
+/* *********************************************************** */
+/* /!\/!\/!\ SCOPE: GLOBAL STRUCTURE OF THE HOMEPAGE /!\/!\/!\ */
+/* *********************************************************** */
+
+a
+{
+  text-decoration: none;
+}
+
+article
+{
+  min-height: calc(100vh - 101px);
+  border-top: solid lightgrey 1px;
+}
+
+body
+{
+  background-color: #FFFFFF;
+  font-family: 'Mali', cursive;
+  margin: 0px;
+}
+
+h1, h2, h3
+{
+  font-family: 'Lobster Two',cursive;
+}
+
+h2
+{
+  font-size: 24px;
+}
+
+h3
+{
+  font-size: 18px;
+}
+
+
+/* *********************************************************** */
+        /* /!\/!\/!\ Palette Saved up Tests /!\/!\/!\ */
+/* *********************************************************** */
+
+/*#FFEAB7*/
+/*#FFF6E7*/
+/*#BFAAE5;
+#FFFDF0;body
+#acb6e5;header*/

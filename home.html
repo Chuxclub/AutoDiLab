@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
 
         <!-- CSS Styles -->
-        <link rel="stylesheet" type="text/css" href="./CSS/home.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./CSS/homepage.css" title="main"/>
 
         <!-- Scripts -->
         <script src="./JS/adl.js"></script>
@@ -36,12 +36,14 @@
 
         <h1>
           AutoDiLab
-
-          <img src="./Icons/adl_icon2.png" alt="AutoDiLab symbol"
-               title="Symbole d'AutoDiLab" class="home_header_icon"/>
+          <a href="./home.html">
+             <img src="./Icons/adl_icon2.png" alt="AutoDiLab symbol"
+                  title="Retourner à la page d'accueil" class="home_header_icon"/>
+          </a>
 
           <img src="./Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
-              title="Symbole d'AutoDiLab" class="home_header_icon tool"/>
+               title="Chercher un cours" class="home_header_icon tool"
+               onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)"/>
         </h1>
 
     </header>
@@ -66,32 +68,32 @@
                   <figcaption id="sciences_caption">Sciences</figcaption>
                 </figure>
 
-                    <div class="submenu_row">
-                      <figure class="button" onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)">
-                        <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
-                        <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
-                        <figcaption>Formelles</figcaption>
-                      </figure>
+                          <div class="submenu_row">
+                            <figure class="button" onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)">
+                              <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
+                              <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
+                              <figcaption class="simple_caption">Formelles</figcaption>
+                            </figure>
 
-                      <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
-                        <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"/>
-                        <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"/>
-                        <figcaption>Naturelles</figcaption>
-                      </figure>
-                    </div>
+                            <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
+                              <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"/>
+                              <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"/>
+                              <figcaption class="simple_caption">Naturelles</figcaption>
+                            </figure>
+                          </div>
 
-                    <div class="submenu_row">
-                      <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
-                        <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"/>
-                        <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"/>
-                        <figcaption>Humaines</figcaption>
-                      </figure>
+                          <div class="submenu_row">
+                            <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
+                              <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"/>
+                              <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"/>
+                              <figcaption class="simple_caption">Humaines</figcaption>
+                            </figure>
 
-                      <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
-                        <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"/>
-                        <figcaption>Appliquées</figcaption>
-                      </figure>
-                    </div>
+                            <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
+                              <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"/>
+                              <figcaption class="simple_caption">Appliquées</figcaption>
+                            </figure>
+                          </div>
 
             </div>
 
@@ -113,30 +115,30 @@
                   <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
                 </figure>
 
-                <div class="submenu_row default_collapse">
-                  <figure class="button">
-                    <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"/>
-                    <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"/>
-                    <figcaption>Entretiens</figcaption>
-                  </figure>
+                          <div class="submenu_row default_collapse">
+                            <figure class="button">
+                              <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"/>
+                              <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"/>
+                              <figcaption class="simple_caption">Entretiens</figcaption>
+                            </figure>
 
-                  <figure class="button">
-                    <img src="./Icons/icons8-talk-64.png" alt="Relations" class="icon_loner"/>
-                    <figcaption>Relations</figcaption>
-                  </figure>
-                </div>
+                            <figure class="button">
+                              <img src="./Icons/icons8-talk-64.png" alt="Relations" class="icon_loner"/>
+                              <figcaption class="simple_caption">Relations</figcaption>
+                            </figure>
+                          </div>
 
-                <div class="submenu_row default_collapse">
-                  <figure class="button">
-                    <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"/>
-                    <figcaption>Orientation</figcaption>
-                  </figure>
+                          <div class="submenu_row default_collapse">
+                            <figure class="button">
+                              <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"/>
+                              <figcaption class="simple_caption">Orientation</figcaption>
+                            </figure>
 
-                  <figure class="button">
-                    <img src="./Icons/icons8-safety-float-64.png" alt="Entraide" class="icon_loner"/>
-                    <figcaption>Entraide</figcaption>
-                  </figure>
-                </div>
+                            <figure class="button">
+                              <img src="./Icons/icons8-safety-float-64.png" alt="Entraide" class="icon_loner"/>
+                              <figcaption class="simple_caption">Entraide</figcaption>
+                            </figure>
+                          </div>
 
             </div>
 
@@ -155,32 +157,32 @@
                   <figcaption id="arts_caption"> Arts </figcaption>
                 </figure>
 
-                <div class="submenu_row default_collapse">
-                  <figure class="button">
-                    <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"/>
-                    <figcaption>Littérature</figcaption>
-                  </figure>
+                          <div class="submenu_row default_collapse">
+                            <figure class="button">
+                              <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"/>
+                              <figcaption class="simple_caption">Littérature</figcaption>
+                            </figure>
 
-                  <figure class="button">
-                    <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"/>
-                    <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"/>
-                    <figcaption class="caption_specific_adjustment"> Visuels</figcaption>
-                  </figure>
-                </div>
+                            <figure class="button">
+                              <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"/>
+                              <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"/>
+                              <figcaption class="long_caption"> Visuels</figcaption>
+                            </figure>
+                          </div>
 
-                <div class="submenu_row default_collapse">
-                  <figure class="button">
-                    <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"/>
-                    <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"/>
-                    <figcaption class="caption_specific_adjustment">Spectacle/Son</figcaption>
-                  </figure>
+                          <div class="submenu_row default_collapse">
+                            <figure class="button">
+                              <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"/>
+                              <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"/>
+                              <figcaption class="long_caption">Spectacle/Son</figcaption>
+                            </figure>
 
-                  <figure class="button">
-                    <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"/>
-                    <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"/>
-                    <figcaption class="caption_specific_adjustment">Appliqués</figcaption>
-                  </figure>
-                </div>
+                            <figure class="button">
+                              <img src="./Icons/icons8-flower-64.png" alt="Arts appliqués" class="icon"/>
+                              <img src="./Icons/icons8-cake-64.png" alt="Arts appliqués" class="icon_couple"/>
+                              <figcaption class="long_caption">Appliqués</figcaption>
+                            </figure>
+                          </div>
 
             </div>
 

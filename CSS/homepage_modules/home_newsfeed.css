@@ -1,0 +1,42 @@
+/* *********************************************************** */
+/* /!\/!\/!\ SCOPE: GLOBAL STRUCTURE OF THE NEWSFEED /!\/!\/!\ */
+/* *********************************************************** */
+
+#newsfeed
+{
+  color: #6A7BCA;
+  display: table-cell;
+  overflow-y: auto;
+  vertical-align: top;
+  width: calc(100vw - 300px);
+}
+
+/* ======================== TITLES ======================== */
+
+#newsfeed h2
+{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#newsfeed h3
+{
+  padding-left: 5px;
+}
+
+
+/* ======================= CONTENTS ======================= */
+
+/* ~~~~~~~~ Concerns expand/collapse arrow ~~~~~~~~ */
+
+#newsfeed p
+{
+  color: #000000;
+  padding-bottom: 25px;
+  padding-left: 5px;
+}
+
+#newsfeed ul li
+{
+   color: #000000;
+}
