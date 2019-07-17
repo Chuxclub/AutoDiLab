@@ -1,3 +1,7 @@
+@import url(./home_header.css) screen;
+@import url(./home_nav_bar.css) screen;
+@import url(./home_newsfeed.css) screen;
+
 body
 {
   background-color: #FFFFFF;

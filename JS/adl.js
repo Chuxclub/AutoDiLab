@@ -3,7 +3,7 @@
 function set_unavailable_infobulle(obj)
 {
 
-  if(obj.className == "submenu_choice")
+  if(obj.className == "button")
   {
 
     for(let i = 0; i < obj.children.length; i++)
@@ -41,7 +41,7 @@ function set_unavailable_infobulle(obj)
 
 function unset_unavailable_infobulle(obj)
 {
-  if(obj.className == "submenu_choice")
+  if(obj.className == "button")
   {
     obj.children[0].style.filter = "blur(0)";
     obj.children[1].style.filter = "blur(0)";

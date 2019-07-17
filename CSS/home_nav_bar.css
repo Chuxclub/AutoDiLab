@@ -1,35 +1,89 @@
-/* ===================== ALL SUBMENUS ===================== */
+/*
 
-div[class~="grey_border"] /* Horizontal grey_border, doesn't concern arts submenu */
-{
-  border-bottom: solid lightgrey 1px;
-}
+Note to contributors:
 
-div[class~="default_collapse"] /* Concerns daily_life and arts submenus, are collapsed by default */
-{
-  display: none;
-}
+Order this CSS code based on this method:
 
-/*figure[class~="selectable"]:hover
-{
-  box-shadow: "0px 5px 40px -10px rgba(0,0,0,0.57)";
-  width: "88px";
-  height: "45px";
-  padding-left: "8px";
-  padding-top: "5px";
-  border-radius: "5px";
-}*/
+1. Divid several css elements according to the structure of what you're styling
+   Ex. This Nav bar is composed of submenus, those submenus are composed of expand/collapse
+       arrows, headers and rows of buttons. These rows of buttons are composed of... Etc.
 
-figure.expand_collapse_arrow
+2. Organise those categories and inside those categories according to the alphabetical
+   order.
+
+3. Always pick up explicit names for your classes, ids, etc.
+
+4. Comment the scope of your various css styles, what they are for,
+   why you chose this solution, who you are and I can contact you
+
+Any code which doesn't these rules may be discarded.
+
+Thank you very much for your interest in this project! I look forward working with you!
+
+See you!
+
+Florian L.
+*/
+
+
+
+/* ********************************************************** */
+/* /!\/!\/!\ SCOPE: GLOBAL STRUCTURE OF THE NAV BAR /!\/!\/!\ */
+/* ********************************************************** */
+
+
+/* ======================== BUTTONS ======================== */
+
+/* ~~~~~~~~ Concerns expand/collapse arrow ~~~~~~~~ */
+
+.expand_collapse_arrow
 {
-  position: relative;
+  height: 24px;
   left: 275px;
   margin: 0 0 0 0;
+  position: relative;
   width: 24px;
-  height: 24px;
 }
 
-figcaption /* Concerns submenus buttons subtitles */
+
+/* ~~~~~~~~ Concerns thematic buttons ~~~~~~~~ */
+
+.button
+{
+  height: 68px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  padding: 8px 8px 5px 8px;
+  width: 85.5px;
+}
+
+/* Submenu button picture(s) .icon is always followed by a .icon_couple */
+.icon
+{
+  height: auto;
+  max-width: 40px;
+}
+
+.icon_couple
+{
+  display: inline;
+  height: auto;
+  max-width: 40px;
+}
+
+/* If there's a single picture for the button, use .icon_loner */
+.icon_loner
+{
+  height: auto;
+  max-width: 40px;
+  padding-left: 25px;
+}
+
+
+/* ========================== NAV BAR ======================== */
+
+/* Concerns all captions under icons in the nav bar */
+.button figcaption, .submenu_header figcaption
 {
   color: #6A7BCA;
   font-family: "Lobster Two", cursive;
@@ -37,87 +91,68 @@ figcaption /* Concerns submenus buttons subtitles */
   padding-left: 10px;
 }
 
-figure.submenu_table_title
+.caption_specific_adjustment
 {
-  padding-left: 85px;
-}
-
-figure.submenu_table_title figcaption
-{
-  position: relative;
-  left: -19px;
-}
-
-figure.submenu_choice
-{
-  display: table-cell;
-  width: 85.5px;
-  height: 68px;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
-}
-
-img.icon /* Submenu button picture(s) .icon is always followed by a .icon_couple */
-{
-  max-width: 40px;
-  height: auto;
-}
-
-img.icon_couple
-{
-  display: inline;
-  max-width: 40px;
-  height: auto;
-}
-
-img.icon_loner /* If there's a single picture for the button, use .icon_loner */
-{
-  max-width: 40px;
-  height: auto;
-  padding-left: 25px;
-}
-
-#mainframe_table
-{
-  display: table;
-}
-
-#mainframe_row
-{
-  display: table-row;
+  padding-left: 0;
+  white-space: pre;
 }
 
 nav
 {
-  display: table-cell;
-  min-width: 300px;
-  height: auto;
   border-right: solid lightgrey 1px;
+  display: table-cell;
+  height: auto;
+  min-width: 300px;
+}
+
+
+/* ====================== SUBMENU BODY ====================== */
+
+/* Horizontal grey_border, doesn't concern arts submenu */
+div[class~="grey_border"]
+{
+  border-bottom: solid lightgrey 1px;
+}
+
+/* Concerns daily_life and arts submenus, are collapsed by default */
+div[class~="default_collapse"]
+{
+  display: none;
 }
 
 nav div
 {
   padding-bottom: 10px;
-  width: 300px;
-}
-
-nav div h2
-{
-  padding-left: 70px;
-}
-
-.submenu_table
-{
-  padding-left: 0px;
 }
 
 .submenu_row
 {
   display: grid;
-  grid-template-columns: 170px 170px;
+  grid-template-columns: 149px 150px;
   grid-template-rows: 100px;
-  padding-top: 5px;
 }
+
+
+/* ===================== SUBMENU HEADER ===================== */
+
+figure.submenu_header
+{
+  padding-left: 90px;
+}
+
+figure.submenu_header figcaption
+{
+  position: relative;
+  left: -19px;
+}
+
+
+
+
+/* ******************************************************************* */
+/* /!\/!\/!\ SCOPE: SPECIFIC TO SOME SUBMENUS OF THE NAV BAR /!\/!\/!\ */
+/* ******************************************************************* */
+
 
 /* =================== SCIENCES SUBMENU =================== */
 
@@ -139,9 +174,4 @@ nav div h2
 #arts_caption
 {
   padding-left: 25px;
-}
-
-figcaption.long_button_caption
-{
-  white-space: pre;
 }
