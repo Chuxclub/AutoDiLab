@@ -92,7 +92,7 @@ div[class~="grey_border"]
 }
 
 /* Concerns daily_life and arts submenus, are collapsed by default */
-div[class~="default_collapse"]
+div[class~="collapsed"]
 {
   display: none;
 }

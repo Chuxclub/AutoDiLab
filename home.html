@@ -43,7 +43,9 @@
 
           <img src="./Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
                title="Chercher un cours" class="home_header_icon tool"
-               onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)"/>
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"/>
         </h1>
 
     </header>
@@ -69,7 +71,11 @@
                 </figure>
 
                           <div class="submenu_row">
-                            <figure class="button" onmouseover="highlight_chosen_button(this)" onmouseout="remove_highlight_effect(this)">
+                            <figure class="button"
+                                    onmouseover="highlight_chosen_button(this)"
+                                    onclick="button_pressure_effect(this)"
+                                    ondblclick="show_next_submenu(this)"
+                                    onmouseout="remove_highlight_effect(this)">
                               <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
                               <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
                               <figcaption class="simple_caption">Formelles</figcaption>
@@ -114,7 +120,7 @@
                   <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
                 </figure>
 
-                          <div class="submenu_row default_collapse">
+                          <div class="submenu_row collapsed">
                             <figure class="button">
                               <img src="./Icons/icons8-broom-64.png" alt="Entretien" class="icon"/>
                               <img src="./Icons/icons8-wrench-64.png" alt="Entretien" class="icon_couple"/>
@@ -127,7 +133,7 @@
                             </figure>
                           </div>
 
-                          <div class="submenu_row default_collapse">
+                          <div class="submenu_row collapsed">
                             <figure class="button">
                               <img src="./Icons/icons8-compass-64.png" alt="Orientation" class="icon_loner"/>
                               <figcaption class="simple_caption">Orientation</figcaption>
@@ -156,7 +162,7 @@
                   <figcaption id="arts_caption"> Arts </figcaption>
                 </figure>
 
-                          <div class="submenu_row default_collapse">
+                          <div class="submenu_row collapsed">
                             <figure class="button">
                               <img src="./Icons/icons8-book-64.png" alt="Littérature" class="icon_loner"/>
                               <figcaption class="simple_caption">Littérature</figcaption>
@@ -165,11 +171,11 @@
                             <figure class="button">
                               <img src="./Icons/icons8-game-controller-64.png" alt="Arts numérique" class="icon"/>
                               <img src="./Icons/icons8-paint-palette-64.png" alt="Arts visuels" class="icon_couple"/>
-                              <figcaption class="simple_caption"> Visuels</figcaption>
+                              <figcaption class="simple_caption">Visuels</figcaption>
                             </figure>
                           </div>
 
-                          <div class="submenu_row default_collapse">
+                          <div class="submenu_row collapsed">
                             <figure class="button">
                               <img src="./Icons/icons8-party-64.png" alt="Arts du spectacle" class="icon"/>
                               <img src="./Icons/icons8-music-64.png" alt="Arts du son" class="icon_couple"/>
@@ -227,7 +233,7 @@
 
 <!-- =============== CONTENT =============== -->
 
-<article>
+<article id="storyboard">
 
     <h2>Qu'est-ce que AutoDiLab?</h2>
 
