@@ -1,4 +1,15 @@
 /* ==================== BUTTONS FUNCTIONS ==================== */
+function add_buttons_interactions(buttons_array, interactions_array)
+{
+  for(let i = 0; i < buttons_array.length; i++)
+  {
+    for(let j = 0; j < interactions_array.length; j += 2)
+    {
+      buttons_array[i].setAttribute(interactions_array[j], interactions_array[j+1]);
+    }
+  }
+}
+
 function button_pressure_effect(submenu_button)
 {
   submenu_button.style.boxShadow = "0px 5px 20px -10px rgba(0,0,0,0.57) inset";
