@@ -1,9 +1,45 @@
-/* ==================== MAIN FUNCTIONS ==================== */
-
+/* ==================== BUTTONS FUNCTIONS ==================== */
 function button_pressure_effect(submenu_button)
 {
   submenu_button.style.boxShadow = "0px 5px 20px -10px rgba(0,0,0,0.57) inset";
 }
+
+function create_button(img_src, img_alt, caption)
+{
+  let button = document.createElement("figure");
+  let button_picture = document.createElement("img");
+  let button_caption_container = document.createElement("figcaption");
+  let button_caption = document.createTextNode(caption);
+
+  button_picture.src = img_src;
+  button_picture.alt = img_alt;
+  button_picture.className = "icon_loner";
+  button.className = "button";
+
+  button_caption_container.className = "simple_caption";
+
+  button.appendChild(button_picture);
+  button_caption_container.appendChild(button_caption);
+  button.appendChild(button_caption_container);
+
+  return button;
+}
+
+function highlight_chosen_button(submenu_button)
+{
+  submenu_button.style.borderRadius = "5px";
+  submenu_button.style.boxShadow = "0px 5px 40px -10px rgba(0,0,0,0.57)";
+  submenu_button.style.transition= "all 0.3s ease 0s";
+}
+
+function remove_highlight_effect(submenu_button)
+{
+    submenu_button.removeAttribute("style", "border-radius");
+    submenu_button.removeAttribute("style", "box-shadow");
+}
+
+
+/* ==================== EXPAND/COLLAPSE ARROWS FUNCTIONS ==================== */
 
 //This function is used on arrows icon found in the right hand corner of
 //all submenus. It uses the display CSS attribute to hide elements with the
@@ -33,19 +69,8 @@ function expand_submenu(arrow_icon)
   }
 }
 
-function highlight_chosen_button(submenu_button)
-{
-  submenu_button.style.borderRadius = "5px";
-  submenu_button.style.boxShadow = "0px 5px 40px -10px rgba(0,0,0,0.57)";
-  submenu_button.style.transition= "all 0.3s ease 0s";
-}
 
-function remove_highlight_effect(submenu_button)
-{
-    submenu_button.removeAttribute("style", "border-radius");
-    submenu_button.removeAttribute("style", "box-shadow");
-}
-
+/* ==================== USER INTERACTIONS FUNCTIONS ==================== */
 function set_unavailable_infobulle(obj)
 {
 
@@ -117,19 +142,4 @@ function unset_unavailable_infobulle(obj)
       obj.removeChild(obj.lastChild);
     }
   }
-}
-
-
-
-
-
-/* ==================== SECUNDARY FUNCTIONS ==================== */
-
-function create_span(span_class, span_txt)
-{
-  let span = document.createElement("span");
-  let span_content = document.createTextNode(span_txt);
-  span.setAttribute("class", span_class);
-  span.appendChild(span_content);
-  return span;
 }

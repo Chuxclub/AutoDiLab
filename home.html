@@ -18,8 +18,9 @@
         <link rel="stylesheet" type="text/css" href="./CSS/homepage.css" title="main"/>
 
         <!-- Scripts -->
-        <script src="./JS/adl.js"></script>
-        <script src="./JS/home_nav_bar.js"></script>
+        <script src="./JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./JS/DOM_manipulation_functions.js"></script>
+        <script src="./JS/HOME_NAV_BAR_manipulation_functions.js"></script>
 
     </head>
 
@@ -73,8 +74,8 @@
                           <div class="submenu_row">
                             <figure class="button"
                                     onmouseover="highlight_chosen_button(this)"
-                                    onclick="button_pressure_effect(this)"
-                                    ondblclick="show_next_submenu(this)"
+                                    onmousedown="button_pressure_effect(this)"
+                                    onmouseup="show_next_submenu(this)"
                                     onmouseout="remove_highlight_effect(this)">
                               <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
                               <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
