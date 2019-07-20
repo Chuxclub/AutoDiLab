@@ -10,8 +10,9 @@ function add_path_bar()
 
   let home_button = create_custom_hyperbutton("path_bar_button", "path_bar_icon", "",
                                               "./home.html", "./Icons/icons8-home-page-64.png", "Retourner à l'accueil", "");
-  home_button.id = "home_button"; //Setting home icon only a bit further from the left edge of the screen
+  append_attributes(home_button, ["id", "home_button"]);//Setting home icon only a bit further from the left edge of the screen
   let path_arrow = create_img("./Icons/icons8-path-arrow-24.png", "Path arrow", "path_bar_arrow");
+  append_attributes(path_arrow, ["class", "path_bar_arrow"]);
 
 
   /* ~~~~~~~~ Adding javascript interactions to the buttons ~~~~~~~~ */
@@ -32,35 +33,54 @@ function show_level_submenu()
   full_clean_slate(document.getElementById("transition_submenu_container"));
 
   //Creating submenu container
-  append_submenu_grid_container("div", "level_submenu_container", 1, 2, "300px", "49.5vw");
-  append_columns_to_submenu_container_grid(2, "div", "submenu_column", "level_submenu_container");
+  append_submenu_grid_container("div", "level_submenu_container", 1, 4, "300px", "24.75vw");
+  append_columns_to_submenu_container_grid(4, "div", "submenu_column", "level_submenu_container");
   let level_submenu_container = document.getElementById("level_submenu_container");
-  let middleschool_column = level_submenu_container.children[0];
-  let highschool_column = level_submenu_container.children[1];
-
+  let primaryschool_column = level_submenu_container.children[0];
+  let middleschool_column = level_submenu_container.children[1];
+  let highschool_column = level_submenu_container.children[2];
+  let superior_column = level_submenu_container.children[3];
 
   //Adding Titles to columns
-  let columns_array = [middleschool_column, highschool_column];
-  let columns_names_array = ["Collège", "Lycée"];
+  let columns_array = [primaryschool_column, middleschool_column, highschool_column, superior_column];
+  let columns_names_array = ["École primaire", "Collège", "Lycée", "Études Supérieures"];
   append_columns_titles(columns_array, columns_names_array, "h2", "transition_submenu_titles");
 
+  //Creating primary school submenu
+  let primaryschool_grid = create_grid("div", 2, 3, "110px", "150px");
+  append_attributes(primaryschool_grid, ["id", "primaryschool_submenu", "class", "submenu"]);
+  primaryschool_column.appendChild(primaryschool_grid);
+
+  let primaryschool_submenu = primaryschool_column.children[1];
+  let primaryschool_submenu_buttons = create_primaryschool_submenu_buttons();
+  append_submenu_buttons(primaryschool_submenu_buttons, primaryschool_submenu);
 
   //Creating middleschool submenu
-  let middleschool_grid = create_grid("div", "middleschool_submenu", "submenu", 2, 2, "110px", "150px");
+  let middleschool_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(middleschool_grid, ["id", "middleschool_submenu", "class", "submenu"]);
   middleschool_column.appendChild(middleschool_grid);
 
   let middleschool_submenu = middleschool_column.children[1];
   let middleschool_submenu_buttons = create_middleschool_submenu_buttons();
   append_submenu_buttons(middleschool_submenu_buttons, middleschool_submenu);
 
-
   //Creating highschool submenu
-  let highschool_grid = create_grid("div", "highschool_submenu", "submenu", 1, 3, "110px", "150px");
+  let highschool_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(highschool_grid, ["id", "highschool_submenu", "class", "submenu"])
   highschool_column.appendChild(highschool_grid);
 
   let highschool_submenu = highschool_column.children[1];
   let highschool_submenu_buttons = create_highschool_submenu_buttons();
   append_submenu_buttons(highschool_submenu_buttons, highschool_submenu);
+
+  //Creating superior studies submenu
+  let superior_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(superior_grid, ["id", "superior_submenu", "class", "submenu"]);
+  superior_column.appendChild(superior_grid);
+
+  let superior_submenu = superior_column.children[1];
+  let superior_submenu_buttons = create_superior_submenu_buttons();
+  append_submenu_buttons(superior_submenu_buttons, superior_submenu);
 }
 
 function show_transition_submenu(chosen_button)
@@ -75,7 +95,6 @@ function show_transition_submenu(chosen_button)
 
   switch(button_name)
   {
-
     //Sciences
     case "Formelles":
       create_sciences_formelles_submenu();
@@ -140,7 +159,8 @@ function create_sciences_formelles_submenu()
 
 
   //Creating maths submenu
-  let maths_submenu_grid = create_grid("div", "maths_submenu", "submenu", 2, 4, "110px", "150px");
+  let maths_submenu_grid = create_grid("div", 2, 4, "110px", "150px");
+  append_attributes(maths_submenu_grid, ["id", "maths_submenu", "class", "submenu"]);
   maths_column.appendChild(maths_submenu_grid);
 
   let maths_submenu = maths_column.children[1];
@@ -149,7 +169,8 @@ function create_sciences_formelles_submenu()
 
 
   //Creating CS submenu
-  let cs_submenu_grid = create_grid("div", "cs_submenu", "submenu", 1, 4, "110px", "150px");
+  let cs_submenu_grid = create_grid("div", 1, 4, "110px", "150px");
+  append_attributes(cs_submenu_grid, ["id", "cs_submenu", "class", "submenu"]);
   cs_column.appendChild(cs_submenu_grid);
 
   let cs_submenu = cs_column.children[1];
@@ -224,10 +245,10 @@ function create_maths_submenu_buttons()
 /* ~~~~~~~~ Middleschool submenu ~~~~~~~~ */
 function create_middleschool_submenu_buttons()
 {
-  let sixieme_button = create_js_button("./Icons/Digits/icons8-circled-6-64.png", "Sixième", "Sixième");
-  let cinquieme_button = create_js_button("./Icons/Digits/icons8-circled-5-64.png", "Cinquième", "Cinquième");
-  let quatrieme_button = create_js_button("./Icons/Digits/icons8-circled-4-64.png", "Quatrième", "Quatrième");
-  let troisieme_button = create_js_button("./Icons/Digits/icons8-circled-3-64.png", "Troisième", "Troisième");
+  let sixieme_button = create_js_button("./Icons/Digits/icons8-6-100.png", "Sixième", "Sixième");
+  let cinquieme_button = create_js_button("./Icons/Digits/icons8-5-100.png", "Cinquième", "Cinquième");
+  let quatrieme_button = create_js_button("./Icons/Digits/icons8-4-100.png", "Quatrième", "Quatrième");
+  let troisieme_button = create_js_button("./Icons/Digits/icons8-3-100.png", "Troisième", "Troisième");
 
   let middleschool_submenu_buttons = [sixieme_button, cinquieme_button, quatrieme_button, troisieme_button];
 
@@ -238,6 +259,39 @@ function create_middleschool_submenu_buttons()
   return middleschool_submenu_buttons;
 }
 
+/* ~~~~~~~~ Primary school submenu ~~~~~~~~ */
+function create_primaryschool_submenu_buttons()
+{
+  let cp_button = create_js_button("./Icons/primary_school_submenu/icons8-reading-64.png", "CP", "CP");
+  let ce1_button = create_js_button("./Icons/primary_school_submenu/icons8-crayon-64.png", "CE1", "CE1");
+  let ce2_button = create_js_button("./Icons/primary_school_submenu/icons8-ball-point-pen-64.png", "CE2", "CE2");
+  let cm1_button = create_js_button("./Icons/primary_school_submenu/icons8-pen-64.png", "CM1", "CM1");
+  let cm2_button = create_js_button("./Icons/primary_school_submenu/icons8-classroom-64.png", "CM2", "CM2");
+
+  let primaryschool_submenu_buttons = [cp_button, ce1_button, ce2_button, cm1_button, cm2_button];
+
+  let interactions_array = create_default_button_interactions();
+
+  add_buttons_interactions(primaryschool_submenu_buttons, interactions_array);
+
+  return primaryschool_submenu_buttons;
+}
+
+/* ~~~~~~~~ Superior studies submenu ~~~~~~~~ */
+function create_superior_submenu_buttons()
+{
+  let l1_button = create_js_button("./Icons/superior_studies_submenu/icons8-university-64.png", "Licence 1", "Licence 1");
+  let l2_button = create_js_button("./Icons/superior_studies_submenu/icons8-book-shelf-64.png", "Licence 2", "Licence 2");
+  let l3_button = create_js_button("./Icons/superior_studies_submenu/icons8-graduation-cap-64.png", "Licence 3", "Licence 3");
+
+  let superior_studies_submenu_buttons = [l1_button, l2_button, l3_button];
+
+  let interactions_array = create_default_button_interactions();
+
+  add_buttons_interactions(superior_studies_submenu_buttons, interactions_array);
+
+  return superior_studies_submenu_buttons;
+}
 
 /* ==================== SUBMENU BUTTONS MANIPULATIONS ==================== */
 function append_submenu_buttons(submenu_buttons, submenu)
@@ -277,7 +331,8 @@ function append_columns_to_submenu_container_grid(nb_of_columns, html_element, c
 
 function append_submenu_grid_container(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
 {
-  let formal_sciences_submenu_container = create_grid(element_container, id, "", nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
+  let formal_sciences_submenu_container = create_grid(element_container, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
+  append_attributes(formal_sciences_submenu_container, ["id", id, "class", ""]);
   let home_storyboard = document.getElementById("storyboard");
 
   document.getElementsByTagName("body")[0].insertBefore(formal_sciences_submenu_container, home_storyboard);
