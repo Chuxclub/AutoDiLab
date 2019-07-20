@@ -1,17 +1,27 @@
 function add_path_bar()
 {
-  //Nav bar becomes a path bar thanks to some CSS work
+  /* ~~~~~~~~ Nav bar becomes a path bar thanks to some CSS work ~~~~~~~~ */
+
   let nav_bar = document.getElementsByTagName("nav")[0];
   nav_bar.className = "path_bar";
 
 
-  //Creating elements to be added to the path bar
-  let home_button = create_custom_js_button("path_bar_button", "path_bar_icon", "",
-                                     "./Icons/icons8-home-page-64.png", "Retourner à l'accueil", "");
+  /* ~~~~~~~~ Creating elements to be added to the path bar ~~~~~~~~ */
+
+  let home_button = create_custom_hyperbutton("path_bar_button", "path_bar_icon", "",
+                                              "./home.html", "./Icons/icons8-home-page-64.png", "Retourner à l'accueil", "");
+  home_button.id = "home_button"; //Setting home icon only a bit further from the left edge of the screen
   let path_arrow = create_img("./Icons/icons8-path-arrow-24.png", "Path arrow", "path_bar_arrow");
 
 
-  //Adding elements to the path bar
+  /* ~~~~~~~~ Adding javascript interactions to the buttons ~~~~~~~~ */
+
+  //Check ADL_elements_manipulation_functions.js for more information on create_default_button_interactions()
+  add_buttons_interactions([home_button.children[0]], create_default_button_interactions());
+
+
+  /* ~~~~~~~~ Adding elements to the path bar ~~~~~~~~ */
+
   nav_bar.appendChild(home_button);
   nav_bar.appendChild(path_arrow);
 }

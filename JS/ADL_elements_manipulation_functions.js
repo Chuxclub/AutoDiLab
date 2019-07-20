@@ -15,7 +15,35 @@ function button_pressure_effect(submenu_button)
   submenu_button.style.boxShadow = "0px 5px 20px -10px rgba(0,0,0,0.57) inset";
 }
 
-//Javascript buttons with user defined CSS
+//The hyperbutton (<a> html element) contains the button (<figure>)
+//which contains a picture and a caption
+function create_custom_hyperbutton(button_class_name, icon_class_name, figcaption_class_name,
+                                   href, img_src, img_alt, figcaption)
+{
+  let hyperbutton = document.createElement("a");
+  let button = document.createElement("figure");
+  let button_picture = document.createElement("img");
+  let button_caption_container = document.createElement("figcaption");
+  let button_caption = document.createTextNode(figcaption);
+
+  hyperbutton.setAttribute("href", href);
+  button_picture.src = img_src;
+  button_picture.alt = img_alt;
+  button_picture.className = icon_class_name;
+  button.className = button_class_name;
+
+  button_caption_container.className = figcaption_class_name;
+
+  button.appendChild(button_picture);
+  button_caption_container.appendChild(button_caption);
+  button.appendChild(button_caption_container);
+  hyperbutton.appendChild(button);
+
+  return hyperbutton;
+}
+
+//Javascript buttons with user defined CSS, interactions are added thanks
+//to the add_buttons_interactions() function
 function create_custom_js_button(button_class_name, icon_class_name, figcaption_class_name, img_src, img_alt, figcaption)
 {
   let button = document.createElement("figure");
@@ -37,8 +65,23 @@ function create_custom_js_button(button_class_name, icon_class_name, figcaption_
   return button;
 }
 
+//Default javascript buttons interactions are as follow:
+//"onmouseover", "highlight_chosen_button(this)",
+//"onmousedown", "button_pressure_effect(this)",
+//"onmouseout", "remove_highlight_effect(this)"
+function create_default_button_interactions()
+{
+  let default_interactions_array = ["onmouseover", "highlight_chosen_button(this)",
+                            "onmousedown", "button_pressure_effect(this)",
+                            "onmouseout", "remove_highlight_effect(this)",];
+
+  return default_interactions_array;
+}
+
 //Default javascript button CSS is: .button, .icon_loner, .simple_caption
 //defined in home_nav_bar.css under BUTTONS category
+//A javascript button isn't contained in a <a> html element
+//Interactions are added thanks to the add_buttons_interactions() function
 function create_js_button(img_src, img_alt, figcaption)
 {
   let button = document.createElement("figure");
