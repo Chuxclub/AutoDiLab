@@ -1,0 +1,20 @@
+#cs_submenu
+{
+  justify-content: center;
+}
+
+#maths_submenu
+{
+  justify-content: center;
+}
+
+.submenu_column + .submenu_column
+{
+  border-left: 1px solid lightgrey;
+}
+
+.transition_submenu_titles
+{
+  color: #6A7BCA;
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+.path_bar
+{
+  display: inline-block;
+  border-bottom: 1px solid lightgrey;
+  width: 100vw;
+  height: 40px;
+}
+
+.path_bar_arrow
+{
+  display: inline-block;
+}
+
+.path_bar_button
+{
+  margin: 0 0 0 0;
+  padding: 5px 0 5px 0;
+  height: 30px;
+  width: 60px;
+  display: inline-block;
+}
+
+.path_bar_icon
+{
+  width: 30px;
+  height: auto;
+}

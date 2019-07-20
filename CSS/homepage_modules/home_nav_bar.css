@@ -60,7 +60,8 @@
   color: #6A7BCA;
   font-family: "Lobster Two", cursive;
   font-size: 18px;
-  white-space: pre;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .simple_caption
@@ -68,7 +69,7 @@
   color: #6A7BCA;
   font-family: "Lobster Two", cursive;
   font-size: 18px;
-  padding-left: 10px;
+  text-align: center;
 }
 
 
@@ -107,6 +108,7 @@ nav div
   display: grid;
   grid-template-columns: 149px 150px;
   grid-template-rows: 100px;
+  justify-content: center;
 }
 
 

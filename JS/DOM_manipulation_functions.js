@@ -1,4 +1,15 @@
 /* ==================== DOM CREATION FUNCTIONS ==================== */
+function create_img(img_src, img_alt, class_name)
+{
+  let new_dom_img = document.createElement("img");
+
+  new_dom_img.src = img_src;
+  new_dom_img.alt = img_alt;
+  new_dom_img.className = class_name;
+
+  return new_dom_img;
+}
+
 function create_grid(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
 {
   let new_submenu_container = document.createElement(element_container);

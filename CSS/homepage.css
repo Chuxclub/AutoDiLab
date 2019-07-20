@@ -31,11 +31,16 @@ Florian L.
             /* /!\/!\/!\ HOME MODULES /!\/!\/!\ */
 /* ********************************************************* */
 
+/* Used when user first connects on homepage and after */
 @import url(./homepage_modules/home_header.css) screen;
 @import url(./homepage_modules/home_nav_bar.css) screen;
 @import url(./homepage_modules/home_newsfeed.css) screen;
 @import url(./homepage_modules/home_storyboard.css) screen;
 @import url(./homepage_modules/home_footer.css) screen;
+
+/* Used when user clicks on a choice in nav bar on homepage */
+@import url(./homepage_modules/home_path_bar.css) screen;
+@import url(./homepage_modules/home_transition_submenus.css) screen;
 
 
 

@@ -15,12 +15,36 @@ function button_pressure_effect(submenu_button)
   submenu_button.style.boxShadow = "0px 5px 20px -10px rgba(0,0,0,0.57) inset";
 }
 
-function create_button(img_src, img_alt, caption)
+//Javascript buttons with user defined CSS
+function create_custom_js_button(button_class_name, icon_class_name, figcaption_class_name, img_src, img_alt, figcaption)
 {
   let button = document.createElement("figure");
   let button_picture = document.createElement("img");
   let button_caption_container = document.createElement("figcaption");
-  let button_caption = document.createTextNode(caption);
+  let button_caption = document.createTextNode(figcaption);
+
+  button_picture.src = img_src;
+  button_picture.alt = img_alt;
+  button_picture.className = icon_class_name;
+  button.className = button_class_name;
+
+  button_caption_container.className = figcaption_class_name;
+
+  button.appendChild(button_picture);
+  button_caption_container.appendChild(button_caption);
+  button.appendChild(button_caption_container);
+
+  return button;
+}
+
+//Default javascript button CSS is: .button, .icon_loner, .simple_caption
+//defined in home_nav_bar.css under BUTTONS category
+function create_js_button(img_src, img_alt, figcaption)
+{
+  let button = document.createElement("figure");
+  let button_picture = document.createElement("img");
+  let button_caption_container = document.createElement("figcaption");
+  let button_caption = document.createTextNode(figcaption);
 
   button_picture.src = img_src;
   button_picture.alt = img_alt;
