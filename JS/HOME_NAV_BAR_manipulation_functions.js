@@ -26,7 +26,44 @@ function add_path_bar()
   nav_bar.appendChild(path_arrow);
 }
 
-function show_next_submenu(chosen_button)
+function show_level_submenu()
+{
+  //Deleting Transition submenu
+  full_clean_slate(document.getElementById("transition_submenu_container"));
+
+  //Creating submenu container
+  append_submenu_grid_container("div", "level_submenu_container", 1, 2, "300px", "49.5vw");
+  append_columns_to_submenu_container_grid(2, "div", "submenu_column", "level_submenu_container");
+  let level_submenu_container = document.getElementById("level_submenu_container");
+  let middleschool_column = level_submenu_container.children[0];
+  let highschool_column = level_submenu_container.children[1];
+
+
+  //Adding Titles to columns
+  let columns_array = [middleschool_column, highschool_column];
+  let columns_names_array = ["Collège", "Lycée"];
+  append_columns_titles(columns_array, columns_names_array, "h2", "transition_submenu_titles");
+
+
+  //Creating middleschool submenu
+  let middleschool_grid = create_grid("div", "middleschool_submenu", "submenu", 2, 2, "110px", "150px");
+  middleschool_column.appendChild(middleschool_grid);
+
+  let middleschool_submenu = middleschool_column.children[1];
+  let middleschool_submenu_buttons = create_middleschool_submenu_buttons();
+  append_submenu_buttons(middleschool_submenu_buttons, middleschool_submenu);
+
+
+  //Creating highschool submenu
+  let highschool_grid = create_grid("div", "highschool_submenu", "submenu", 1, 3, "110px", "150px");
+  highschool_column.appendChild(highschool_grid);
+
+  let highschool_submenu = highschool_column.children[1];
+  let highschool_submenu_buttons = create_highschool_submenu_buttons();
+  append_submenu_buttons(highschool_submenu_buttons, highschool_submenu);
+}
+
+function show_transition_submenu(chosen_button)
 {
   let nav_bar = document.getElementsByTagName("nav")[0];
   let newsfeed = document.getElementById("newsfeed");
@@ -89,9 +126,9 @@ function show_next_submenu(chosen_button)
 function create_sciences_formelles_submenu()
 {
   //Creating submenu container
-  append_submenu_grid_container("div", "formal_sciences_container", 1, 2, "300px", "49.5vw");
-  append_columns_to_submenu_container_grid(2, "div", "submenu_column", "formal_sciences_container");
-  let formal_sciences_container = document.getElementById("formal_sciences_container");
+  append_submenu_grid_container("div", "transition_submenu_container", 1, 2, "300px", "49.5vw");
+  append_columns_to_submenu_container_grid(2, "div", "submenu_column", "transition_submenu_container");
+  let formal_sciences_container = document.getElementById("transition_submenu_container");
   let maths_column = formal_sciences_container.children[0];
   let cs_column = formal_sciences_container.children[1];
 
@@ -103,25 +140,27 @@ function create_sciences_formelles_submenu()
 
 
   //Creating maths submenu
-  let maths_submenu_grid = create_grid("div", "maths_submenu", 2, 4, "110px", "150px");
+  let maths_submenu_grid = create_grid("div", "maths_submenu", "submenu", 2, 4, "110px", "150px");
   maths_column.appendChild(maths_submenu_grid);
 
   let maths_submenu = maths_column.children[1];
   let maths_submenu_buttons = create_maths_submenu_buttons();
-  append_maths_submenu_buttons(maths_submenu_buttons, maths_submenu);
+  append_submenu_buttons(maths_submenu_buttons, maths_submenu);
 
 
   //Creating CS submenu
-  let cs_submenu_grid = create_grid("div", "cs_submenu", 1, 4, "110px", "150px");
+  let cs_submenu_grid = create_grid("div", "cs_submenu", "submenu", 1, 4, "110px", "150px");
   cs_column.appendChild(cs_submenu_grid);
 
   let cs_submenu = cs_column.children[1];
   let cs_submenu_buttons = create_cs_submenu_buttons();
-  append_cs_submenu_buttons(cs_submenu_buttons, cs_submenu);
+  append_submenu_buttons(cs_submenu_buttons, cs_submenu);
 }
 
 
-/* ==================== SPECIFIC TO THE CS SUBMENU ==================== */
+/* ==================== SPECIFIC TO THE... ==================== */
+
+/* ~~~~~~~~ CS submenu ~~~~~~~~ */
 function create_cs_submenu_buttons()
 {
   let programmation_languages_button = create_js_button("./Icons/icons8-c-programming-64.png", "Languages", "Languages");
@@ -133,33 +172,31 @@ function create_cs_submenu_buttons()
 
   let interactions_array = ["onmouseover", "highlight_chosen_button(this)",
                             "onmousedown", "button_pressure_effect(this)",
-                            "onmouseup", "set_unavailable_infobulle(this)",
-                            "onmouseout", "remove_highlight_effect(this)",
-                            "onmouseleave", "unset_unavailable_infobulle(this)"];
+                            "onmouseup", "show_level_submenu()",
+                            "onmouseout", "remove_highlight_effect(this)"];
 
   add_buttons_interactions(cs_submenu_buttons, interactions_array);
 
   return cs_submenu_buttons;
 }
 
-function append_cs_submenu_buttons(cs_submenu_buttons, cs_submenu)
+/* ~~~~~~~~ Highschool submenu ~~~~~~~~ */
+function create_highschool_submenu_buttons()
 {
-  for(let i = 0; i < cs_submenu_buttons.length; i++)
-  {
-    cs_submenu.appendChild(cs_submenu_buttons[i]);
-  }
+  let seconde_button = create_js_button("./Icons/Digits/icons8-circled-2-64.png", "Seconde", "Seconde");
+  let premiere_button = create_js_button("./Icons/Digits/icons8-1st-64.png", "Première", "Première");
+  let terminale_button = create_js_button("./Icons/Alphabets/icons8-t-64.png", "Terminale", "Terminale");
+
+  let highschool_submenu_buttons = [seconde_button, premiere_button, terminale_button];
+
+  let interactions_array = create_default_button_interactions();
+
+  add_buttons_interactions(highschool_submenu_buttons, interactions_array);
+
+  return highschool_submenu_buttons;
 }
 
-
-/* ==================== SPECIFIC TO THE MATHS SUBMENU ==================== */
-function append_maths_submenu_buttons(maths_submenu_buttons, maths_submenu)
-{
-  for(let i = 0; i < maths_submenu_buttons.length; i++)
-  {
-    maths_submenu.appendChild(maths_submenu_buttons[i]);
-  }
-}
-
+/* ~~~~~~~~ Maths submenu ~~~~~~~~ */
 function create_maths_submenu_buttons()
 {
   let analysis_button = create_js_button("./Icons/icons8-minimum-value-512.png", "Analyse", "Analyse");
@@ -176,13 +213,39 @@ function create_maths_submenu_buttons()
                               methodology_button, geometry_button, algebra_button, misc_button];
   let interactions_array = ["onmouseover", "highlight_chosen_button(this)",
                             "onmousedown", "button_pressure_effect(this)",
-                            "onmouseup", "set_unavailable_infobulle(this)",
-                            "onmouseout", "remove_highlight_effect(this)",
-                            "onmouseleave", "unset_unavailable_infobulle(this)"];
+                            "onmouseup", "show_level_submenu()",
+                            "onmouseout", "remove_highlight_effect(this)"];
 
   add_buttons_interactions(maths_submenu_buttons, interactions_array);
 
   return maths_submenu_buttons;
+}
+
+/* ~~~~~~~~ Middleschool submenu ~~~~~~~~ */
+function create_middleschool_submenu_buttons()
+{
+  let sixieme_button = create_js_button("./Icons/Digits/icons8-circled-6-64.png", "Sixième", "Sixième");
+  let cinquieme_button = create_js_button("./Icons/Digits/icons8-circled-5-64.png", "Cinquième", "Cinquième");
+  let quatrieme_button = create_js_button("./Icons/Digits/icons8-circled-4-64.png", "Quatrième", "Quatrième");
+  let troisieme_button = create_js_button("./Icons/Digits/icons8-circled-3-64.png", "Troisième", "Troisième");
+
+  let middleschool_submenu_buttons = [sixieme_button, cinquieme_button, quatrieme_button, troisieme_button];
+
+  let interactions_array = create_default_button_interactions();
+
+  add_buttons_interactions(middleschool_submenu_buttons, interactions_array);
+
+  return middleschool_submenu_buttons;
+}
+
+
+/* ==================== SUBMENU BUTTONS MANIPULATIONS ==================== */
+function append_submenu_buttons(submenu_buttons, submenu)
+{
+  for(let i = 0; i < submenu_buttons.length; i++)
+  {
+    submenu.appendChild(submenu_buttons[i]);
+  }
 }
 
 
@@ -199,7 +262,7 @@ function append_columns_titles(columns_array, columns_names_array, html_element,
 }
 
 
-/* ==================== SUBMENU CONTAINER CREATION ==================== */
+/* ==================== SUBMENU CONTAINER MANIPULATIONS ==================== */
 function append_columns_to_submenu_container_grid(nb_of_columns, html_element, class_name, container_id)
 {
   let container = document.getElementById(container_id);
@@ -214,7 +277,7 @@ function append_columns_to_submenu_container_grid(nb_of_columns, html_element, c
 
 function append_submenu_grid_container(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
 {
-  let formal_sciences_submenu_container = create_grid(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
+  let formal_sciences_submenu_container = create_grid(element_container, id, "", nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
   let home_storyboard = document.getElementById("storyboard");
 
   document.getElementsByTagName("body")[0].insertBefore(formal_sciences_submenu_container, home_storyboard);

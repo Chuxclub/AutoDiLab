@@ -10,11 +10,12 @@ function create_img(img_src, img_alt, class_name)
   return new_dom_img;
 }
 
-function create_grid(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
+function create_grid(element_container, id, class_name, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
 {
   let new_submenu_container = document.createElement(element_container);
   new_submenu_container.style.display = "grid";
   new_submenu_container.id = id;
+  new_submenu_container.className = class_name;
 
   for(let i = 0; i < nb_of_columns; i++)
   {

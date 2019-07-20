@@ -78,6 +78,30 @@ function create_default_button_interactions()
   return default_interactions_array;
 }
 
+function create_hyperbutton(href, img_src, img_alt, figcaption)
+{
+  let hyperbutton = document.createElement("a");
+  let button = document.createElement("figure");
+  let button_picture = document.createElement("img");
+  let button_caption_container = document.createElement("figcaption");
+  let button_caption = document.createTextNode(figcaption);
+
+  hyperbutton.setAttribute("href", href);
+  button_picture.src = img_src;
+  button_picture.alt = img_alt;
+  button_picture.className = "icon_loner";
+  button.className = "button";
+
+  button_caption_container.className = "simple_caption";
+
+  button.appendChild(button_picture);
+  button_caption_container.appendChild(button_caption);
+  button.appendChild(button_caption_container);
+  hyperbutton.appendChild(button);
+
+  return hyperbutton;
+}
+
 //Default javascript button CSS is: .button, .icon_loner, .simple_caption
 //defined in home_nav_bar.css under BUTTONS category
 //A javascript button isn't contained in a <a> html element
