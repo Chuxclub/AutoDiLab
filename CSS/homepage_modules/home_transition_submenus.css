@@ -1,7 +1,18 @@
+#primaryschool_submenu
+{
+  height: 200px;
+  overflow-y: scroll;
+}
+
 .submenu
 {
   justify-content: center;
 }
+
+/* .submenu_column
+{
+  padding: 0 50px;
+} */
 
 .submenu_column + .submenu_column
 {

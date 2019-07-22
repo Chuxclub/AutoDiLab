@@ -7,7 +7,8 @@
 {
   display: inline-block;
   border-bottom: 1px solid lightgrey;
-  width: 100vw;
+  border-right: 0;
+  width: 100%;
   height: 40px;
 }
 
@@ -29,4 +30,19 @@
 {
   width: 30px;
   height: auto;
+}
+
+.path_bar_iconless_button
+{
+  bottom: 7px;
+  color: #6A7BCA;
+  display: inline-block;
+  font-family: "Lobster Two", cursive;
+  font-size: 18px;
+  height: 25px;
+  padding: 0 8px;
+  margin-right: 17px;
+  position: relative;
+  left: 10px;
+  width: fit-content;
 }

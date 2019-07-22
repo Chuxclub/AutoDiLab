@@ -27,60 +27,40 @@ function add_path_bar()
   nav_bar.appendChild(path_arrow);
 }
 
-function show_level_submenu()
+function append_path_bar(path_bar, chosen_button)
 {
-  //Deleting Transition submenu
-  full_clean_slate(document.getElementById("transition_submenu_container"));
+  //Building next submenu call function based on the parent node id
+  //A few string manipulations functions were necessary to achieve this
+  //Feel free to check those functions in TOOLBOX.js
+  let button_id = chosen_button.id;
+  let submenu_creation_function = "create_" + button_id + "_submenu()";
+  let button_name = capitalize_first_letters(delete_underscores(button_id));
 
-  //Creating submenu container
-  append_submenu_grid_container("div", "level_submenu_container", 1, 4, "300px", "24.75vw");
-  append_columns_to_submenu_container_grid(4, "div", "submenu_column", "level_submenu_container");
-  let level_submenu_container = document.getElementById("level_submenu_container");
-  let primaryschool_column = level_submenu_container.children[0];
-  let middleschool_column = level_submenu_container.children[1];
-  let highschool_column = level_submenu_container.children[2];
-  let superior_column = level_submenu_container.children[3];
+  //Creating and appending new button to path bar
+  let path_bar_button = create_iconless_js_button("path_bar_iconless_button", button_name);
+  append_attributes(path_bar_button, create_default_button_interactions());
+  append_attributes(path_bar_button, ["onmouseup", submenu_creation_function]);
+  path_bar.appendChild(path_bar_button);
 
-  //Adding Titles to columns
-  let columns_array = [primaryschool_column, middleschool_column, highschool_column, superior_column];
-  let columns_names_array = ["École primaire", "Collège", "Lycée", "Études Supérieures"];
-  append_columns_titles(columns_array, columns_names_array, "h2", "transition_submenu_titles");
+  //Creating and appending path arrow
+  let path_arrow = create_img("./Icons/icons8-path-arrow-24.png", "Path arrow", "path_bar_arrow");
+  append_attributes(path_arrow, ["class", "path_bar_arrow"]);
+  path_bar.appendChild(path_arrow);
+}
 
-  //Creating primary school submenu
-  let primaryschool_grid = create_grid("div", 2, 3, "110px", "150px");
-  append_attributes(primaryschool_grid, ["id", "primaryschool_submenu", "class", "submenu"]);
-  primaryschool_column.appendChild(primaryschool_grid);
+function show_level_submenu(chosen_button)
+{
+  //Deleting home submenu
+  let path_bar = document.getElementsByTagName("nav")[0];
+  let newsfeed = document.getElementById("newsfeed");
 
-  let primaryschool_submenu = primaryschool_column.children[1];
-  let primaryschool_submenu_buttons = create_primaryschool_submenu_buttons();
-  append_submenu_buttons(primaryschool_submenu_buttons, primaryschool_submenu);
+  clean_slate(path_bar);
+  full_clean_slate(newsfeed);
+  add_path_bar();
+  append_path_bar(path_bar, chosen_button);
 
-  //Creating middleschool submenu
-  let middleschool_grid = create_grid("div", 2, 2, "110px", "150px");
-  append_attributes(middleschool_grid, ["id", "middleschool_submenu", "class", "submenu"]);
-  middleschool_column.appendChild(middleschool_grid);
-
-  let middleschool_submenu = middleschool_column.children[1];
-  let middleschool_submenu_buttons = create_middleschool_submenu_buttons();
-  append_submenu_buttons(middleschool_submenu_buttons, middleschool_submenu);
-
-  //Creating highschool submenu
-  let highschool_grid = create_grid("div", 2, 2, "110px", "150px");
-  append_attributes(highschool_grid, ["id", "highschool_submenu", "class", "submenu"])
-  highschool_column.appendChild(highschool_grid);
-
-  let highschool_submenu = highschool_column.children[1];
-  let highschool_submenu_buttons = create_highschool_submenu_buttons();
-  append_submenu_buttons(highschool_submenu_buttons, highschool_submenu);
-
-  //Creating superior studies submenu
-  let superior_grid = create_grid("div", 2, 2, "110px", "150px");
-  append_attributes(superior_grid, ["id", "superior_submenu", "class", "submenu"]);
-  superior_column.appendChild(superior_grid);
-
-  let superior_submenu = superior_column.children[1];
-  let superior_submenu_buttons = create_superior_submenu_buttons();
-  append_submenu_buttons(superior_submenu_buttons, superior_submenu);
+  let next_submenu = path_bar.children[2].getAttribute("onmouseup");
+  create_level_submenu(next_submenu);
 }
 
 function show_transition_submenu(chosen_button)
@@ -98,9 +78,11 @@ function show_transition_submenu(chosen_button)
     //Sciences
     case "Formelles":
       create_sciences_formelles_submenu();
+      append_path_bar(nav_bar, chosen_button);
     break;
 
     case "Naturelles":
+      create_sciences_naturelles_submenu();
     break;
 
     case "Humaines":
@@ -144,6 +126,10 @@ function show_transition_submenu(chosen_button)
 /* ==================== FORMAL SCIENCES SUBMENU CREATION ==================== */
 function create_sciences_formelles_submenu()
 {
+  //Deleting previous submenu
+  let level_submenu_container = document.getElementById("level_submenu_container");
+  full_clean_slate(level_submenu_container);
+
   //Creating submenu container
   append_submenu_grid_container("div", "transition_submenu_container", 1, 2, "300px", "49.5vw");
   append_columns_to_submenu_container_grid(2, "div", "submenu_column", "transition_submenu_container");
@@ -178,6 +164,105 @@ function create_sciences_formelles_submenu()
   append_submenu_buttons(cs_submenu_buttons, cs_submenu);
 }
 
+/* ==================== LEVEL SUBMENU CREATION ==================== */
+function create_level_submenu(next_submenu)
+{
+  //Creating submenu container
+  append_submenu_grid_container("div", "level_submenu_container", 1, 4, "300px", "25%");
+  append_columns_to_submenu_container_grid(4, "div", "submenu_column", "level_submenu_container");
+  let level_submenu_container = document.getElementById("level_submenu_container");
+  let primaryschool_column = level_submenu_container.children[0];
+  let middleschool_column = level_submenu_container.children[1];
+  let highschool_column = level_submenu_container.children[2];
+  let superior_column = level_submenu_container.children[3];
+
+  //Adding Titles to columns
+  let columns_array = [primaryschool_column, middleschool_column, highschool_column, superior_column];
+  let columns_names_array = ["École primaire", "Collège", "Lycée", "Études Supérieures"];
+  append_columns_titles(columns_array, columns_names_array, "h2", "transition_submenu_titles");
+
+  //Creating primary school submenu
+  let primaryschool_grid = create_grid("div", 3, 2, "110px", "150px");
+  append_attributes(primaryschool_grid, ["id", "primaryschool_submenu", "class", "submenu"]);
+  primaryschool_column.appendChild(primaryschool_grid);
+
+  let primaryschool_submenu = primaryschool_column.children[1];
+  let primaryschool_submenu_buttons = create_primaryschool_submenu_buttons(next_submenu);
+  append_submenu_buttons(primaryschool_submenu_buttons, primaryschool_submenu);
+
+  //Creating middleschool submenu
+  let middleschool_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(middleschool_grid, ["id", "middleschool_submenu", "class", "submenu"]);
+  middleschool_column.appendChild(middleschool_grid);
+
+  let middleschool_submenu = middleschool_column.children[1];
+  let middleschool_submenu_buttons = create_middleschool_submenu_buttons(next_submenu);
+  append_submenu_buttons(middleschool_submenu_buttons, middleschool_submenu);
+
+  //Creating highschool submenu
+  let highschool_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(highschool_grid, ["id", "highschool_submenu", "class", "submenu"])
+  highschool_column.appendChild(highschool_grid);
+
+  let highschool_submenu = highschool_column.children[1];
+  let highschool_submenu_buttons = create_highschool_submenu_buttons(next_submenu);
+  append_submenu_buttons(highschool_submenu_buttons, highschool_submenu);
+
+  //Creating superior studies submenu
+  let superior_grid = create_grid("div", 2, 2, "110px", "150px");
+  append_attributes(superior_grid, ["id", "superior_submenu", "class", "submenu"]);
+  superior_column.appendChild(superior_grid);
+
+  let superior_submenu = superior_column.children[1];
+  let superior_submenu_buttons = create_superior_submenu_buttons(next_submenu);
+  append_submenu_buttons(superior_submenu_buttons, superior_submenu);
+}
+
+/* ==================== NATURAL SCIENCES SUBMENU CREATION ==================== */
+function create_sciences_naturelles_submenu()
+{
+  //Deleting previous submenu
+  let level_submenu_container = document.getElementById("level_submenu_container");
+  full_clean_slate(level_submenu_container);
+
+  //Creating submenu container
+  append_submenu_grid_container("div", "transition_submenu_container", 1, 2, "300px", "49.5vw");
+  append_columns_to_submenu_container_grid(2, "div", "submenu_column", "transition_submenu_container");
+  let natural_sciences_container = document.getElementById("transition_submenu_container");
+  let svt_column = natural_sciences_container.children[0];
+  let pc_column = natural_sciences_container.children[1];
+
+
+  //Adding Titles to columns
+  let columns_array = [svt_column, pc_column];
+  let columns_names_array = ["Sciences de la Vie et des Planètes", "Physique et Chimie"];
+  append_columns_titles(columns_array, columns_names_array, "h2", "transition_submenu_titles");
+
+
+  //Creating SVT submenu
+  let svt_submenu_grid = create_grid("div", 1, 2, "110px", "150px");
+  append_attributes(svt_submenu_grid, ["id", "svt_submenu", "class", "submenu"]);
+  svt_column.appendChild(svt_submenu_grid);
+
+  let svt_submenu = svt_column.children[1];
+  let svt_submenu_buttons = create_svt_submenu_buttons();
+  append_submenu_buttons(svt_submenu_buttons, svt_submenu);
+
+
+  //Creating PC submenu
+  let pc_submenu_grid = create_grid("div", 2, 4, "110px", "150px");
+  append_attributes(pc_submenu_grid, ["id", "pc_submenu", "class", "submenu"]);
+  pc_column.appendChild(pc_submenu_grid);
+
+  let pc_submenu = pc_column.children[1];
+  let pc_submenu_buttons = create_pc_submenu_buttons();
+  append_submenu_buttons(pc_submenu_buttons, pc_submenu);
+}
+
+
+/* ==================== HUMAN SCIENCES SUBMENU CREATION ==================== */
+
+
 
 /* ==================== SPECIFIC TO THE... ==================== */
 
@@ -202,7 +287,7 @@ function create_cs_submenu_buttons()
 }
 
 /* ~~~~~~~~ Highschool submenu ~~~~~~~~ */
-function create_highschool_submenu_buttons()
+function create_highschool_submenu_buttons(next_submenu)
 {
   let seconde_button = create_js_button("./Icons/Digits/icons8-circled-2-64.png", "Seconde", "Seconde");
   let premiere_button = create_js_button("./Icons/Digits/icons8-1st-64.png", "Première", "Première");
@@ -213,6 +298,7 @@ function create_highschool_submenu_buttons()
   let interactions_array = create_default_button_interactions();
 
   add_buttons_interactions(highschool_submenu_buttons, interactions_array);
+  add_buttons_interactions(highschool_submenu_buttons, ["onmouseup", next_submenu]);
 
   return highschool_submenu_buttons;
 }
@@ -243,7 +329,7 @@ function create_maths_submenu_buttons()
 }
 
 /* ~~~~~~~~ Middleschool submenu ~~~~~~~~ */
-function create_middleschool_submenu_buttons()
+function create_middleschool_submenu_buttons(next_submenu)
 {
   let sixieme_button = create_js_button("./Icons/Digits/icons8-6-100.png", "Sixième", "Sixième");
   let cinquieme_button = create_js_button("./Icons/Digits/icons8-5-100.png", "Cinquième", "Cinquième");
@@ -255,12 +341,39 @@ function create_middleschool_submenu_buttons()
   let interactions_array = create_default_button_interactions();
 
   add_buttons_interactions(middleschool_submenu_buttons, interactions_array);
+  add_buttons_interactions(middleschool_submenu_buttons, ["onmouseup", next_submenu]);
 
   return middleschool_submenu_buttons;
 }
 
+/* ~~~~~~~~ PC submenu ~~~~~~~~ */
+function create_pc_submenu_buttons()
+{
+  let classical_mecanic_button = create_custom_js_button("custom_button", "icon_loner", "long_caption", "./Icons/pc_submenu/icons8-satellite-in-orbit-40.png", "Mécanique classique", "Mécanique classique");
+  let quantical_mecanic_button = create_custom_js_button("custom_button", "icon_loner", "long_caption", "./Icons/pc_submenu/icons8-physics-64.png", "Physique subatomique", "Physique subatomique");
+  let electromagnetism_button = create_custom_js_button("custom_button", "icon_loner", "long_caption", "./Icons/pc_submenu/icons8-magnet-64.png", "Electro-magnétisme", "Electro-magnétisme");
+  let thermodynamics_button = create_custom_js_button("custom_button", "icon_loner", "long_caption", "./Icons/pc_submenu/icons8-fire-64.png", "Thermo-dynamique", "Thermo-dynamique");
+
+  let optic_button = create_js_button("./Icons/pc_submenu/icons8-aperture-64.png", "Optique", "Optique");
+  let relativity_button = create_js_button("./Icons/pc_submenu/icons8-speed-64.png", "Relativité", "Relativité");
+  let astrophysics_button = create_js_button("./Icons/pc_submenu/icons8-planet-on-the-dark-side-64.png", "Astronomie", "Astronomie");
+  let chemistry_button = create_js_button("./Icons/pc_submenu/icons8-test-tube-64.png", "Chimie", "Chimie");
+
+  let pc_submenu_buttons = [classical_mecanic_button, quantical_mecanic_button, electromagnetism_button, thermodynamics_button,
+                            optic_button, relativity_button, astrophysics_button, chemistry_button];
+
+  let interactions_array = ["onmouseover", "highlight_chosen_button(this)",
+                            "onmousedown", "button_pressure_effect(this)",
+                            "onmouseup", "show_level_submenu()",
+                            "onmouseout", "remove_highlight_effect(this)"];
+
+  add_buttons_interactions(pc_submenu_buttons, interactions_array);
+
+  return pc_submenu_buttons;
+}
+
 /* ~~~~~~~~ Primary school submenu ~~~~~~~~ */
-function create_primaryschool_submenu_buttons()
+function create_primaryschool_submenu_buttons(next_submenu)
 {
   let cp_button = create_js_button("./Icons/primary_school_submenu/icons8-reading-64.png", "CP", "CP");
   let ce1_button = create_js_button("./Icons/primary_school_submenu/icons8-crayon-64.png", "CE1", "CE1");
@@ -273,12 +386,13 @@ function create_primaryschool_submenu_buttons()
   let interactions_array = create_default_button_interactions();
 
   add_buttons_interactions(primaryschool_submenu_buttons, interactions_array);
+  add_buttons_interactions(primaryschool_submenu_buttons, ["onmouseup", next_submenu]);
 
   return primaryschool_submenu_buttons;
 }
 
 /* ~~~~~~~~ Superior studies submenu ~~~~~~~~ */
-function create_superior_submenu_buttons()
+function create_superior_submenu_buttons(next_submenu)
 {
   let l1_button = create_js_button("./Icons/superior_studies_submenu/icons8-university-64.png", "Licence 1", "Licence 1");
   let l2_button = create_js_button("./Icons/superior_studies_submenu/icons8-book-shelf-64.png", "Licence 2", "Licence 2");
@@ -289,9 +403,28 @@ function create_superior_submenu_buttons()
   let interactions_array = create_default_button_interactions();
 
   add_buttons_interactions(superior_studies_submenu_buttons, interactions_array);
+  add_buttons_interactions(superior_studies_submenu_buttons, ["onmouseup", next_submenu]);
 
   return superior_studies_submenu_buttons;
 }
+
+/* ~~~~~~~~ SVT submenu ~~~~~~~~ */
+function create_svt_submenu_buttons()
+{
+  let biology_button = create_js_button("./Icons/svt_submenu/icons8-microorganisms-80.png", "Biologie", "Biologie");
+  let geology_button = create_js_button("./Icons/svt_submenu/icons8-globe-earth-64.png", "Géologie", "Géologie");
+
+  let svt_submenu_buttons = [biology_button, geology_button];
+  let interactions_array = ["onmouseover", "highlight_chosen_button(this)",
+                            "onmousedown", "button_pressure_effect(this)",
+                            "onmouseup", "show_level_submenu()",
+                            "onmouseout", "remove_highlight_effect(this)"];
+
+  add_buttons_interactions(svt_submenu_buttons, interactions_array);
+
+  return svt_submenu_buttons;
+}
+
 
 /* ==================== SUBMENU BUTTONS MANIPULATIONS ==================== */
 function append_submenu_buttons(submenu_buttons, submenu)
@@ -331,9 +464,9 @@ function append_columns_to_submenu_container_grid(nb_of_columns, html_element, c
 
 function append_submenu_grid_container(element_container, id, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns)
 {
-  let formal_sciences_submenu_container = create_grid(element_container, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
-  append_attributes(formal_sciences_submenu_container, ["id", id, "class", ""]);
+  let submenu_container = create_grid(element_container, nb_of_rows, nb_of_columns, size_of_rows, size_of_columns);
+  append_attributes(submenu_container, ["id", id, "class", ""]);
   let home_storyboard = document.getElementById("storyboard");
 
-  document.getElementsByTagName("body")[0].insertBefore(formal_sciences_submenu_container, home_storyboard);
+  document.getElementsByTagName("body")[0].insertBefore(submenu_container, home_storyboard);
 }

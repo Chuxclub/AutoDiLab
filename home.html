@@ -22,6 +22,7 @@
         <script src="./JS/DOM_manipulation_functions.js"></script>
         <script src="./JS/HOME_NAV_BAR_manipulation_functions.js"></script>
         <script src="./JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./JS/TOOLBOX.js"></script>
 
     </head>
 
@@ -74,16 +75,22 @@
 
                           <div class="submenu_row">
                             <figure class="button"
+                                    id="sciences_formelles"
                                     onmouseover="highlight_chosen_button(this)"
                                     onmousedown="button_pressure_effect(this)"
-                                    onmouseup="show_transition_submenu(this)"
+                                    onmouseup="show_level_submenu(this)"
                                     onmouseout="remove_highlight_effect(this)">
                               <img src="./Icons/icons8-math-64.png" alt="Maths" class="icon"/>
                               <img src="./Icons/icons8-informatics-64.png" alt="Informatique" class="icon_couple"/>
                               <figcaption class="simple_caption">Formelles</figcaption>
                             </figure>
 
-                            <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
+                            <figure class="button"
+                                    id="sciences_naturelles"
+                                    onmouseover="highlight_chosen_button(this)"
+                                    onmousedown="button_pressure_effect(this)"
+                                    onmouseup="show_level_submenu(this)"
+                                    onmouseout="remove_highlight_effect(this)">
                               <img src="./Icons/icons8-leaf-64.png" alt="SVT" class="icon"/>
                               <img src="./Icons/icons8-physics-64.png" alt="Physique-Chimie" class="icon_couple"/>
                               <figcaption class="simple_caption">Naturelles</figcaption>
@@ -92,14 +99,14 @@
 
                           <div class="submenu_row">
                             <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
-                              <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon"/>
-                              <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple"/>
-                              <figcaption class="simple_caption">Humaines</figcaption>
+                              <img src="./Icons/icons8-world-map-64.png" alt="Histoire-Géo" class="icon unavailable"/>
+                              <img src="./Icons/icons8-user-groups-64.png" alt="Sciences humaines" class="icon_couple unavailable"/>
+                              <figcaption class="simple_caption unavailable">Humaines</figcaption>
                             </figure>
 
                             <figure class="button" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
-                              <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner"/>
-                              <figcaption class="simple_caption">Appliquées</figcaption>
+                              <img src="./Icons/icons8-gear-64.png" alt="Sciences appliquées" class="icon_loner unavailable"/>
+                              <figcaption class="simple_caption unavailable">Appliquées</figcaption>
                             </figure>
                           </div>
 
@@ -108,19 +115,16 @@
 
 <!-- ~~~~~~ Daily Life Submenu ~~~~~~ -->
 
-<figure class="expand_collapse_arrow"
-        onclick="set_unavailable_infobulle(this)"
-        onmouseout="unset_unavailable_infobulle(this)">
+<figure class="expand_collapse_arrow">
   <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
        onclick="expand_submenu(this)"/>
 </figure>
 
-            <div class="submenu grey_border" onmouseover="set_unavailable_infobulle(this)"
-                   onmouseout="unset_unavailable_infobulle(this)">
+            <div class="submenu grey_border" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
 
                 <figure class="submenu_header">
-                  <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon"/>
-                  <figcaption id="daily_life_caption"> Vie Quotidienne </figcaption>
+                  <img src="./Icons/icons8-bridge-64.png" alt="Section vie quotidienne" class="icon unavailable"/>
+                  <figcaption id="daily_life_caption" class="unavailable"> Vie Quotidienne </figcaption>
                 </figure>
 
                           <div class="submenu_row collapsed">
@@ -147,23 +151,21 @@
                               <figcaption class="simple_caption">Entraide</figcaption>
                             </figure>
                           </div>
-
             </div>
 
 
 <!-- ~~~~~~ Arts Submenu ~~~~~~ -->
 
-<figure onclick="set_unavailable_infobulle(this)" onmouseout="unset_unavailable_infobulle(this)" class="expand_collapse_arrow">
+<figure class="expand_collapse_arrow">
   <img src="./Icons/icons8-expand-arrow-24.png" alt="Flèche pour déplier le menu"
        onclick="expand_submenu(this)"/>
 </figure>
 
-            <div class="submenu" onmouseover="set_unavailable_infobulle(this)"
-                 onmouseout="unset_unavailable_infobulle(this)">
+            <div class="submenu" onmouseenter="set_unavailable_infobulle(this)" onmouseleave="unset_unavailable_infobulle(this)">
 
                 <figure class="submenu_header">
-                  <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon"/>
-                  <figcaption id="arts_caption"> Arts </figcaption>
+                  <img src="./Icons/icons8-greek-pillar-capital-64.png" alt="Section Arts" class="icon unavailable"/>
+                  <figcaption id="arts_caption" class="unavailable"> Arts </figcaption>
                 </figure>
 
                           <div class="submenu_row collapsed">

@@ -49,3 +49,14 @@ function create_grid(element_container, nb_of_rows, nb_of_columns, size_of_rows,
 
   return new_submenu_container;
 }
+
+// function create_flex_grid(element_container)
+// {
+//   let new_submenu_container = document.createElement(element_container);
+//   new_submenu_container.style.display = "flex";
+//   new_submenu_container.style.flexFlow = "row wrap";
+//   new_submenu_container.style.justifyContent = "space-evenly";
+//   new_submenu_container.style.alignContent = "space-evenly";
+//
+//   return new_submenu_container;
+// }

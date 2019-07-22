@@ -18,6 +18,10 @@
 
 
 /* ~~~~~~~~ Concerns thematic buttons ~~~~~~~~ */
+*[class~="unavailable"]
+{
+  filter: blur(2px);
+}
 
 .button
 {
@@ -25,7 +29,17 @@
   margin-inline-start: 20px;
   margin-inline-end: 20px;
   padding: 8px 8px 5px 8px;
-  width: 85.5px;
+  width: 86px;
+}
+
+.custom_button
+{
+  height: fit-content;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  padding: 8px 8px 5px 8px;
+  max-width: 86px;
+  word-break: keep-all;
 }
 
 /* Submenu button picture(s) .icon is always followed by a .icon_couple */
@@ -114,12 +128,12 @@ nav div
 
 /* ===================== SUBMENU HEADER ===================== */
 
-figure.submenu_header
+.submenu_header
 {
   padding-left: 90px;
 }
 
-figure.submenu_header figcaption
+.submenu_header figcaption
 {
   position: relative;
   left: -19px;
@@ -132,7 +146,6 @@ figure.submenu_header figcaption
   font-size: 18px;
   padding-left: 10px;
 }
-
 
 
 
