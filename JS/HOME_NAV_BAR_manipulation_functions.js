@@ -173,7 +173,7 @@ function create_path_button_name(chosen_button)
 
 function create_next_submenu_calling_functions(saved_button_id)
 {
-  let submenu_creation_function = "create_" + saved_button_id + "_submenu()";
+  let submenu_creation_function = "create_" + saved_button_id + "_submenu(this)";
 
   return submenu_creation_function;
 }

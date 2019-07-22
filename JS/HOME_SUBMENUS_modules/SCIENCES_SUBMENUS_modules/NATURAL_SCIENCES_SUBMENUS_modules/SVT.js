@@ -7,7 +7,6 @@ function create_svt_submenu_buttons()
   let svt_submenu_buttons = [biology_button, geology_button];
   let interactions_array = ["onmouseover", "highlight_chosen_button(this)",
                             "onmousedown", "button_pressure_effect(this)",
-                            "onmouseup", "show_level_submenu()",
                             "onmouseout", "remove_highlight_effect(this)"];
 
   add_buttons_interactions(svt_submenu_buttons, interactions_array);

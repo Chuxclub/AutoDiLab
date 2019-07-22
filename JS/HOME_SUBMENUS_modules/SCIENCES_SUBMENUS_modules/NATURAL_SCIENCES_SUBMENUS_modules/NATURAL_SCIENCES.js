@@ -1,9 +1,19 @@
 /* ==================== NATURAL SCIENCES SUBMENU CREATION ==================== */
-function create_sciences_naturelles_submenu()
+function create_sciences_naturelles_submenu(chosen_button)
 {
+  //Appending path bar with button indicating user position in submenus tree
+  let path_bar = document.getElementsByTagName("nav")[0];
+  let chosen_level_submenu_button_name = get_button_name(chosen_button);
+  let submenu_container = document.getElementById("storyboard").previousElementSibling;
+
+  if(!(path_bar.children[4]))
+  {
+    append_path_bar(path_bar, chosen_level_submenu_button_name, "create_sciences_naturelles_submenu(this)");
+    path_bar.removeChild(path_bar.children[5]);
+  }
+
   //Deleting previous submenu
-  let level_submenu_container = document.getElementById("level_submenu_container");
-  full_clean_slate(level_submenu_container);
+  full_clean_slate(submenu_container);
 
   //Creating submenu container
   append_submenu_grid_container("div", "transition_submenu_container", 1, 2, "300px", "49.5vw");
