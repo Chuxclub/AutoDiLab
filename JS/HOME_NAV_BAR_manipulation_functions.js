@@ -14,8 +14,6 @@ function add_path_bar()
   let home_button = create_custom_hyperbutton("path_bar_button", "path_bar_icon", "",
                                               "./home.html", "./Icons/icons8-home-page-64.png", "Retourner à l'accueil", "");
   append_attributes(home_button, ["id", "home_button"]);//Setting home icon only a bit further from the left edge of the screen
-  let path_arrow = create_img("./Icons/icons8-path-arrow-24.png", "Path arrow", "path_bar_arrow");
-  append_attributes(path_arrow, ["class", "path_bar_arrow"]);
 
 
   /* ~~~~~~~~ Adding javascript interactions to the buttons ~~~~~~~~ */
@@ -27,21 +25,21 @@ function add_path_bar()
   /* ~~~~~~~~ Adding elements to the path bar ~~~~~~~~ */
 
   nav_bar.appendChild(home_button);
-  nav_bar.appendChild(path_arrow);
+  // nav_bar.appendChild(path_arrow);
 }
 
-function append_path_bar(path_bar, button_name, calling_function)
+function append_path_bar(path_bar, button_name)
 {
-  //Creating and appending new button to path bar
-  let path_bar_button = create_iconless_js_button("path_bar_iconless_button", button_name);
-  append_attributes(path_bar_button, create_default_button_interactions());
-  append_attributes(path_bar_button, ["onmouseup", calling_function]);
-  path_bar.appendChild(path_bar_button);
-
   //Creating and appending path arrow
   let path_arrow = create_img("./Icons/icons8-path-arrow-24.png", "Path arrow", "path_bar_arrow");
   append_attributes(path_arrow, ["class", "path_bar_arrow"]);
   path_bar.appendChild(path_arrow);
+
+  //Creating and appending new button to path bar
+  let path_bar_button = create_iconless_js_button("path_bar_iconless_button", button_name);
+  // append_attributes(path_bar_button, create_default_button_interactions());
+  // append_attributes(path_bar_button, ["onmouseup", calling_function]);
+  path_bar.appendChild(path_bar_button);
 }
 
 function show_level_submenu(chosen_button)
@@ -61,83 +59,16 @@ function show_level_submenu(chosen_button)
   //Creating path bar
   add_path_bar();
   let path_bar = nav_bar;
+  append_path_bar(path_bar, chosen_home_nav_button_name);
 
   //Creating level submenu with its buttons
   //And affecting calling submenu function to all buttons
-  let next_submenu_calling_function = create_next_submenu_calling_functions(chosen_home_nav_button_id);
-  let submenus_choices_array = [next_submenu_calling_function,
-                                next_submenu_calling_function,
-                                next_submenu_calling_function,
-                                next_submenu_calling_function,
-                                next_submenu_calling_function];
-
+  let submenus_choices_array = create_next_submenu_calling_functions(chosen_home_nav_button_id);
   create_level_submenu(submenus_choices_array[0],
                        submenus_choices_array[1],
                        submenus_choices_array[2],
                        submenus_choices_array[3],
                        submenus_choices_array[4]);
-
-  append_path_bar(path_bar, chosen_home_nav_button_name, "show_level_submenu(this)");
-}
-
-function show_transition_submenu(chosen_button)
-{
-  let nav_bar = document.getElementsByTagName("nav")[0];
-  let newsfeed = document.getElementById("newsfeed");
-  let button_name = chosen_button.getElementsByTagName("figcaption")[0].innerText;
-
-  clean_slate(nav_bar);
-  full_clean_slate(newsfeed);
-  add_path_bar();
-
-  switch(button_name)
-  {
-    //Sciences
-    case "Formelles":
-      create_sciences_formelles_submenu();
-      append_path_bar(nav_bar, chosen_button);
-    break;
-
-    case "Naturelles":
-      create_sciences_naturelles_submenu();
-    break;
-
-    case "Humaines":
-    break;
-
-    case "Appliquées":
-    break;
-
-    //Vie quotidienne
-    case "Entretiens":
-    break;
-
-    case "Relations":
-    break;
-
-    case "Orientation":
-    break;
-
-    case "Entraide":
-    break;
-
-    //Arts
-    case "Littérature":
-    break;
-
-    case "Visuels":
-    break;
-
-    case "Spectacle/Son":
-    break;
-
-    case "Appliqués":
-    break;
-
-    default:
-    window.alert("Quelque-chose ne s'est pas passé comme prévu, veuillez contacter l'administrateur de ce site");
-    break;
-  }
 }
 
 
@@ -173,9 +104,19 @@ function create_path_button_name(chosen_button)
 
 function create_next_submenu_calling_functions(saved_button_id)
 {
-  let submenu_creation_function = "create_" + saved_button_id + "_submenu(this)";
+  let submenu_calling_function_main_part = "create_" + saved_button_id;
 
-  return submenu_creation_function;
+  let submenu_adapted_to_c2 = submenu_calling_function_main_part + "_submenu_c2(this)";
+  let submenu_adapted_to_c3 = submenu_calling_function_main_part + "_submenu_c3(this)";;
+  let submenu_adapted_to_c4 = submenu_calling_function_main_part + "_submenu_c4(this)";;
+  let submenu_adapted_to_lyc = submenu_calling_function_main_part + "_submenu_lyc(this)";;
+  let submenu_adapted_to_sup = submenu_calling_function_main_part + "_submenu_sup(this)";;
+
+  let submenu_calling_functions_array = [submenu_adapted_to_c2, submenu_adapted_to_c3,
+                                         submenu_adapted_to_c4, submenu_adapted_to_lyc,
+                                         submenu_adapted_to_sup];
+
+  return submenu_calling_functions_array;
 }
 
 function get_button_name(chosen_button)
@@ -231,37 +172,3 @@ function append_submenu_grid_container(element_container, id, nb_of_rows, nb_of_
 
   document.getElementsByTagName("body")[0].insertBefore(submenu_container, home_storyboard);
 }
-
-
-
-
-
-// //Deleting home submenu
-// let path_bar = document.getElementsByTagName("nav")[0];
-// let newsfeed = document.getElementById("newsfeed");
-//
-// if(document.getElementById("newsfeed"))
-// {
-//   saved_button_id = chosen_button.id;
-//   clean_slate(path_bar);
-//   full_clean_slate(newsfeed);
-//   add_path_bar();
-//   append_path_bar(path_bar, chosen_button);
-//   create_level_submenu("show_level_submenu(this)");
-// }
-//
-// else if(document.getElementById("level_submenu_container"))
-// {
-//   append_path_bar(path_bar, chosen_button);
-//   let level_container = document.getElementById("level_submenu_container");
-//   full_clean_slate(level_container);
-//   create_level_submenu("create_sciences_formelles_submenu()");
-// }
-//
-// else
-// {
-//   // append_path_bar(path_bar, chosen_button);
-//   let transition_container = document.getElementById("transition_submenu_container");
-//   full_clean_slate(transition_container);
-//   create_level_submenu("create_sciences_formelles_submenu()");
-// }
