@@ -1,0 +1,129 @@
+/* ======================== AMENDS ======================== */
+footer
+{
+  margin-top:0;
+}
+
+nav
+{
+  border: 0;
+}
+
+/* ======================== HEADER ======================== */
+
+/* ======================== CORE CONTENT ======================== */
+#core_services_container
+{
+  /* box-sizing: border-box; */
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  min-height: 80vh;
+}
+
+#core_services_container *
+{
+  padding: 1px 5px;
+}
+
+#core_services_container h2
+{
+  color: #6A7BCA;
+}
+
+#core_services_container h3
+{
+  color: #C482E7;
+}
+
+#core_services_container h4
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  margin-top: 0;
+}
+
+#found_lessons
+{
+  border-left: solid 1px lightgrey;
+  border-right: solid 1px lightgrey;
+}
+
+/* ~~~~~~~~~~~~~~~ Chapters ~~~~~~~~~~~~~~~ */
+.chapter
+{
+  margin: 0 0 40px 0;
+}
+
+.chapter_button_container a
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chapter_button_container h3
+{
+  margin-top: 8px;
+}
+
+.chapter_button_container:hover
+{
+  background-color: #C482E7;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.chapter_button_container:hover *
+{
+  color: #FFFFFF !important;
+  transition: 1s;
+}
+
+.chapter .sequence
+{
+  display: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~ Lessons ~~~~~~~~~~~~~~~ */
+.lesson_button:hover
+{
+  background-color: #6A7BCA;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); ;
+  transition: 1s;
+}
+
+.lesson_button:hover *
+{
+  color: #FFFFFF !important;
+  transition: 1s;
+}
+
+.lesson_button + .lesson_button
+{
+  padding-top: 15px !important;
+}
+
+.lesson_button:hover
+{
+  cursor: pointer;
+  padding-top: 10px !important;
+  transition: 1s !important;
+}
+
+.sequence > *
+{
+  border-bottom: solid 1px lightgrey;
+  border-left: solid 1px lightgrey;
+  margin-left: 50px !important;
+}
+
+/* ======================== FOOTER ======================== */
+
+
+
+/* ========== Palette ========== */
+/* ADL blue: #6A7BCA */
+/* Clear purple: #C482E7 */

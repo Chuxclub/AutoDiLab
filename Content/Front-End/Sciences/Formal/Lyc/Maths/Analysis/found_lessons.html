@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <title>AutoDiLab</title>
+
+        <meta charset="utf-8">
+
+        <!-- Font Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../CSS/homepage.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../CSS/found_lessons.css" title="main"/>
+
+        <!-- Scripts -->
+        <script src="./../../../../../../../JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./../../../../../../../JS/DOM_manipulation_functions.js"></script>
+        <script src="./../../../../../../../JS/FOUND_LESSONS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./../../../../../../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../JS/TOOLBOX.js"></script>
+
+    </head>
+
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\ BEGINNING OF DOCUMENT /!\/!\/!\ -->
+<!-- ***************************************** -->
+
+<body>
+
+<!-- =============== HEADER =============== -->
+
+    <header>
+
+        <h1>
+          AutoDiLab
+          <a href="./../../../../../../../home.html">
+             <img src="./../../../../../../../Icons/adl_icon2.png" alt="AutoDiLab symbol"
+                  title="Retourner à la page d'accueil" class="home_header_icon"/>
+          </a>
+
+          <img src="./../../../../../../../Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
+               title="Chercher un cours" class="home_header_icon tool"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"/>
+        </h1>
+
+    </header>
+
+
+<div id="core_services_container">
+    <!-- =============== NAV =============== -->
+
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="themes_navigation">
+      <p>bla bla</p>
+
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+
+    <!-- =============== FOUND LESSONS =============== -->
+
+    <div id="found_lessons">
+
+<!-- ~~~~~~~~~ First Theme ~~~~~~~~~ -->
+    <div class="theme">
+
+        <h2>Etude de fonctions: </h2>
+
+          <div class="chapter"
+               onmouseenter="reveal_sequences(this)"
+               onmouseleave = "conceal_sequences(this)">
+
+            <div class="chapter_button_container">
+              <h3 class="sequence_title">Images, réels et calculs</h3>
+              <p class="sequence_description">
+                Que signifie calculer l'image d'un nombre réel par une fonction? A quels
+                moments dans ma vie je pourrais bien en avoir besoin? Plus on avance et
+                plus les mathématiques semblent perdre le lien avec la vie réelle. Les
+                fonctions ne dérogent pas à la règle. Et si on essayait de raccrocher ça
+                à des choses que nous connaissons bien?
+              </p>
+            </div>
+
+            <div class="sequence">
+              <div class="lesson_button">
+                <h4 class="lesson_button_title">Qu'est-ce qu'une image?</h4>
+                <p class="lesson_description">
+                  Images, antécédents... Ces mots vous semblent familiers et pourtant personne ne
+                  semble savoir pourquoi on les appelle comme ceci au lieu des biens connus "ordonnée"
+                  et "abscisse"... Pourquoi ces mots? D'où viennent-ils? En quoi en a-t-on besoin?
+                  Voici les quelques questions auxquelles nous allons répondre ici.
+                </p>
+              </div>
+
+              <div class="lesson_button">
+                <h4 class="lesson_button_title">Qu'est-ce qu'une image?</h4>
+                <p class="lesson_description">
+                  Images, antécédents... Ces mots vous semblent familiers et pourtant personne ne
+                  semble savoir pourquoi on les appelle comme ceci au lieu des biens connus "ordonnée"
+                  et "abscisse"... Pourquoi ces mots? D'où viennent-ils? En quoi en a-t-on besoin?
+                  Voici les quelques questions auxquelles nous allons répondre ici.
+                </p>
+              </div>
+
+              <div class="lesson_button">
+                <h4 class="lesson_button_title">Qu'est-ce qu'une image?</h4>
+                <p class="lesson_description">
+                  Images, antécédents... Ces mots vous semblent familiers et pourtant personne ne
+                  semble savoir pourquoi on les appelle comme ceci au lieu des biens connus "ordonnée"
+                  et "abscisse"... Pourquoi ces mots? D'où viennent-ils? En quoi en a-t-on besoin?
+                  Voici les quelques questions auxquelles nous allons répondre ici.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+<!-- ~~~~~~~~~ Second Theme ~~~~~~~~~ -->
+  <div class="theme">
+
+      <h2>Les fonctions usuelles: </h2>
+
+         <div class="chapter"
+              onmouseenter="reveal_sequences(this)"
+              onmouseleave = "conceal_sequences(this)">
+
+              <div class="chapter_button_container">
+                <h3 class="sequence_title">Images, réels et calculs</h3>
+                <p class="sequence_description">
+                  Que signifie calculer l'image d'un nombre réel par une fonction? A quels
+                  moments dans ma vie je pourrais bien en avoir besoin? Plus on avance et
+                  plus les mathématiques semblent perdre le lien avec la vie réelle. Les
+                  fonctions ne dérogent pas à la règle. Et si on essayait de raccrocher ça
+                  à des choses que nous connaissons bien?
+                </p>
+              </div>
+
+              <div class="sequence">
+
+                <div class="lesson_button">
+                  <h4 class="lesson_button_title">Qu'est-ce qu'une image?</h4>
+                  <p class="lesson_description">
+                    Images, antécédents... Ces mots vous semblent familiers et pourtant personne ne
+                    semble savoir pourquoi on les appelle comme ceci au lieu des biens connus "ordonnée"
+                    et "abscisse"... Pourquoi ces mots? D'où viennent-ils? En quoi en a-t-on besoin?
+                    Voici les quelques questions auxquelles nous allons répondre ici.
+                  </p>
+                </div>
+
+              </div>
+
+          </div>
+
+          <div class="chapter"
+               onmouseenter="reveal_sequences(this)"
+               onmouseleave = "conceal_sequences(this)">
+
+               <div class="chapter_button_container">
+                  <h3 class="sequence_title">Images, réels et calculs</h3>
+                  <p class="sequence_description">
+                    Que signifie calculer l'image d'un nombre réel par une fonction? A quels
+                    moments dans ma vie je pourrais bien en avoir besoin? Plus on avance et
+                    plus les mathématiques semblent perdre le lien avec la vie réelle. Les
+                    fonctions ne dérogent pas à la règle. Et si on essayait de raccrocher ça
+                    à des choses que nous connaissons bien?
+                  </p>
+              </div>
+
+                <div class="sequence">
+
+                  <div class="lesson_button">
+                    <h4 class="lesson_button_title">Qu'est-ce qu'une image?</h4>
+                    <p class="lesson_description">
+                      Images, antécédents... Ces mots vous semblent familiers et pourtant personne ne
+                      semble savoir pourquoi on les appelle comme ceci au lieu des biens connus "ordonnée"
+                      et "abscisse"... Pourquoi ces mots? D'où viennent-ils? En quoi en a-t-on besoin?
+                      Voici les quelques questions auxquelles nous allons répondre ici.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+        </div>
+
+<!-- ~~~~~~~~~ End of core contents ~~~~~~~~~ -->
+      </div>
+
+    <!-- =============== CONTENT =============== -->
+
+    <!-- Friends bar, contribute buttons, rules, etc. -->
+    <div id="user_tools">
+      <p>bla bla</p>
+
+    </div>
+
+</div>
+
+<!-- =============== FOOTER =============== -->
+
+<footer>
+
+    <ul>
+        <li> <a href="./../../../../../../../Content/Misc/site_map.html">Plan du Site</a> </li>
+        <li> <a href="./../../../../../../../Content/Misc/synoptic.html">Synoptique</a> </li>
+        <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
+    </ul>
+
+</footer>
+
+
+<!-- ====================================== -->
+
+</body>
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\/!\ END OF DOCUMENT /!\/!\/!\/!\ -->
+<!-- ***************************************** -->
+
+</html>
