@@ -1,0 +1,291 @@
+/* ************************************************** */
+/* /!\/!\/!\ SCOPE: STRUCTURE OF ANY LESSON /!\/!\/!\ */
+/* ************************************************** */
+
+body
+{
+  margin: 0;
+}
+
+#core_services_container
+{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  min-height: 80vh;
+}
+
+.home_icon
+{
+  float: right;
+  height: auto;
+  margin: 2px 4px;
+  padding: 4px 4px;
+  width: 30px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: "Lobster Two", cursive;
+}
+
+h2, h3, h4, h5, h6
+{
+  color: #6A7BCA;
+}
+
+
+
+/* =================================== HEADER  =================================== */
+
+
+
+
+/* ====================== TOP NAV BAR (Chapter navigation)  ====================== */
+#chapter_navigation
+{
+  border-bottom: solid 1px lightgrey;
+  width: 100%;
+}
+
+#chapter_navigation h3
+{
+  padding-top: 10px;
+  padding-left: 10px;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+#chapter_nav_bar
+{
+  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(200px, 10vw) minmax(200px, 87vw);
+  grid-template-rows: 50px;
+  justify-content: left;
+  padding-left: 5px;
+}
+
+.chapter_bar_header
+{
+  position: relative;
+  top: 6px;
+}
+
+.chapter_bar_row
+{
+  display: grid;
+  margin-bottom: 9px;
+  text-align: center;
+}
+
+.chapter_bar_cell
+{
+  background-color: lightgrey;
+  border: solid 1px grey;
+  height: 20px;
+  cursor: pointer;
+  width: 40px;
+}
+
+.chapter_bar_cell *
+{
+  display: none;
+}
+
+.chapter_bar_cell:hover
+{
+  background-color: orange;
+}
+
+.chapter_bar_cell:hover *
+{
+  display: inline-block;
+}
+
+.chapter_cell_title
+{
+  font-family: arial;
+  margin: 0;
+}
+
+
+/* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
+#lesson, #lesson_navigation
+{
+  border-right: solid 1px lightgrey;
+}
+
+.lesson_nav_bar_title
+{
+  color: #6A7BCA;
+  font-family: "Lobster Two", cursive;
+  font-size: 24px;
+}
+
+.plan_container
+{
+  margin: 5px 10px 10px;
+  min-width: 130px;
+  overflow-x: hidden;
+  padding: 0 5px 5px;
+  position: sticky;
+  top: 0;
+}
+
+.plan_container ul li
+{
+  padding: 2px 0;
+}
+
+.plan_container a
+{
+  color: blue;
+  text-decoration: none;
+}
+
+.plan_container a:hover
+{
+  color: orange;
+}
+
+/* ==================================== LESSON =================================== */
+.diagram
+{
+  display: block;
+  margin: 0 auto;
+}
+
+#lesson
+{
+  padding: 0 20px;
+}
+
+#lesson article
+{
+  padding: 10px 0 40px 0;
+}
+
+#lesson article p, #lesson ul li
+{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.lesson_main_title
+{
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pdf_icon
+{
+  float: right;
+  height: auto;
+  padding: 5px;
+  width: 30px;
+}
+
+#pre_requisites
+{
+  border: solid 1px lightgrey;
+  margin: 65px 0 45px 0;
+  padding: 0 25px 0 15px;
+  width: fit-content;
+  max-width: 500px;
+}
+
+.previous_lesson_button
+{
+  border: solid 1px lightgrey;
+  border-radius: 10px;
+  color: #6A7BCA;
+  float: left;
+  font-family: "Lobster Two", sans-serif;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+.previous_lesson_button:hover
+{
+  background-color: #6A7BCA;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.previous_lesson_button img
+{
+  float: right;
+  height: 20px;
+  width: 20px;
+}
+
+.next_lesson_button
+{
+  border: solid 1px lightgrey;
+  border-radius: 10px;
+  color: #6A7BCA;
+  float: right;
+  font-family: "Lobster Two", sans-serif;
+  height: fit-content;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 200px;
+}
+
+.next_lesson_button:hover
+{
+  background-color: #6A7BCA;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.next_lesson_button:active
+{
+  box-shadow: 0px 5px 20px -10px rgba(0,0,0,1) inset;
+}
+
+.next_lesson_button img
+{
+  float: right;
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/* =============================== RIGHT USER TOOLS ============================== */
+.user_toolbar_button
+{
+  display: block;
+  border-bottom: solid 1px lightgrey;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.user_toolbar_button:hover
+{
+  background-color: orange;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.user_toolbar_button h2
+{
+  margin-top: 0;
+  position: relative;
+  top: 24px;
+}
+
+
+
+/* =================================== FOOTER ==================================== */
+footer
+{
+  margin-top: 0 !important;
+}

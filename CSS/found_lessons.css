@@ -101,7 +101,7 @@ nav
   transition: 1s;
 }
 
-.lesson_button + .lesson_button
+.lesson_button
 {
   padding-top: 15px !important;
 }
@@ -109,8 +109,6 @@ nav
 .lesson_button:hover
 {
   cursor: pointer;
-  padding-top: 10px !important;
-  transition: 1s !important;
 }
 
 .sequence > *
