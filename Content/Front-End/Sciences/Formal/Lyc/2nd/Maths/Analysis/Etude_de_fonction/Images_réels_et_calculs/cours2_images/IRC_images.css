@@ -1,0 +1,56 @@
+/* ********************************************************** */
+/* /!\/!\/!\ SCOPE: SPECIFIC TO THE TARGETED LESSON /!\/!\/!\ */
+/* ********************************************************** */
+
+
+/* =================================== HEADER  =================================== */
+
+/* ====================== TOP NAV BAR (Chapter navigation)  ====================== */
+
+.chapter_bar_header
+{
+  grid-column: 1 / span 5;
+}
+
+.chapter_bar_row
+{
+  grid-template-columns: repeat(5, 45px);
+  grid-template-rows: repeat(2, 20px);
+  max-width: 300px;
+}
+
+.chapter_cell_title
+{
+  font-size: 10px;
+}
+
+/* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
+
+/* ==================================== LESSON =================================== */
+
+.diagram
+{
+  width: 40vw;
+  height: auto;
+}
+
+#double_function_abstract
+{
+  width: 20vw;
+  height: auto;
+}
+
+#triple_function_abstract
+{
+  width: 30vw;
+  height: auto;
+}
+
+.previous_lesson_button img
+{
+  padding-top: 20px;
+}
+
+/* =============================== RIGHT USER TOOLS ============================== */
+
+/* =================================== FOOTER ==================================== */

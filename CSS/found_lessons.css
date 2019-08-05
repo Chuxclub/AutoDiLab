@@ -103,7 +103,10 @@ nav
 
 .lesson_button
 {
+  color: initial;
+  display: block;
   padding-top: 15px !important;
+  text-decoration: none;
 }
 
 .lesson_button:hover

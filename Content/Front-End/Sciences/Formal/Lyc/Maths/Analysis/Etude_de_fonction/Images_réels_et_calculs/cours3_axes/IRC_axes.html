@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <title>Qu'est-ce que l'axe des abscisses? Des ordonnées? - AutoDiLab</title>
+
+        <meta charset="utf-8">
+
+        <!-- Font Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+        <link href="./../../../../../../../../../../../CSS/open-dyslexia_font/stylesheet.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_header.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_footer.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./IRC_axes.css" title="main"/>
+
+        <!-- Scripts -->
+        <script src="./../../../../../../../../../../../JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/DOM_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/FOUND_LESSONS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/TOOLBOX.js"></script>
+        <script src="./IRC_axes.js"></script>
+
+    </head>
+
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\ BEGINNING OF DOCUMENT /!\/!\/!\ -->
+<!-- ***************************************** -->
+
+<body onload="display_lesson_nav()">
+
+<!-- =============== HEADER =============== -->
+
+    <header>
+        <h1 title="Retourner à la page d'accueil">
+
+          <a href="./../../../../../../../../../../home.html"
+             id="website_title"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)">
+            AutoDiLab
+            <img src="./../../../../../../../../../../Icons/adl_icon2.png"
+                 alt="AutoDiLab symbol"
+                 class="home_header_icon"/>
+          </a>
+
+          <img src="./../../../../../../../../../../Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
+               title="Chercher un cours" class="home_header_icon tool"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"/>
+        </h1>
+    </header>
+
+
+
+
+    <!-- =============== CHAPTER NAV BAR (Top) =============== -->
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="chapter_navigation">
+
+      <div id="chapter_nav_bar">
+        <h3>Images, réels et calculs: </h3>
+
+          <div class="chapter_bar_row">
+
+            <div class="chapter_bar_header">
+            </div>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une fonction?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une image? Un antécédent?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce que l\'axe des abscisses?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Comment lire un repère?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'À quoi servent les fonctions?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+          </div>
+
+      </div>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+    <!-- =============== LESSON NAV BAR (Left) =============== -->
+<div id="core_services_container">
+
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="lesson_navigation">
+
+      <a href="./../../../../../../../../../../home.html">
+        <img src="./../../../../../../../../../../Icons/icons8-home-page-64.png"
+             alt="Icône pour le retour à la page d'accueil"
+             class="home_icon"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)"
+             title="Retourner à la page d'accueil"/>
+      </a>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+
+    <!-- =============== LESSON CONTENT =============== -->
+
+    <div id="lesson">
+      <h2 class="lesson_main_title">
+        Qu'est-ce que l'axe des abscisses? Et des ordonnées?
+
+        <a href="./IRC_images.pdf">
+          <img src="./../../../../../../../../../../Icons/icons8-pdf-64.png"
+               alt="pdf download button"
+               class="pdf_icon"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"
+               title="Téléchargez ce cours sous format pdf"/>
+        </a>
+      </h2>
+
+      <div id="pre_requisites">
+        <h4 id="pre_requisites_title">Ce que vous devez avoir compris avant de lire ce cours:</h4>
+        <ul>
+          <li>
+            Ce à quoi servent les lettres en maths
+          </li>
+          <li>
+            <a href="./../cours1_fonctions/IRC_Fonction_Concept.html">
+              Ce qu'est une fonction
+            </a>
+          </li>
+          <li>
+            <a href="./../cours2_images/IRC_images.html">
+              Ce qu'est une image et un antécédent
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <article>
+            <h3 id="number_machine">Valeur qui entre, valeur qui sort...</h3>
+            <p>
+            </p>
+
+            <p>
+            </p>
+
+             <aside class="notice">
+               <h6></h6>
+             </aside>
+      </article>
+
+      <article>
+            <h3 id="various_number_machines">L'origine du mot antécédent et du mot image...</h3>
+
+            <p>
+            </p>
+
+            <p>
+            </p>
+      </article>
+
+      <article>
+            <h3 id="conclusion">Conclusion</h3>
+            <p>
+            </p>
+
+            <p>
+            </p>
+      </article>
+
+      <a href="./../cours2_images/IRC_images.html" class="previous_lesson_button">
+        <div>
+          Qu'est-ce qu'une image? Un antécédent?
+        </div>
+
+        <img src="./../../../../../../../../../../Icons/icons8-previous-arrow-24.png" alt="Bouton pour aller vers la leçon précédente"/>
+      </a>
+
+      <a class="next_lesson_button">
+        <div>
+          Comment lit-on un repère?
+        </div>
+
+        <img src="./../../../../../../../../../../Icons/icons8-next-arrow-24.png" alt="Bouton pour aller vers la prochaine leçon"/>
+      </a>
+
+    </div>
+
+
+    <!-- =============== USER TOOLS (Right) =============== -->
+
+      <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
+      <div id="user_tools">
+        <a href="" class="user_toolbar_button">
+          <h2>Cours</h2>
+        </a>
+        <a class="user_toolbar_button">
+          <h2>Exercices</h2>
+        </a>
+      </div>
+
+</div>
+
+<!-- =============== FOOTER =============== -->
+
+<footer>
+
+    <ul>
+        <li> <a href="./../../../../../../../../../../Content/Misc/site_map.html">Plan du Site</a> </li>
+        <li> <a href="./../../../../../../../../../../Content/Misc/synoptic.html">Synoptique</a> </li>
+        <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
+    </ul>
+
+</footer>
+
+
+<!-- ====================================== -->
+
+</body>
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\/!\ END OF DOCUMENT /!\/!\/!\/!\ -->
+<!-- ***************************************** -->
+
+</html>

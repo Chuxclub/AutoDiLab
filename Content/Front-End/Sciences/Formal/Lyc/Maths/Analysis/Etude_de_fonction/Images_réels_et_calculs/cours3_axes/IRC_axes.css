@@ -46,6 +46,16 @@
   height: auto;
 }
 
+/* .previous_lesson_button img
+{
+  padding-top: 20px;
+} */
+
+.next_lesson_button img
+{
+  padding-top: 20px;
+}
+
 /* =============================== RIGHT USER TOOLS ============================== */
 
 /* =================================== FOOTER ==================================== */

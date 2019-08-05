@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <title>Qu'est-ce qu'une image? Un antécédent? - AutoDiLab</title>
+
+        <meta charset="utf-8">
+
+        <!-- Font Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+        <link href="./../../../../../../../../../../../CSS/open-dyslexia_font/stylesheet.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_header.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_footer.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./IRC_images.css" title="main"/>
+
+        <!-- Scripts -->
+        <script src="./../../../../../../../../../../../JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/DOM_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/FOUND_LESSONS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/TOOLBOX.js"></script>
+        <script src="./IRC_images.js"></script>
+
+    </head>
+
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\ BEGINNING OF DOCUMENT /!\/!\/!\ -->
+<!-- ***************************************** -->
+
+<body onload="display_lesson_nav()">
+
+<!-- =============== HEADER =============== -->
+
+    <header>
+        <h1 title="Retourner à la page d'accueil">
+
+          <a href="./../../../../../../../../../../../home.html"
+             id="website_title"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)">
+            AutoDiLab
+            <img src="./../../../../../../../../../../../Icons/adl_icon2.png"
+                 alt="AutoDiLab symbol"
+                 class="home_header_icon"/>
+          </a>
+
+          <img src="./../../../../../../../../../../../Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
+               title="Chercher un cours" class="home_header_icon tool"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"/>
+        </h1>
+    </header>
+
+
+
+
+    <!-- =============== CHAPTER NAV BAR (Top) =============== -->
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="chapter_navigation">
+
+      <div id="chapter_nav_bar">
+        <h3>Images, réels et calculs: </h3>
+
+          <div class="chapter_bar_row">
+
+            <div class="chapter_bar_header">
+            </div>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une fonction?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une image? Un antécédent?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce que l\'axe des abscisses?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Comment lire un repère?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'À quoi servent les fonctions?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+          </div>
+
+      </div>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+    <!-- =============== LESSON NAV BAR (Left) =============== -->
+<div id="core_services_container">
+
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="lesson_navigation">
+
+      <a href="./../../../../../../../../../../../home.html">
+        <img src="./../../../../../../../../../../../Icons/icons8-home-page-64.png"
+             alt="Icône pour le retour à la page d'accueil"
+             class="home_icon"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)"
+             title="Retourner à la page d'accueil"/>
+      </a>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+
+    <!-- =============== LESSON CONTENT =============== -->
+
+    <div id="lesson">
+      <h2 class="lesson_main_title">
+        Qu'est-ce qu'une image? Un antécédent?
+
+        <a href="./IRC_images.pdf">
+          <img src="./../../../../../../../../../../../Icons/icons8-pdf-64.png"
+               alt="pdf download button"
+               class="pdf_icon"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"
+               title="Téléchargez ce cours sous format pdf"/>
+        </a>
+      </h2>
+
+      <div id="pre_requisites">
+        <h4 id="pre_requisites_title">Ce que vous devez avoir compris avant de lire ce cours:</h4>
+        <ul>
+          <li>
+            Ce à quoi servent les lettres en maths
+          </li>
+          <li>
+            <a href="./../cours1_fonctions/IRC_Fonction_Concept.html">
+              Ce qu'est une fonction
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <article>
+            <h3 id="number_machine">Valeur qui entre, valeur qui sort...</h3>
+            <p>
+              Si vous avez lu la leçon précédente ou compris le fonctionnement de base d'une fonction
+              vous savez donc qu'il y a un nombre qui entre dans la fonction, la fonction transforme
+              ce nombre selon certaines opérations et en ressort un nouveau nombre.
+            </p>
+
+            <p>
+              Les mathématiciens travaillent parfois tous les jours sur des fonctions et écrire
+              "nombre qui entre", "nombre qui sort" est un peu long. On préfère donc appeler "nombre
+              qui entre" : antécédent. Et "nombre qui sort" : image.
+            </p>
+
+            <img src="./image_diagram.png" alt="Schéma d'une machine à double avec légende" class="diagram"/>
+
+            <p>
+              Ci-dessus vous avez le schéma type "machine à nombre" présentée dans la leçon précédente. Mais en
+              écriture mathématique ça donne:
+            </p>
+
+            <img src="./image_abstract_example_correct.png" alt="Ecriture mathématique d'un nombre transformé en son double par une fonction avec légende" class="diagram"/>
+
+             <aside class="notice">
+               <h6>Pourquoi cette nouvelle écriture?</h6>
+               Certains d'entre vous remarqueront que l'écriture a légèrement changé... En effet, pourquoi n'ai-je pas écrit ceci:
+
+               <img src="./image_abstract_example_wrong.png" alt="Fausse écriture mathématique d'un nombre transformé en son double par une fonction avec légende" class="diagram"/>
+
+               En vérité cette écriture est réservée pour décrire le fonctionnement général d'une fonction,
+               c'est-à-dire peu importe le nombre en entrée. Or "2" est une valeur particulière. Quand il s'agit
+               de valeurs particulières on préfère écrire avec les parenthèses et le signe égal.
+
+               On peut donc écrire:
+
+               <img src="./image_abstract.png" alt="Ecriture mathématique d'une fonction à faire des doubles avec légende" class="diagram"/>
+
+               En effet, "a" représente un nombre quelconque qui peut être: 2, 3, 4, ... Il s'agit donc de ce qu'il se passe
+               généralement, peu importe le nombre en entrée (l'antécédent).
+
+               Pour votre niveau cette nuance n'est qu'un détail. Mais avec le temps elle aura de l'importance. Autant donc s'y
+               préparer un peu maintenant.
+             </aside>
+      </article>
+
+      <article>
+            <h3 id="various_number_machines">L'origine du mot antécédent et du mot image...</h3>
+
+            <p>
+              Pourquoi appelle-t-on la valeur d'entrée "l'antécédent"? Antécédent est un mot latin.
+              il est composé du préfixe "ante-" qui signifie "avant" et du verbe "cedere" qui signifie
+              "venir". Antécédent signifie donc mot pour mot: "ce qui vient avant". Or le nombre qui entre
+              dans la fonction est bien le nombre qui vient avant, n'est-ce pas? D'où son nom: antécédent.
+            </p>
+
+            <p>
+              Malheureusement je n'ai pas de réponse aussi précise à vous proposer pour le terme "image"
+              (la valeur qui sort). J'ai toutefois mon hypothèse (attention: cette hypothèse est très probablement
+              fausse. N'allez donc pas apprendre ça comme une vérité)...
+            </p>
+
+            <p>
+              Selon moi il est probable que ce terme vienne de la géométrie. En effet, souvenez-vous de ces énoncés:
+              "Quel est l'image du point A par la symétrie axiale d'axe (d) ? Quel est l'image du point B par la symétrie centrale
+              de centre O ?" Ici le point A est une valeur (qui n'est pas un nombre certes) qu'on rentre dans une sorte de machine
+              géométrique (la symétrie axiale ou centrale) et qui en ressort transformé. On appelle le résultat de cette transformation
+              l'image.
+            </p>
+
+            <p>
+              Il serait donc possible que les fonctions aient tout simplement copié ce terme pour signifier "ce qui a été transformé"
+              ou encore "ce qui ressort après la transformation".
+            </p>
+
+      </article>
+
+      <article>
+            <h3 id="conclusion">Conclusion</h3>
+            <p>
+              Bravo à vous si vous êtes arrivés au bout de cette leçon! Vous avez fait un pas de plus vers la capacité à résoudre des problèmes
+              qui ne font certes pas parti de votre quotidien ordinaire mais qui vous permettront de résoudre des problèmes extraordinaires!
+            </p>
+
+            <p>
+              Maintenant que vous êtes de fins connaisseurs des fonctions, prochaine étape: le repère cartésien.
+              Et on commence avec la découverte des axes des abscisses et des ordonnées.
+            </p>
+      </article>
+
+      <a href="./../cours1_fonctions/IRC_Fonction_Concept.html" class="previous_lesson_button">
+        <div>
+          Qu'est-ce qu'une fonction?
+        </div>
+
+        <img src="./../../../../../../../../../../../Icons/icons8-previous-arrow-24.png" alt="Bouton pour aller vers la leçon précédente"/>
+      </a>
+
+      <a href="./../cours3_axes/IRC_axes.html" class="next_lesson_button">
+        <div>
+          Qu'est-ce que l'axe des abscisses? Des ordonnées?
+        </div>
+
+        <img src="./../../../../../../../../../../../Icons/icons8-next-arrow-24.png" alt="Bouton pour aller vers la prochaine leçon"/>
+      </a>
+
+    </div>
+
+
+    <!-- =============== USER TOOLS (Right) =============== -->
+
+      <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
+      <div id="user_tools">
+        <a href="" class="user_toolbar_button">
+          <h2>Cours</h2>
+        </a>
+        <a class="user_toolbar_button">
+          <h2>Exercices</h2>
+        </a>
+      </div>
+
+</div>
+
+<!-- =============== FOOTER =============== -->
+
+<footer>
+
+    <ul>
+        <li> <a href="./../../../../../../../../../../../Content/Misc/site_map.html">Plan du Site</a> </li>
+        <li> <a href="./../../../../../../../../../../../Content/Misc/synoptic.html">Synoptique</a> </li>
+        <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
+    </ul>
+
+</footer>
+
+
+<!-- ====================================== -->
+
+</body>
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\/!\ END OF DOCUMENT /!\/!\/!\/!\ -->
+<!-- ***************************************** -->
+
+</html>
