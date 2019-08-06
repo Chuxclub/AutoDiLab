@@ -27,26 +27,6 @@
 /* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
 
 /* ==================================== LESSON =================================== */
-@media print
-{
-  .axis
-  {
-    display: block;
-    margin: 0 auto;
-    width: 56vw;
-  }
-}
-
-.big_picture
-{
-  overflow-x: hidden;
-}
-
-.big_picture:hover
-{
-  overflow-x: scroll;
-}
-
 
 .diagram
 {

@@ -69,6 +69,7 @@ li
   max-width: 250px;
 }
 
+
 #chapter_nav_bar
 {
   align-items: center;
@@ -77,6 +78,16 @@ li
   grid-template-rows: 50px;
   justify-content: left;
   padding-left: 5px;
+}
+
+#chapter_nav_bar a
+{
+  color: #6A7BCA;
+}
+
+#chapter_nav_bar a:hover
+{
+  color: orange;
 }
 
 .chapter_bar_header
@@ -187,9 +198,13 @@ li
   border: solid 1px lightgrey;
   border-radius: 10px;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
   margin: 25px 0 0;
   padding: 20px;
+}
+
+.notice p
+{
+  font-size: 14px !important;
 }
 
 .notice h6
