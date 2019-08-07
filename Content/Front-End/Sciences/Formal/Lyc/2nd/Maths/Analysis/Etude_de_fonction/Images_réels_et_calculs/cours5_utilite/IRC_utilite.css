@@ -27,6 +27,11 @@
 /* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
 
 /* ==================================== LESSON =================================== */
+.graph
+{
+  height: auto;
+  width: 57vw;
+}
 
 .diagram
 {
@@ -54,6 +59,12 @@
 .next_lesson_button img
 {
   padding-top: 20px;
+}
+
+.youtube_video
+{
+  height: 600px;
+  width: 95%;
 }
 
 /* =============================== RIGHT USER TOOLS ============================== */

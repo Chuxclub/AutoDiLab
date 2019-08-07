@@ -312,7 +312,11 @@ li
   width: 20px;
 }
 
-
+.youtube_video
+{
+  display: block;
+  margin: 0 auto;
+}
 
 /* =============================== RIGHT USER TOOLS ============================== */
 .user_toolbar_button
