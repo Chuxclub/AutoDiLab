@@ -1,3 +1,10 @@
+/* ==================== STANDARD PARTS LOADING FUNCTION ==================== */
+function load_found_lessons_standard_parts_and_interactions()
+{
+  generate_standard_parts_and_interactions('./../../../../../../../../');
+}
+
+/* ==================== SEQUENCES FUNCTIONS ==================== */
 function reveal_sequences(chosen_chapter)
 {
   let sequences = chosen_chapter.getElementsByClassName("sequence");
@@ -13,7 +20,6 @@ function reveal_sequences(chosen_chapter)
 
   chosen_chapter.children[0].appendChild(hyperlink);
 }
-
 
 function conceal_sequences(chosen_chapter)
 {

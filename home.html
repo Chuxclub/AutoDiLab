@@ -18,6 +18,7 @@
 
         <!-- Scripts -->
         <script src="./JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./JS/ADL_WEBPAGES_STANDARD_PARTS_manipulation_functions.js"></script>
         <script src="./JS/DOM_manipulation_functions.js"></script>
         <script src="./JS/HOME_NAV_BAR_manipulation_functions.js"></script>
         <script src="./JS/HTML_ELEMENTS_manipulation_functions.js"></script>
@@ -42,26 +43,11 @@
 <!-- /!\/!\/!\ BEGINNING OF DOCUMENT /!\/!\/!\ -->
 <!-- ***************************************** -->
 
-<body>
+<body onload="generate_standard_parts_and_interactions('./')">
 
 <!-- =============== HEADER =============== -->
 
     <header>
-
-        <h1>
-          AutoDiLab
-          <a href="./home.html">
-             <img src="./Icons/adl_icon2.png" alt="AutoDiLab symbol"
-                  title="Retourner à la page d'accueil" class="home_header_icon"/>
-          </a>
-
-          <img src="./Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
-               title="Chercher un cours" class="home_header_icon tool"
-               onmouseover="highlight_chosen_button(this)"
-               onclick="button_pressure_effect(this)"
-               onmouseout="remove_highlight_effect(this)"/>
-        </h1>
-
     </header>
 
 
@@ -72,7 +58,7 @@
 <nav>
 
 <!-- ~~~~~~ Sciences Submenu ~~~~~~ -->
-<figure  class="expand_collapse_arrow">
+<figure class="expand_collapse_arrow">
   <img src="./Icons/icons8-collapse-arrow-24.png" alt="Flèche pour déplier le menu"
        onclick="expand_submenu(this)"/>
 </figure>
@@ -261,13 +247,6 @@
 <!-- =============== FOOTER =============== -->
 
 <footer>
-
-    <ul>
-        <li> <a href="./Content/Misc/site_map.html">Plan du Site</a> </li>
-        <li> <a href="./Content/Misc/synoptic.html">Synoptique</a> </li>
-        <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
-    </ul>
-
 </footer>
 
 

@@ -1,3 +1,47 @@
+/* ==================== HEADER ==================== */
+function display_standard_header(relative_path_to_root)
+{
+  //Creating header main container
+  let header_title_container = document.createElement("h1");
+  header_title_container.setAttribute("title", "Retourner à la page d'accueil");
+
+  //Creating and adding hyperlink container
+  let hyperlink = document.createElement("a");
+  let hyperlink_interactions =
+  ["href", relative_path_to_root + "home.html", "id", "website_title", "onmouseover", "highlight_chosen_button(this)",
+  "onclick", "button_pressure_effect(this)", "onmouseout", "remove_highlight_effect(this)"];
+  append_attributes(hyperlink, hyperlink_interactions);
+  header_title_container.appendChild(hyperlink);
+  let title_hyperlink = header_title_container.children[0];
+
+  //Adding text to header title in hyperlink container
+  let header_title_txt = document.createTextNode("AutoDiLab");
+  title_hyperlink.appendChild(header_title_txt);
+
+  //Adding website icon in hyperlink container
+  let website_icon = document.createElement("img");
+  append_attributes(website_icon, ["src", relative_path_to_root + "Icons/adl_icon2.png",
+                                   "alt", "AutoDiLab symbol", "class", "home_header_icon"]);
+  title_hyperlink.appendChild(website_icon);
+
+  //Adding research tool to h1 main container
+  let research_tool = document.createElement("img");
+  append_attributes(research_tool, ["src", relative_path_to_root + "Icons/icons8-detective-64.png",
+                                   "alt", "Research icon", "class", "home_header_icon tool",
+                                   "onmouseover", "highlight_chosen_button(this)", "onclick", "button_pressure_effect(this)",
+                                   "onmouseout", "remove_highlight_effect(this)"]);
+  header_title_container.appendChild(research_tool);
+
+  //Adding header main container to document header
+  document.getElementsByTagName("header")[0].appendChild(header_title_container);
+}
+
+/* ==================== FOOTER ==================== */
+function display_standard_footer()
+{
+
+}
+
 /* ==================== BUTTONS FUNCTIONS ==================== */
 function add_buttons_interactions(buttons_array, interactions_array)
 {
