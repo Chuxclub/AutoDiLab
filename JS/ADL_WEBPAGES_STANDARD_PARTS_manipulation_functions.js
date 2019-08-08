@@ -6,14 +6,38 @@ function generate_standard_parts_and_interactions(relative_path_to_root)
 }
 
 /* ==================== HEADER ==================== */
+
 //Standard header generation. relative_path_to_root means
 //relative path to get to Icons file, Content files, etc.
 //depending on .html position in tree. This is a requirement
 //to get pictures and other .html files.
 //relative_path_to_root is specified in FOUND_LESSONS_manipulation_functions
 //and LESSONS_manipulation_functions
+
 function display_standard_header(relative_path_to_root)
 {
+  /* This is the html version of what is coded down here:
+      <h1 title="Retourner à la page d'accueil">
+
+        <a href="./../../../../../../../../../../../home.html"
+           id="website_title"
+           onmouseover="highlight_chosen_button(this)"
+           onclick="button_pressure_effect(this)"
+           onmouseout="remove_highlight_effect(this)">
+          AutoDiLab
+          <img src="./../../../../../../../../../../../Icons/adl_icon2.png"
+               alt="AutoDiLab symbol"
+               class="home_header_icon"/>
+        </a>
+
+        <img src="./../../../../../../../../../../../Icons/icons8-detective-64.png" alt="AutoDiLab symbol"
+             title="Chercher un cours" class="home_header_icon tool"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)"/>
+      </h1>
+  */
+  
   //Creating header main container
   let header_title_container = document.createElement("h1");
   header_title_container.setAttribute("title", "Retourner à la page d'accueil");
@@ -59,7 +83,7 @@ function display_standard_footer(relative_path_to_root)
           <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
       </ul>
   */
-  
+
   //Creating unordered list
   let unordered_options_list_container = document.createElement("ul");
   let list_item1 = document.createElement("li");
