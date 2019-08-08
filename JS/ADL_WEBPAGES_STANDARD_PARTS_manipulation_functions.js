@@ -37,16 +37,15 @@ function display_standard_header(relative_path_to_root)
              onmouseout="remove_highlight_effect(this)"/>
       </h1>
   */
-  
+
   //Creating header main container
   let header_title_container = document.createElement("h1");
-  header_title_container.setAttribute("title", "Retourner à la page d'accueil");
 
   //Creating and adding hyperlink container
   let hyperlink = document.createElement("a");
   let hyperlink_interactions =
   ["href", relative_path_to_root + "home.html", "id", "website_title", "onmouseover", "highlight_chosen_button(this)",
-  "onclick", "button_pressure_effect(this)", "onmouseout", "remove_highlight_effect(this)"];
+  "onclick", "button_pressure_effect(this)", "onmouseout", "remove_highlight_effect(this)", "title", "Retourner à la page d'accueil"];
   append_attributes(hyperlink, hyperlink_interactions);
   header_title_container.appendChild(hyperlink);
   let title_hyperlink = header_title_container.children[0];
@@ -66,7 +65,7 @@ function display_standard_header(relative_path_to_root)
   append_attributes(research_tool, ["src", relative_path_to_root + "Icons/icons8-detective-64.png",
                                    "alt", "Research icon", "class", "home_header_icon tool",
                                    "onmouseover", "highlight_chosen_button(this)", "onclick", "button_pressure_effect(this)",
-                                   "onmouseout", "remove_highlight_effect(this)"]);
+                                   "onmouseout", "remove_highlight_effect(this)", "title", "Rechercher un cours"]);
   header_title_container.appendChild(research_tool);
 
   //Adding header main container to document header
