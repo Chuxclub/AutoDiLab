@@ -343,6 +343,31 @@ li
 }
 
 
+.user_toolbar_button_subchoices
+{
+  display: none;
+  border-bottom: solid 1px lightgrey;
+  border-left: solid 1px lightgrey;
+  height: 80px;
+  margin-left: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.user_toolbar_button_subchoices:hover
+{
+  background-color: orange;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.user_toolbar_button_subchoices h3
+{
+  margin-top: 0;
+  position: relative;
+  top: 24px;
+}
+
 
 /* =================================== FOOTER ==================================== */
 footer

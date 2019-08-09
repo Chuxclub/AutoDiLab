@@ -1,0 +1,62 @@
+@media print
+{
+
+  /* =================================== HEADER  =================================== */
+  *[class~="tool"]
+  {
+    display: none;
+  }
+
+  /* ====================== TOP NAV BAR (Chapter navigation)  ====================== */
+  #chapter_navigation
+  {
+    display: none;
+  }
+
+
+  /* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
+  #lesson_navigation
+  {
+    display: none;
+  }
+
+
+  /* ==================================== LESSON =================================== */
+  #lesson
+  {
+    width: 100vw;
+  }
+
+  .next_lesson_button
+  {
+    display: none;
+  }
+
+  .pdf_icon
+  {
+    display: none;
+  }
+
+  .previous_lesson_button
+  {
+    display: none;
+  }
+
+  .youtube_video
+  {
+    display: none;
+  }
+
+  /* =============================== RIGHT USER TOOLS ============================== */
+  #user_tools
+  {
+    display: none;
+  }
+
+  /* =================================== FOOTER ==================================== */
+  footer
+  {
+    display: none;
+  }
+
+}

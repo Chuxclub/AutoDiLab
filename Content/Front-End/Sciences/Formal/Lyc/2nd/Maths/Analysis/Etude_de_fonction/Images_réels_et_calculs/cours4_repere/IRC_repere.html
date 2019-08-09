@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_header.css" title="main"/>
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_footer.css" title="main"/>
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons_print.css" title="main"/>
         <link rel="stylesheet" type="text/css" href="./IRC_repere.css" title="main"/>
 
         <!-- Scripts -->
@@ -126,7 +127,7 @@
       <h2 class="lesson_main_title">
         Comment lit-on un repère?
 
-        <a href="./IRC_images.pdf">
+        <a href="./repere.pdf">
           <img src="./../../../../../../../../../../../Icons/icons8-pdf-64.png"
                alt="pdf download button"
                class="pdf_icon"
@@ -348,12 +349,18 @@
 
       <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
       <div id="user_tools">
-        <a href="" class="user_toolbar_button">
+        <a onclick="reveal_or_hide_user_toolbar_button_subchoices('cours_subchoices')"
+           class="user_toolbar_button">
           <h2>Cours</h2>
         </a>
-        <a class="user_toolbar_button">
+          <div id="cours_subchoices">
+            <a class="user_toolbar_button_subchoices">
+              <h3>Format texte</h3>
+            </a>
+          </div>
+        <!-- <a class="user_toolbar_button">
           <h2>Exercices</h2>
-        </a>
+        </a> -->
       </div>
 
 </div>

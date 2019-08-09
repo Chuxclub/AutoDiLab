@@ -1,8 +1,43 @@
+/* ==================== INTERACTIONS SPECIFIC TO LESSONS PAGES ==================== */
+function reveal_or_hide_user_toolbar_button_subchoices(id)
+{
+  let subchoices = document.getElementById(id);
+
+  if (subchoices.children[0].style.display == "none")
+  {
+    for(let i = 0; i < subchoices.children.length; i++)
+    {
+      subchoices.children[i].style.display = "block";
+    }
+  }
+
+  else
+  {
+    for(let i = 0; i < subchoices.children.length; i++)
+    {
+      subchoices.children[i].style.display = "none";
+    }
+  }
+}
+
 /* ==================== STANDARD PARTS LOADING FUNCTION ==================== */
 function load_lessons_standard_parts_and_interactions()
 {
   generate_standard_parts_and_interactions('./../../../../../../../../../../../');
   display_lesson_nav();
+
+  //Necessary for reveal_or_hide_user_toolbar_button_subchoices(id) to work
+  //at the very first click
+  let user_toolbar_button_subchoices = document.getElementsByClassName("user_toolbar_button_subchoices");
+  for(let i = 0; i < user_toolbar_button_subchoices.length; i++)
+  {
+    user_toolbar_button_subchoices[i].style.display = "none";
+  }
+
+  //Assigning to "format texte" button under "cours" button (in user tools bar on the right)
+  //current page href path
+  let lesson_button = document.getElementById("cours_subchoices").children[0];
+  lesson_button.setAttribute("href", window.location.href);
 }
 
 
@@ -52,8 +87,7 @@ function display_lesson_nav()
     lesson_nav_bar.appendChild(plan_container);
 }
 
-
-/* ==================== SECONDARY FUNCTIONS ==================== */
+/* ~~~~~~~ secondary functions for display_lesson_nav() ~~~~~~~ */
 function correct_lesson_titles(lesson_titles_array)
 {
   for(let i = 0; i < lesson_titles_array.length; i++)
