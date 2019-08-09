@@ -21,6 +21,7 @@
         <script src="./JS/ADL_WEBPAGES_STANDARD_PARTS_manipulation_functions.js"></script>
         <script src="./JS/DOM_manipulation_functions.js"></script>
         <script src="./JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./JS/HOME_STORYBOARD_manipulation_functions.js"></script>
         <script src="./JS/HTML_ELEMENTS_manipulation_functions.js"></script>
         <script src="./JS/TOOLBOX.js"></script>
 
@@ -238,7 +239,75 @@
 
     <h2>Qu'est-ce qu'AutoDiLab?</h2>
 
-    <img src="./Images/undraw_learning_2q1h.svg" alt="Image reflétant le processus d'apprentissage" class="storyboard"/>
+    <div id="story_container">
+
+      <img src="./Icons/icons8-previous-button-64.png"
+           alt="Montrer le paragraphe suivant"
+           onclick="reveal_previous_story()"
+           onmouseover="highlight_chosen_button(this)"
+           onmousedown="button_pressure_effect(this)"
+           onmouseout="remove_highlight_effect(this)"
+           id="previous_story"
+           title="Montrer la story précédente"/>
+
+      <div class="story">
+        <img src="./Images/ada_stands.svg"
+             alt="Image d'Ada, mascotte du site"
+             class="ada_story"
+             title="Ada, mascotte du site"/>
+
+        <p>
+          Apprendre est dur: il faut d'abord comprendre puis s'exercer pour mémoriser
+          et tout au long de ce parcours: se motiver.
+        </p>
+
+        <p>
+          Apprendre seul est encore plus dur: il faut faire face à son incompréhension
+          sans personne à qui poser ses questions, sans toujours des ressources adaptées.
+          Parfois ces ressources sont tout simplement inexistantes ou cachées derrière des
+          paiements...
+        </p>
+
+        <p>
+          Pourtant il existe mille et une raisons d'apprendre seul: besoin d'un complément
+          à ses propres cours, envie de se réorienter tout en ayant un avant-goût
+          de ce qui nous attend ou encore tout simplement pour le plaisir d'en savoir plus
+          sur notre monde et de s'en sentir plus grand!
+        </p>
+      </div>
+
+      <div class="hidden_story">
+        <img src="./Images/ada_waves.svg"
+             alt="Image d'Ada, mascotte du site"
+             class="ada_story"
+             title="Ada, mascotte du site"/>
+        <p>
+          AutoDiLab a pour ambition de vous fournir ces ressources et ces interlocuteurs en se
+          posant comme le réseau social privilégié de l'apprentissage!
+        </p>
+
+        <p>
+          AutoDiLab souhaite également vous offrir des méthodes et des outils afin d'apprendre
+          plus vite et mieux!
+        </p>
+
+        <p>
+          Ensemble apprenons seul pour ne plus jamais nous sentir démunis face à des
+          problèmes inédits de la vie, seuls apprenons ensemble pour gagner du temps
+          et optimiser nos chances d'accomplir nos rêves.
+        </p>
+      </div>
+
+      <img src="./Icons/icons8-next-button-64.png"
+           alt="Montrer le paragraphe suivant"
+           onclick="reveal_next_story()"
+           onmouseover="highlight_chosen_button(this)"
+           onmousedown="button_pressure_effect(this)"
+           onmouseout="remove_highlight_effect(this)"
+           id="next_story"
+           title="Montrer la story suivante"/>
+
+    </div>
 
 </article>
 
@@ -259,3 +328,6 @@
 <!-- ***************************************** -->
 
 </html>
+
+
+<!-- <img src="./Images/undraw_learning_2q1h.svg" alt="Image reflétant le processus d'apprentissage" class="storyboard"/> -->

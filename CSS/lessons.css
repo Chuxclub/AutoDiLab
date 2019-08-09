@@ -192,6 +192,18 @@ li
   font-size: 18px;
 }
 
+#lesson_contextual_information
+{
+  border: solid 1px lightgrey;
+  border-radius: 10px;
+  display: block;
+  font-family: "Mali", sans-serif;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
 .lesson_main_title
 {
   font-size: 28px;

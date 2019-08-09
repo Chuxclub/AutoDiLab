@@ -12,6 +12,44 @@ article h1, article h2
 
 
 /* ======================= STORYBOARD CONTENT ======================= */
+.ada_story
+{
+  float: right;
+  height: auto;
+  margin-left: 20px;
+  width: 150px;
+}
+
+#previous_story
+{
+  float: left;
+  padding: 5px;
+}
+
+#next_story
+{
+  float: right;
+  padding: 5px;
+}
+
+.story
+{
+  background-image: url("./../../Images/blackboard.jpg");
+  border: solid 10px lightgrey;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-size: 18px;
+  height: 340px;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding: 20px;
+  width: 40vw;
+}
+
+.hidden_story
+{
+  display: none;
+}
 
 .storyboard
 {
@@ -21,4 +59,13 @@ article h1, article h2
   background-color: white;
   border-radius: 25px;
   padding: 50px 50px 50px 50px;
+}
+
+#story_container
+{
+  display: grid;
+  grid-template-columns: 74px 45vw 74px;
+  grid-template-rows: fit-content;
+  align-items: center;
+  justify-content: center;
 }
