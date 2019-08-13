@@ -17,6 +17,12 @@ footer
   /* top: 30px; */
 }
 
+footer h6
+{
+  margin: 0;
+  text-decoration: underline;
+}
+
 
 /* ========================= FOOTER CONTENT ========================= */
 

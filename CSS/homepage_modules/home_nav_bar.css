@@ -18,10 +18,6 @@
 
 
 /* ~~~~~~~~ Concerns thematic buttons ~~~~~~~~ */
-*[class~="unavailable"]
-{
-  filter: blur(2px);
-}
 
 .button
 {

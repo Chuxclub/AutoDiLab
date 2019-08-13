@@ -1,17 +1,6 @@
 /* ************************************************** */
 /* /!\/!\/!\ SCOPE: STRUCTURE OF ANY LESSON /!\/!\/!\ */
 /* ************************************************** */
-a
-{
-  color: blue;
-  text-decoration: none;
-}
-
-a:hover
-{
-  color: orange;
-}
-
 body
 {
   margin: 0;
@@ -140,6 +129,17 @@ li
   border-right: solid 1px lightgrey;
 }
 
+#lesson a, #lesson_navigation a
+{
+  color: blue;
+  text-decoration: none;
+}
+
+#lesson a:hover, #lesson_navigation a:hover
+{
+  color: orange;
+}
+
 .lesson_nav_bar_title
 {
   color: #6A7BCA;
@@ -164,6 +164,13 @@ li
 
 
 /* ==================================== LESSON =================================== */
+.biblio_link
+{
+  bottom: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
 .diagram
 {
   display: block;
@@ -263,7 +270,7 @@ li
 {
   border: solid 1px lightgrey;
   border-radius: 10px;
-  color: #6A7BCA;
+  color: #6A7BCA !important;
   float: left;
   font-family: "Lobster Two", sans-serif;
   height: 60px;
@@ -277,7 +284,7 @@ li
 .previous_lesson_button:hover
 {
   background-color: #6A7BCA;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -293,7 +300,7 @@ li
 {
   border: solid 1px lightgrey;
   border-radius: 10px;
-  color: #6A7BCA;
+  color: #6A7BCA !important;
   float: right;
   font-family: "Lobster Two", sans-serif;
   height: 60px;
@@ -307,7 +314,7 @@ li
 .next_lesson_button:hover
 {
   background-color: #6A7BCA;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -384,5 +391,12 @@ li
 /* =================================== FOOTER ==================================== */
 footer
 {
+  font-family: "Mali", sans-serif;
   margin-top: 0 !important;
+}
+
+footer h6
+{
+  color: initial;
+  font-family: "Mali", sans-serif;
 }

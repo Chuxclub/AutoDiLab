@@ -20,11 +20,22 @@ function reveal_or_hide_user_toolbar_button_subchoices(id)
   }
 }
 
+function set_biblio_links()
+{
+  let biblio_links = document.getElementsByClassName("biblio_link");
+
+  for(let i = 0; i < biblio_links.length; i++)
+  {
+    biblio_links[i].appendChild(document.createTextNode(i + 1));
+  }
+}
+
 /* ==================== STANDARD PARTS LOADING FUNCTION ==================== */
 function load_lessons_standard_parts_and_interactions()
 {
   generate_standard_parts_and_interactions('./../../../../../../../../../../../');
   display_lesson_nav();
+  set_biblio_links();
 
   //Necessary for reveal_or_hide_user_toolbar_button_subchoices(id) to work
   //at the very first click

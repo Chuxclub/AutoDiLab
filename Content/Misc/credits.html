@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+
+        <title>Remerciements - AutoDiLab</title>
+
+        <meta charset="utf-8">
+
+        <!-- Font Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="./../../CSS/adl.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../CSS/homepage.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../CSS/qui_suis_je.css" title="main"/>
+
+        <!-- Scripts -->
+        <script src="./../../JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./../../JS/ADL_WEBPAGES_STANDARD_PARTS_manipulation_functions.js"></script>
+        <script src="./../../JS/DOM_manipulation_functions.js"></script>
+        <script src="./../../JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./../../JS/HOME_STORYBOARD_manipulation_functions.js"></script>
+        <script src="./../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./../../JS/TOOLBOX.js"></script>
+        <script src="./../../JS/qui_suis_je.js"></script>
+
+    </head>
+
+    <body onload="generate_standard_parts_and_interactions('./../../')">
+
+      <!-- =============== NAV =============== -->
+      <nav>
+      </nav>
+
+      <!-- =============== HEADER =============== -->
+      <header>
+      </header>
+
+      <!-- =============== CONTENT =============== -->
+      <article id="who_am_I">
+        <a href="./../../home.html">
+          <img src="./../../Icons/icons8-home-page-64.png"
+               alt="Icône pour le retour à la page d'accueil"
+               class="home_icon"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"
+               title="Retourner à la page d'accueil"/>
+        </a>
+        
+        <h1>Remerciements</h1>
+
+      </article>
+
+      <!-- =============== FOOTER =============== -->
+      <footer>
+      </footer>
+
+    </body>
+
+</html>
