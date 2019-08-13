@@ -94,15 +94,15 @@ function display_standard_footer(relative_path_to_root)
 
   //Adding site map hyperlink in list item 1
   let site_map_hyperlink_container = document.createElement("a");
-  site_map_hyperlink_container.setAttribute("href", relative_path_to_root + "Content/Misc/site_map.html");
-  let site_map_hyperlink_text = document.createTextNode("Plan du Site");
+  site_map_hyperlink_container.setAttribute("href", relative_path_to_root + "Content/Misc/FAQ.html");
+  let site_map_hyperlink_text = document.createTextNode("FAQ");
   site_map_hyperlink_container.appendChild(site_map_hyperlink_text);
   unordered_options_list_container.children[0].appendChild(site_map_hyperlink_container);
 
   //Adding synoptic hyperlink in list item 2
   let synoptic_hyperlink_container = document.createElement("a");
-  synoptic_hyperlink_container.setAttribute("href", relative_path_to_root + "Content/Misc/synoptic.html");
-  let synoptic_hyperlink_text = document.createTextNode("Synoptique");
+  synoptic_hyperlink_container.setAttribute("href", relative_path_to_root + "Content/Misc/qui_suis_je.html");
+  let synoptic_hyperlink_text = document.createTextNode("Qui suis-je?");
   synoptic_hyperlink_container.appendChild(synoptic_hyperlink_text);
   unordered_options_list_container.children[1].appendChild(synoptic_hyperlink_container);
 

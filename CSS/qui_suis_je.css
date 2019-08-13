@@ -1,0 +1,38 @@
+footer
+{
+  margin-top: 0 !important;
+}
+
+.portrait
+{
+  float: right;
+  height: auto;
+  padding-left: 20px;
+  width: 150px;
+}
+
+#who_am_I
+{
+  border-left: solid 1px lightgrey;
+  border-right: solid 1px lightgrey;
+  border-top: 0 !important;
+  margin: 0 20vw;
+  padding: 20px;
+}
+
+#who_am_I em
+{
+  font-weight: bold;
+}
+
+#who_am_I h1
+{
+  font-size: 28px;
+  text-align: center;
+}
+
+#who_am_I h2
+{
+  font-size: 20px;
+  margin-top: 40px;
+}
