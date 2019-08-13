@@ -42,112 +42,140 @@
 
       <!-- =============== CONTENT =============== -->
       <article id="faq">
-        <h1>FAQ</h1>
 
+        <a href="./../../home.html">
+          <img src="./../../Icons/icons8-home-page-64.png"
+               alt="Icône pour le retour à la page d'accueil"
+               class="home_icon"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"
+               title="Retourner à la page d'accueil"/>
+        </a>
+        
+        <h1>
+          FAQ
+        </h1>
 
+        <!-- Question -->
 
-        <h2>
-          Les informations trouvées sur AutoDiLab sont-elles fiables?
+        <div class="question_container">
+            <h2>
+              Les informations trouvées sur AutoDiLab sont-elles fiables?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
-               alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
-        </h2>
-        <p>
-          À l'heure actuelle: non. À l'avenir: peut-être. L'un des axes de développement
-          d'AutoDiLab est de permettre à tous de publier des cours et aux lecteurs d'évaluer
-          leur qualité pédagogique et la fiabilité de leurs contenus. L'un des objectifs d'AutoDiLab
-          est donc d'être une plateforme participative, vivante sans renoncer à la qualité des informations
-          qui y sont postées.
-        </p>
+              <img src="./../../Icons/icons8-expand-arrow-24.png"
+                   alt="Flèche pour déplier le menu"
+                   onclick="expand_answer(this)"/>
+            </h2>
 
-        <p>
-          Cependant, pour l'instant, AutoDiLab est le projet d'une seule personne. Et les cours qui y sont postées
-          ne peuvent faire l'objet d'aucune évaluation ou de commentaires. Donc la réponse est non: <em>vous devez croiser
-          vos sources pour vous assurer de la fiabilité du contenu que vous y trouverez!</em>
-        </p>
+            <div class="answer collapsed">
+              <p>
+                À l'heure actuelle: non. À l'avenir: peut-être. L'un des axes de développement
+                d'AutoDiLab est de permettre à tous de publier des cours et aux lecteurs d'évaluer
+                leur qualité pédagogique et la fiabilité de leurs contenus. L'un des objectifs d'AutoDiLab
+                est donc d'être une plateforme participative, vivante sans renoncer à la qualité des informations
+                qui y sont postées.
+              </p>
 
+              <p>
+                Cependant, pour l'instant, AutoDiLab est le projet d'une seule personne. Et les cours qui y sont postées
+                ne peuvent faire l'objet d'aucune évaluation ou de commentaires. Donc la réponse est non: <em>vous devez croiser
+                vos sources pour vous assurer de la fiabilité du contenu que vous y trouverez!</em>
+              </p>
+            </div>
+        <div>
 
+        <!-- Question -->
 
         <h2>
           Quelles sont les fonctionnalités à venir d'AutoDiLab?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <div class="long_list">
 
-          <h3>Objectifs très court terme:</h3>
+        <div class="answer collapsed">
+          <div class="long_list">
 
-          <ul>
-              <li class="done">Site statique</li>
-              <li>Dons</li>
-          </ul>
+            <h3>Objectifs très court terme:</h3>
 
-
-          <h3>Objectifs court terme:</h3>
-          <ul>
-              <li>Recherche de contenu</li>
-              <li>Création de compte utilisateur</li>
-              <li>Protéger ces comptes et leurs données</li>
-              <li>Tableau de bord utilisateur</li>
-              <li>Céation de contenu par les utilisateurs</li>
-              <li>Evaluation du contenu (notations et commentaires) par les utilisateurs</li>
-          </ul>
+            <ul>
+                <li class="done">Site statique</li>
+                <li>Dons</li>
+            </ul>
 
 
-          <h3>Objectifs moyen terme:</h3>
-          <ul>
-              <li>Chatrooms par page visualisée</li>
-              <li>Amis</li>
-              <li>Chatrooms privées</li>
-          </ul>
+            <h3>Objectifs court terme:</h3>
+            <ul>
+                <li>Recherche de contenu</li>
+                <li>Création de compte utilisateur</li>
+                <li>Protéger ces comptes et leurs données</li>
+                <li>Tableau de bord utilisateur</li>
+                <li>Céation de contenu par les utilisateurs</li>
+                <li>Evaluation du contenu (notations et commentaires) par les utilisateurs</li>
+            </ul>
 
 
-          <h3>Objectifs long terme:</h3>
-          <ul>
-              <li>Génération de parcours éducatifs</li>
-              <li>Génération d'objectifs quotidien</li>
-          </ul>
+            <h3>Objectifs moyen terme:</h3>
+            <ul>
+                <li>Chatrooms par page visualisée</li>
+                <li>Amis</li>
+                <li>Chatrooms privées</li>
+            </ul>
 
-          <h3>Objectifs très long terme:</h3>
-          <ul>
-              <li>Version mobile</li>
-              <li>Outils de création de contenus pédagogiques (visualisations en maths, animation, etc.)</li>
-          </ul>
 
+            <h3>Objectifs long terme:</h3>
+            <ul>
+                <li>Génération de parcours éducatifs</li>
+                <li>Génération d'objectifs quotidien</li>
+            </ul>
+
+            <h3>Objectifs très long terme:</h3>
+            <ul>
+                <li>Version mobile</li>
+                <li>Outils de création de contenus pédagogiques (visualisations en maths, animation, etc.)</li>
+            </ul>
+
+          </div>
         </div>
 
 
+        <!-- Question -->
 
         <h2>
           Qui est responsable d'AutoDiLab?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <p>
-          Un article complet a été rédigé à ce sujet: <a href="./qui_suis_je.html">cliquez ici pour le lire</a>
-        </p>
+
+        <div class="answer collapsed">
+          <p>
+            Un article complet a été rédigé à ce sujet: <a href="./qui_suis_je.html">cliquez ici pour le lire</a>
+          </p>
+        </div>
 
 
+
+        <!-- Question -->
 
         <h2>
           À quoi servent les dons pour AutoDiLab?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <div>
+
+        <div class="answer collapsed">
 
           <ul>
             <li>À payer la facture d'électricité du serveur</li>
             <li>À payer un café au développeur actuel du site</li>
             <li>À financer la formation universitaire du développeur actuel du site</li>
-            <li>À payer d'éventuels environnements de développements ou livres</li>
+            <li>À payer d'éventuels outils ou livres nécessaires au futur développement du site</li>
             <li>À simplement dire merci pour un service rendu par le site</li>
           </ul>
 
@@ -155,75 +183,98 @@
 
 
 
+        <!-- Question -->
+
         <h2>
           Où est-ce que je peux faire un don pour AutoDiLab?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <p>
-          La page Tipeee pour faire un don n'est pas encore disponible.
-        </p>
+
+        <div class="answer collapsed">
+          <p>
+            La page Tipeee pour faire un don n'est pas encore disponible.
+          </p>
+        </div>
+
+
+
+        <!-- Question -->
 
         <h2>
           Est-ce que je peux contribuer au développement d'AutoDiLab autrement que par des dons?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <p>
-          Bien sûr! Avec plaisir! Ce serait une véritable richesse et un immense honneur que de recevoir vos propositions de codes,
-          de modifications du site, de leçons, etc.
-        </p>
 
-        <p>
-          En revanche cela implique que vous soyez à l'aise avec le language HTML, CSS et éventuellement Javascript. Plus tard il y aura
-          certainement des bouts de PHP et de MySQL mais j'espère que d'ici là, au moins pour celles ou ceux qui veulent simplement écrire
-          et partager des leçons, que des solutions plus accessibles seront disponibles!
-        </p>
+        <div class="answer collapsed">
+          <p>
+            Bien sûr! Avec plaisir! Ce serait une véritable richesse et un immense honneur que de recevoir vos propositions de codes,
+            de modifications du site, de leçons, etc.
+          </p>
 
-        <p>
-          Si vous souhaitez participer, <a href="https://github.com/Chuxclub/AutoDiLab">rendez-vous sur le GitHub du projet AutoDiLab</a>
-        </p>
+          <p>
+            En revanche, si vous souhaitez partager des leçons, cela implique que vous soyez à l'aise avec le language HTML, CSS et éventuellement Javascript...
+            Car selon le nombre que vous êtes à m'envoyer vos propositions je ne peux pas garantir que je serai là pour coder tous vos cours. Si vous n'êtes pas à l'aise
+            avec ces languages, envoyez-moi tout de même vos propositions <a href="mailto:florian-1992@ħotmail.fr">sur ma boîte mail</a>, je verrai ce que je peux faire dans le temps dont je dispose.
+            Plus tard il y aura certainement des solutions plus accessibles pour publier!
+          </p>
+
+          <p>
+            Si vous souhaitez participer à l'implémentation de nouvelles fonctionnalités, <a href="https://github.com/Chuxclub/AutoDiLab">rendez-vous sur le GitHub du projet AutoDiLab</a>.
+          </p>
+        </div>
 
 
+
+        <!-- Question -->
 
         <h2>
           À quoi sert Javascript sur AutoDiLab?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <p>
-          AutoDiLab est mon premier gros projet. Pour simplifier son développement j'ai créé des fonctions qui permettent
-          de générer automatiquement des parties du site comme le header, le footer, les boutons, etc. Il me suffit donc de
-          les modifier en un seul endroit pour que la totalité du site soit modifié, ce qui m'évite de réécrire chacune des
-          pages html que j'ai écrites (et il y en a pas mal déjà.)
-        </p>
 
-        <p>
-          Ce n'est très probablement pas la meilleure approche pour résoudre ce problème mais c'est l'unique solution pour
-          laquelle j'ai été et me suis formé pour l'instant. À l'avenir je verrai à utiliser d'autres solutions pour que
-          celles ou ceux qui n'aiment pas voir des scripts s'exécuter sur leurs machines puissent naviguer en toute tranquilité.
-          Pour l'instant si vous voulez profiter de ses fonctionnalités il faut que vous désactiviez votre bloqueur de scripts.
-        </p>
+        <div class="answer collapsed">
+          <p>
+            AutoDiLab est mon premier gros projet. Pour simplifier son développement j'ai créé des fonctions qui permettent
+            de générer automatiquement des parties du site comme le header, le footer, les boutons, etc. Il me suffit donc de
+            les modifier en un seul endroit pour que la totalité du site soit modifié, ce qui m'évite de réécrire chacune des
+            pages html que j'ai écrites (et il y en a pas mal déjà.)
+          </p>
+
+          <p>
+            Ce n'est très probablement pas la meilleure approche pour résoudre ce problème mais c'est l'unique solution pour
+            laquelle j'ai été et me suis formé pour l'instant. À l'avenir je verrai à utiliser d'autres solutions pour que
+            celles ou ceux qui n'aiment pas voir des scripts s'exécuter sur leurs machines puissent naviguer en toute tranquilité.
+            Pour l'instant si vous voulez profiter de ses fonctionnalités il faut que vous désactiviez votre bloqueur de scripts.
+          </p>
+        </div>
 
 
+
+        <!-- Question -->
 
         <h2>
           Que faites-vous de nos données?
 
-          <img src="./../../Icons/icons8-collapse-arrow-24.png"
+          <img src="./../../Icons/icons8-expand-arrow-24.png"
                alt="Flèche pour déplier le menu"
-               onclick="expand_submenu(this)"/>
+               onclick="expand_answer(this)"/>
         </h2>
-        <p>
-          Pour l'instant: rien... Vu que je ne collecte pas de données à votre égard. Ce-dernier peut et changera certainement à
-          l'avenir. Dès que ce sera le cas je vous en ferai bien évidemment part.
-        </p>
+
+        <div class="answer collapsed">
+          <p>
+            Pour l'instant: rien... Vu que je ne collecte pas de données à votre égard. Ce-dernier peut et changera certainement à
+            l'avenir. Dès que ce sera le cas je vous en ferai bien évidemment part.
+          </p>
+        </div>
 
 
       </article>

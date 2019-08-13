@@ -1,3 +1,23 @@
+a
+{
+  color: blue;
+}
+
+a:hover
+{
+  color: red;
+}
+
+.answer
+{
+  display: initial;
+}
+
+.answer[class~="collapsed"]
+{
+  display: none;
+}
+
 .done
 {
   text-decoration: line-through;
@@ -50,6 +70,14 @@ footer
   color: #6A7BCA;
   font-size: 16px;
   margin-top: 40px;
+}
+
+.home_icon
+{
+  float: right;
+  height: auto;
+  padding: 4px 4px;
+  width: 30px;
 }
 
 .long_list *

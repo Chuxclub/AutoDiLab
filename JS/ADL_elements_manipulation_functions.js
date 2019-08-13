@@ -250,6 +250,27 @@ function expand_submenu(arrow_icon)
   }
 }
 
+function expand_answer(arrow_icon)
+{
+  let answer = arrow_icon.parentNode.nextElementSibling;
+
+  //If the submenu is collapsed then, onclick, expand it
+  if (answer.className == "answer collapsed")
+  {
+    answer.className = "answer";
+    arrow_icon.src = "./../../Icons/icons8-collapse-arrow-24.png";
+    arrow_icon.alt = "Flèche pour déplier le menu";
+  }
+
+  //Otherwise, onclick, collapse it
+  else
+  {
+    answer.className = "answer collapsed";
+    arrow_icon.src = "./../../Icons/icons8-expand-arrow-24.png";
+    arrow_icon.alt = "Flèche pour replier le menu";
+  }
+}
+
 
 /* ==================== USER INTERACTIONS FUNCTIONS ==================== */
 function set_unavailable_infobulle(obj)

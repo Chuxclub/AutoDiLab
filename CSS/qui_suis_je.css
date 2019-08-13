@@ -1,6 +1,24 @@
+a
+{
+  color: blue;
+}
+
+a:hover
+{
+  color: red;
+}
+
 footer
 {
   margin-top: 0 !important;
+}
+
+.home_icon
+{
+  float: right;
+  height: auto;
+  padding: 4px 4px;
+  width: 30px;
 }
 
 .portrait
