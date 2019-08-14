@@ -1,4 +1,23 @@
-/* ==================== INTERACTIONS SPECIFIC TO LESSONS PAGES ==================== */
+function load_bibliography_standard_parts_and_interactions()
+{
+  generate_standard_parts_and_interactions('./../../../../../../../../../../../');
+  display_lesson_nav();
+  set_lesson_links();
+
+  //Necessary for reveal_or_hide_user_toolbar_button_subchoices(id) to work
+  //at the very first click
+  let user_toolbar_button_subchoices = document.getElementsByClassName("user_toolbar_button_subchoices");
+  for(let i = 0; i < user_toolbar_button_subchoices.length; i++)
+  {
+    user_toolbar_button_subchoices[i].style.display = "none";
+  }
+
+  //Assigning to "format texte" button under "cours" button (in user tools bar on the right)
+  //current page href path
+  let lesson_button = document.getElementById("cours_subchoices").children[0];
+  lesson_button.setAttribute("href", "./lesson.html");
+}
+
 function reveal_or_hide_user_toolbar_button_subchoices(id)
 {
   let subchoices = document.getElementById(id);
@@ -20,37 +39,15 @@ function reveal_or_hide_user_toolbar_button_subchoices(id)
   }
 }
 
-function set_biblio_links()
+function set_lesson_links()
 {
-  let biblio_links = document.getElementsByClassName("biblio_link");
+  let lesson_links = document.getElementsByClassName("lesson_link");
 
-  for(let i = 0; i < biblio_links.length; i++)
+  for(let i = 0; i < lesson_links.length; i++)
   {
     let index = i + 1;
-    biblio_links[i].appendChild(document.createTextNode(index));
-    biblio_links[i].setAttribute("id", "biblio_link_" + index);
+    lesson_links[i].href = lesson_links[i].href + "#biblio_link_" + index;
   }
-}
-
-/* ==================== STANDARD PARTS LOADING FUNCTION ==================== */
-function load_lessons_standard_parts_and_interactions()
-{
-  generate_standard_parts_and_interactions('./../../../../../../../../../../../');
-  display_lesson_nav();
-  set_biblio_links();
-
-  //Necessary for reveal_or_hide_user_toolbar_button_subchoices(id) to work
-  //at the very first click
-  let user_toolbar_button_subchoices = document.getElementsByClassName("user_toolbar_button_subchoices");
-  for(let i = 0; i < user_toolbar_button_subchoices.length; i++)
-  {
-    user_toolbar_button_subchoices[i].style.display = "none";
-  }
-
-  //Assigning to "format texte" button under "cours" button (in user tools bar on the right)
-  //current page href path
-  let lesson_button = document.getElementById("cours_subchoices").children[0];
-  lesson_button.setAttribute("href", window.location.href);
 }
 
 

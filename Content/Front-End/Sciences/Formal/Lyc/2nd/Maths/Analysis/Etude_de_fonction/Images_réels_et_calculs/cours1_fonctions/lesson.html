@@ -21,7 +21,7 @@
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_footer.css" title="main"/>
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons.css" title="main"/>
         <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons_print.css" title="main"/>
-        <link rel="stylesheet" type="text/css" href="./IRC_Fonction_Concept.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./lesson.css" title="main"/>
 
         <!-- Scripts -->
         <script src="./../../../../../../../../../../../JS/ADL_elements_manipulation_functions.js"></script>
@@ -32,7 +32,7 @@
         <script src="./../../../../../../../../../../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
         <script src="./../../../../../../../../../../../JS/LESSONS_manipulation_functions.js"></script>
         <script src="./../../../../../../../../../../../JS/TOOLBOX.js"></script>
-        <script src="./IRC_functions.js"></script>
+        <script src="./lesson.js"></script>
 
     </head>
 
@@ -67,32 +67,31 @@
             <div class="chapter_bar_header">
             </div>
 
-            <a href="./IRC_Fonction_Concept.html"
+            <a href="./lesson.html"
             class="chapter_bar_cell"
             onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une fonction?')"
-            onmouseenter="print_working_html()"
             onmouseout="remove_chapter_title(this)">
             </a>
 
-            <a href = "./../cours2_images/IRC_images.html"
+            <a href = "./../cours2_images/lesson.html"
             class="chapter_bar_cell"
             onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'une image? Un antécédent?')"
             onmouseout="remove_chapter_title(this)">
             </a>
 
-            <a href = "./../cours3_axes/IRC_axes.html"
+            <a href = "./../cours3_axes/lesson.html"
             class="chapter_bar_cell"
             onmouseover="display_chapter_title(this, 'Qu\'est-ce que l\'axe des abscisses?')"
             onmouseout="remove_chapter_title(this)">
             </a>
 
-            <a href = "./../cours4_repere/IRC_repere.html"
+            <a href = "./../cours4_repere/lesson.html"
             class="chapter_bar_cell"
             onmouseover="display_chapter_title(this, 'Comment lire un repère?')"
             onmouseout="remove_chapter_title(this)">
             </a>
 
-            <a href = "./../cours5_utilite/IRC_utilite.html"
+            <a href = "./../cours5_utilite/lesson.html"
             class="chapter_bar_cell"
             onmouseover="display_chapter_title(this, 'À quoi servent les fonctions?')"
             onmouseout="remove_chapter_title(this)">
@@ -129,7 +128,7 @@
       <h2 class="lesson_main_title">
         Qu'est-ce qu'une fonction?
 
-        <a href="./fonctions.pdf">
+        <a href="./lesson.pdf">
           <img src="./../../../../../../../../../../../Icons/icons8-pdf-64.png"
                alt="pdf download button"
                class="pdf_icon"
@@ -159,7 +158,7 @@
             selon un certain nombre d'opérations (probablement imposées par une recette).</p>
 
             <p>Il en va exactement de même pour une fonction. Une fonction peut être vue comme une sorte
-               de machine à nombres. Les ingrédients qui rentrent dans cette machine sont des nombres et
+               de machine à nombres<a href="./biblio.html" class="biblio_link"></a>. Les ingrédients qui rentrent dans cette machine sont des nombres et
                la fonction (la machine) transforment ces nombres selon un certain nombre d'opérations (imposées par une recette).
                Il en ressort alors d'autres nombres.</p>
 
@@ -275,7 +274,7 @@
             </p>
       </article>
 
-      <a href="./../cours2_images/IRC_images.html" class="next_lesson_button">
+      <a href="./../cours2_images/lesson.html" class="next_lesson_button">
         <div>
           Qu'est-ce qu'une image? Un antécédent?
         </div>
@@ -296,6 +295,19 @@
         </a>
                 <div id="cours_subchoices">
                   <a class="user_toolbar_button_subchoices">
+                    <h3>Format texte</h3>
+                  </a>
+                  <a href="https://youtu.be/f5YnZs6zX1g" class="user_toolbar_button_subchoices">
+                    <h3>Format vidéo</h3>
+                  </a>
+                </div>
+
+        <a onclick="reveal_or_hide_user_toolbar_button_subchoices('exercices_subchoices')"
+           class="user_toolbar_button">
+           <h2>Exercices</h2>
+        </a>
+                <div id="exercices_subchoices">
+                  <a href="https://chingatome.fr/chapitre/2nd/generalite-sur-les-fonctions" class="user_toolbar_button_subchoices">
                     <h3>Format texte</h3>
                   </a>
                 </div>
