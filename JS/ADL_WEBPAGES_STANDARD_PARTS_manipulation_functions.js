@@ -57,13 +57,14 @@ function display_standard_header(relative_path_to_root)
   //Adding website icon in hyperlink container
   let website_icon = document.createElement("img");
   append_attributes(website_icon, ["src", relative_path_to_root + "Icons/adl_icon2.png",
-                                   "alt", "AutoDiLab symbol", "class", "home_header_icon"]);
+                                   "alt", "AutoDiLab symbol", "class", "home_header_icon",
+                                   "title", "Icon made by Freepik from www.flaticon.com"]);
   title_hyperlink.appendChild(website_icon);
 
   //Adding research tool to h1 main container
   let research_tool = document.createElement("img");
   append_attributes(research_tool, ["src", relative_path_to_root + "Icons/icons8-detective-64.png",
-                                   "alt", "Research icon", "class", "home_header_icon tool unavailable"]);
+                                   "alt", "Research icon", "class", "home_header_icon tool hidden"]);
   header_title_container.appendChild(research_tool);
 
   //Adding header main container to document header
@@ -78,7 +79,7 @@ function display_standard_footer(relative_path_to_root)
       <ul>
           <li> <a href="./Content/Misc/site_map.html">FAQ</a> </li>
           <li> <a href="./Content/Misc/synoptic.html">Qui suis-je?</a> </li>
-          <li> <a href="./Content/Misc/synoptic.html">Remerciements</a> </li>
+          //<li> <a href="./Content/Misc/synoptic.html">Remerciements</a> </li>
           <li> <a href="mailto:florian-1992@hotmail.fr">Me contacter</a> </li>
       </ul>
   */
@@ -114,11 +115,11 @@ function display_standard_footer(relative_path_to_root)
   unordered_options_list_container.children[1].appendChild(synoptic_hyperlink_container);
 
   //Adding credits hyperlink in list item 3
-  let credits_hyperlink_container = document.createElement("a");
-  credits_hyperlink_container.setAttribute("href", relative_path_to_root + "Content/Misc/credits.html");
-  let credits_hyperlink_text = document.createTextNode("Remerciements");
-  credits_hyperlink_container.appendChild(credits_hyperlink_text);
-  unordered_options_list_container.children[2].appendChild(credits_hyperlink_container);
+  let icons_hyperlink_container = document.createElement("a");
+  icons_hyperlink_container.setAttribute("href", "https://icons8.com/icons");
+  let icons_hyperlink_text = document.createTextNode("Merci à icons8 pour les icônes!");
+  icons_hyperlink_container.appendChild(icons_hyperlink_text);
+  unordered_options_list_container.children[2].appendChild(icons_hyperlink_container);
 
   //Adding contact me hyperlink in list item 4
   let contact_me_hyperlink_container = document.createElement("a");

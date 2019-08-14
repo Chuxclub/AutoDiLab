@@ -3,6 +3,11 @@
   filter: blur(2px);
 }
 
+*[class~="hidden"]
+{
+  display: none;
+}
+
 a
 {
   color: blue;

@@ -183,6 +183,16 @@ li
   margin: 0 auto;
 }
 
+.img_caption
+{
+  color: initial;
+  display: block;
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
 #lesson
 {
   padding: 0 20px;
@@ -251,6 +261,10 @@ li
 .portrait
 {
   float: right;
+}
+
+.portrait *
+{
   height: auto;
   width: 150px;
 }
