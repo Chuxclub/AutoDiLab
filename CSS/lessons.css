@@ -352,10 +352,44 @@ li
 }
 
 /* =============================== RIGHT USER TOOLS ============================== */
+#lesson_contextual_information p:last-of-type
+{
+  margin-bottom: 0;
+}
+
+.tipeee_button *
+{
+  display: block;
+  height: 80px;
+  margin: 10px auto;
+  padding: 5px 10px 10px 10px;
+  width: 100px;
+}
+
+#tipeee_button_pic1
+{
+  position: relative;
+  right: 10px;
+  bottom: 30px;
+  height: auto;
+  max-width: 64px;
+}
+
+#tipeee_button_pic2
+{
+  position: relative;
+  left: 30px;
+  bottom: 0;
+  height: auto;
+  margin: 0 auto;
+  max-width: 40px;
+}
+
 .user_toolbar_button
 {
   display: block;
   border-bottom: solid 1px lightgrey;
+  /* border-top: solid 1px lightgrey; */
   height: 80px;
   text-align: center;
   text-decoration: none;

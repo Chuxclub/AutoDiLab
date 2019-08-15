@@ -329,7 +329,7 @@
 
       <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
       <div id="user_tools">
-        <a onclick="reveal_or_hide_user_toolbar_button_subchoices('cours_subchoices')"
+        <a onclick="reveal_or_hide_user_toolbar_button_subchoices(this, 'cours_subchoices')"
            class="user_toolbar_button">
           <h2>Cours</h2>
         </a>
@@ -343,7 +343,7 @@
                   </a>
                 </div>
 
-        <a onclick="reveal_or_hide_user_toolbar_button_subchoices('exercices_subchoices')"
+        <a onclick="reveal_or_hide_user_toolbar_button_subchoices(this, 'exercices_subchoices')"
            class="user_toolbar_button">
            <h2>Exercices</h2>
         </a>
@@ -356,6 +356,20 @@
         <div id="lesson_contextual_information">
             <p>Auteur: Florian Legendre</p>
             <p>Dernière modification: 09/08/2019</p>
+            <a href="https://fr.tipeee.com/autodilab"
+               class="tipeee_button">
+               <figure onmouseover="highlight_chosen_button(this)"
+                       onclick="button_pressure_effect(this)"
+                       onmouseout="remove_highlight_effect(this)">
+                  <img src="./../../../../../../../../../../../Icons/tipeee-tip-btn.png"
+                       alt="Icônes cliquables menant vers la page Tipeee de l'auteur du cours"
+                       id="tipeee_button_pic2"/>
+                  <img src="./../../../../../../../../../../../Icons/icons8-gift-64.png"
+                       alt="Icônes cliquables menant vers la page Tipeee de l'auteur du cours"
+                       id="tipeee_button_pic1"
+                       title="Récompenser l'auteur pour son cours"/>
+                </figure>
+            </a>
         </div>
         <!-- <a class="user_toolbar_button">
           <h2>Exercices</h2>

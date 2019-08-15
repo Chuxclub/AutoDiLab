@@ -1,7 +1,7 @@
 /* ==================== INTERACTIONS SPECIFIC TO LESSONS PAGES ==================== */
-function reveal_or_hide_user_toolbar_button_subchoices(id)
+function reveal_or_hide_user_toolbar_button_subchoices(chosen_button, targeted_submenu_id)
 {
-  let subchoices = document.getElementById(id);
+  let subchoices = document.getElementById(targeted_submenu_id);
 
   if (subchoices.children[0].style.display == "none")
   {
@@ -9,6 +9,8 @@ function reveal_or_hide_user_toolbar_button_subchoices(id)
     {
       subchoices.children[i].style.display = "block";
     }
+
+    add_next_button_top_border(chosen_button);
   }
 
   else
@@ -17,18 +19,45 @@ function reveal_or_hide_user_toolbar_button_subchoices(id)
     {
       subchoices.children[i].style.display = "none";
     }
+
+    delete_next_button_top_border(chosen_button);
   }
 }
 
-function set_biblio_links()
+/* ~~~~~~~ secondary functions for reveal_or_hide_user_toolbar_button_subchoices(id) ~~~~~~~ */
+function add_next_button_top_border(choice)
 {
-  let biblio_links = document.getElementsByClassName("biblio_link");
+  let user_toolbar_buttons = document.getElementsByClassName("user_toolbar_button");
 
-  for(let i = 0; i < biblio_links.length; i++)
+  for(let i = 0; i < user_toolbar_buttons.length; i++)
   {
-    let index = i + 1;
-    biblio_links[i].appendChild(document.createTextNode(index));
-    biblio_links[i].setAttribute("id", "biblio_link_" + index);
+    if(choice.children[0].innerText == user_toolbar_buttons[i].children[0].innerText)
+    {
+      if(i + 1 != user_toolbar_buttons.length) //If chosen_button is not the last one...
+      {
+        let next_user_toolbar_button = user_toolbar_buttons[i + 1];
+        next_user_toolbar_button.style.borderTop = "solid 1px lightgrey";
+        next_user_toolbar_button.style.marginTop = "40px";
+      }
+    }
+  }
+}
+
+function delete_next_button_top_border(choice)
+{
+  let user_toolbar_buttons = document.getElementsByClassName("user_toolbar_button");
+
+  for(let i = 0; i < user_toolbar_buttons.length; i++)
+  {
+    if(choice.children[0].innerText == user_toolbar_buttons[i].children[0].innerText)
+    {
+      if(i + 1 != user_toolbar_buttons.length)
+      {
+        let next_user_toolbar_button = user_toolbar_buttons[i + 1];
+        next_user_toolbar_button.style.borderTop = "0";
+        next_user_toolbar_button.style.marginTop = "0";
+      }
+    }
   }
 }
 
@@ -53,6 +82,18 @@ function load_lessons_standard_parts_and_interactions()
   lesson_button.setAttribute("href", window.location.href);
 }
 
+/* ~~~~~~~ secondary functions for load_lessons_standard_parts_and_interactions() ~~~~~~~ */
+function set_biblio_links()
+{
+  let biblio_links = document.getElementsByClassName("biblio_link");
+
+  for(let i = 0; i < biblio_links.length; i++)
+  {
+    let index = i + 1;
+    biblio_links[i].appendChild(document.createTextNode(index));
+    biblio_links[i].setAttribute("id", "biblio_link_" + index);
+  }
+}
 
 /* ==================== PARTS SPECIFIC TO LESSONS PAGES ==================== */
 function display_lesson_nav()
