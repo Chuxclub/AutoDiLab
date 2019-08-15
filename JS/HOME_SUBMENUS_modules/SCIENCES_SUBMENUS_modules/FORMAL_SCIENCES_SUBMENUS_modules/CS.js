@@ -10,7 +10,7 @@ function create_cs_submenu_buttons()
 
   let interactions_array = create_default_button_interactions();
 
-  add_buttons_interactions(cs_submenu_buttons, interactions_array);
+  // add_buttons_interactions(cs_submenu_buttons, interactions_array);
 
   return cs_submenu_buttons;
 }

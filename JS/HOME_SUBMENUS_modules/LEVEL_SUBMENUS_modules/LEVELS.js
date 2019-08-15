@@ -1,5 +1,5 @@
 /* ==================== LEVEL SUBMENU CREATION ==================== */
-function create_level_submenu(cycle_2_next_submenu, cycle_3_next_submenu, cycle_4_next_submenu, highschool_next_submenu, next_submenu)
+function create_level_submenu(cycle_2_next_submenu, cycle_3_next_submenu, cycle_4_next_submenu, seconde_next_submenu, highschool_next_submenu, next_submenu)
 {
   //Creating submenu container
   append_submenu_grid_container("div", "level_submenu_container", 1, 4, "300px", "25%");
@@ -39,7 +39,7 @@ function create_level_submenu(cycle_2_next_submenu, cycle_3_next_submenu, cycle_
   highschool_column.appendChild(highschool_grid);
 
   let highschool_submenu = highschool_column.children[1];
-  let highschool_submenu_buttons = create_highschool_submenu_buttons(highschool_next_submenu);
+  let highschool_submenu_buttons = create_highschool_submenu_buttons(seconde_next_submenu, highschool_next_submenu);
   append_submenu_buttons(highschool_submenu_buttons, highschool_submenu);
 
   //Creating superior studies submenu
@@ -55,7 +55,7 @@ function create_level_submenu(cycle_2_next_submenu, cycle_3_next_submenu, cycle_
 /* ==================== SPECIFIC TO THE... ==================== */
 
 /* ~~~~~~~~ Highschool submenu ~~~~~~~~ */
-function create_highschool_submenu_buttons(next_submenu)
+function create_highschool_submenu_buttons(seconde_next_submenu, next_submenu)
 {
   let seconde_button = create_js_button("./Icons/Digits/icons8-circled-2-64.png", "Seconde", "Seconde");
   let premiere_button = create_unavailable_js_button("./Icons/Digits/icons8-1st-64.png", "Première", "Première");
@@ -66,7 +66,7 @@ function create_highschool_submenu_buttons(next_submenu)
   let interactions_array = create_default_button_interactions();
 
   add_buttons_interactions([seconde_button], interactions_array);
-  add_buttons_interactions([seconde_button], ["onmouseup", next_submenu]);
+  add_buttons_interactions([seconde_button], ["onmouseup", seconde_next_submenu]);
 
   return highschool_submenu_buttons;
 }

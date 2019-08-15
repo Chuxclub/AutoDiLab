@@ -29,6 +29,11 @@
 
 /* ~~~~~~~~ Concerns expand/collapse arrow ~~~~~~~~ */
 
+#newsfeed a:hover
+{
+  color: orange;
+}
+
 .newsfeed_category
 {
   padding-bottom: 20px;

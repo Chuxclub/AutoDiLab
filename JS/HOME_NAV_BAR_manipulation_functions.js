@@ -107,14 +107,15 @@ function create_next_submenu_calling_functions(saved_button_id)
   let submenu_calling_function_main_part = "create_" + saved_button_id;
 
   let submenu_adapted_to_c2 = submenu_calling_function_main_part + "_submenu_c2(this)";
-  let submenu_adapted_to_c3 = submenu_calling_function_main_part + "_submenu_c3(this)";;
-  let submenu_adapted_to_c4 = submenu_calling_function_main_part + "_submenu_c4(this)";;
-  let submenu_adapted_to_lyc = submenu_calling_function_main_part + "_submenu_lyc(this)";;
-  let submenu_adapted_to_sup = submenu_calling_function_main_part + "_submenu_sup(this)";;
+  let submenu_adapted_to_c3 = submenu_calling_function_main_part + "_submenu_c3(this)";
+  let submenu_adapted_to_c4 = submenu_calling_function_main_part + "_submenu_c4(this)";
+  let submenu_adapted_to_seconde = submenu_calling_function_main_part + "_submenu_seconde(this)";
+  let submenu_adapted_to_lyc = submenu_calling_function_main_part + "_submenu_lyc(this)";
+  let submenu_adapted_to_sup = submenu_calling_function_main_part + "_submenu_sup(this)";
 
   let submenu_calling_functions_array = [submenu_adapted_to_c2, submenu_adapted_to_c3,
-                                         submenu_adapted_to_c4, submenu_adapted_to_lyc,
-                                         submenu_adapted_to_sup];
+                                         submenu_adapted_to_c4, submenu_adapted_to_seconde,
+                                         submenu_adapted_to_lyc, submenu_adapted_to_sup];
 
   return submenu_calling_functions_array;
 }
