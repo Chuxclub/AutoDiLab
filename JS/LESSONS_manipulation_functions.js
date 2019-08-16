@@ -192,6 +192,23 @@ function get_lesson_titles()
   return lesson_plan;
 }
 
+function get_lesson_titles_elements()
+{
+  let descendants = document.getElementById("found_lessons").getElementsByTagName("*");
+  let lesson_plan = [];
+
+  for(let i = 0; i < descendants.length; i++)
+  {
+
+    if(descendants[i].tagName == "H2" || descendants[i].tagName == "H3")
+    {
+        lesson_plan.push(descendants[i]);
+    }
+  }
+
+  return lesson_plan;
+}
+
 function get_lesson_titles_ids()
 {
   let descendants = document.getElementById("lesson").getElementsByTagName("*");

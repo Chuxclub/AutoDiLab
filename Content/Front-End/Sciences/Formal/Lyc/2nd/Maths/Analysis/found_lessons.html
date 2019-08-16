@@ -47,7 +47,15 @@
 
     <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
     <nav id="themes_navigation">
-      <p></p>
+      <a href="./../../../../../../../../home.html">
+        <img src="./../../../../../../../../Icons/icons8-home-page-64.png"
+             alt="Icône pour le retour à la page d'accueil"
+             class="home_icon"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)"
+             title="Retourner à la page d'accueil"/>
+      </a>
 
     <!-- ~~~~~~ End of nav ~~~~~~ -->
     </nav>
@@ -60,15 +68,16 @@
 <!-- ~~~~~~~~~ First Theme ~~~~~~~~~ -->
     <div class="theme">
 
-        <h2>Etude de fonctions: </h2>
+        <h2 id="etude_de_fonction">Etude de fonctions: </h2>
 
           <div class="chapter"
                onmouseenter="reveal_sequences(this)"
+               onmouseover="display_contextual_information('Auteur: Florian Legendre', 'Dernière modification: 09/08/2019','./../../../../../../../../')"
                onmouseleave = "conceal_sequences(this)">
 
             <div class="chapter_button_container">
               <a href="./Etude_de_fonction/Images_réels_et_calculs/cours1_fonctions/lesson.html">
-                <h3 class="sequence_title">Images, réels et calculs</h3>
+                <h3 id="IRC" class="sequence_title">Images, réels et calculs</h3>
 
                 <p class="sequence_description">
                   Que signifie calculer l'image d'un nombre réel par une fonction? A quels
@@ -142,6 +151,7 @@
       <h2>Les fonctions usuelles: </h2>
 
          <div class="chapter"
+              onmouseover="display_contextual_information('Auteur: Jean Kevin', 'Dernière modification: 09/08/2019','./../../../../../../../../')"
               onmouseenter="reveal_sequences(this)"
               onmouseleave = "conceal_sequences(this)">
 
@@ -173,6 +183,7 @@
           </div>
 
           <div class="chapter"
+               onmouseover="display_contextual_information('Auteur: Alfred Durand', 'Dernière modification: 09/08/2019','./../../../../../../../../')"
                onmouseenter="reveal_sequences(this)"
                onmouseleave = "conceal_sequences(this)">
 
@@ -211,8 +222,6 @@
 
     <!-- Friends bar, contribute buttons, rules, etc. -->
     <div id="user_tools">
-      <p></p>
-
     </div>
 
 </div>
