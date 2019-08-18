@@ -52,10 +52,7 @@ li
 
 #chapter_navigation h3
 {
-  padding-top: 10px;
-  padding-left: 10px;
-  min-width: 200px;
-  max-width: 250px;
+  padding: 10px 10px 0 10px;
 }
 
 
@@ -63,7 +60,7 @@ li
 {
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(200px, 10vw) minmax(200px, 87vw);
+  grid-template-columns: max-content minmax(200px, 87vw);
   grid-template-rows: 50px;
   justify-content: left;
   padding-left: 5px;
