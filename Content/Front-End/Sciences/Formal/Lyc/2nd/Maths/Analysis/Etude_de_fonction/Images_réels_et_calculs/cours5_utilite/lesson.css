@@ -9,12 +9,12 @@
 
 .chapter_bar_header
 {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
 }
 
 .chapter_bar_row
 {
-  grid-template-columns: repeat(5, 45px);
+  grid-template-columns: repeat(6, 45px);
   grid-template-rows: repeat(2, 20px);
   max-width: 300px;
 }
@@ -51,10 +51,10 @@
   height: auto;
 }
 
-/* .previous_lesson_button img
+.previous_lesson_button img
 {
   padding-top: 20px;
-} */
+}
 
 .next_lesson_button img
 {

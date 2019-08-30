@@ -1,8 +1,15 @@
+/* /!\/!\/!\ THIS COMMENT MUST BE REMOVED IN THE FINAL HTML FILE /!\/!\/!\
+Edit what's designated by the arrows, delete them when done
+/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\ */
+
 /* ********************************************************** */
 /* /!\/!\/!\ SCOPE: SPECIFIC TO THE TARGETED LESSON /!\/!\/!\ */
 /* ********************************************************** */
 
-
+article li
+{
+  padding-top: 15px;
+}
 /* =================================== HEADER  =================================== */
 
 /* ====================== TOP NAV BAR (Chapter navigation)  ====================== */
@@ -34,21 +41,40 @@
   height: auto;
 }
 
-#double_function_abstract
+#double_of_2_39
 {
-  width: 20vw;
-  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 55vw;
 }
 
-#triple_function_abstract
+.formula
 {
-  width: 30vw;
-  height: auto;
+  vertical-align: middle;
+}
+
+#howto_read_graph
+{
+  display: block;
+  margin: 0 auto;
+  width: 55vw;
 }
 
 .previous_lesson_button img
 {
   padding-top: 20px;
+}
+
+#triple_function_abstract
+{
+  padding-bottom: 5px;
+  width: 250px;
+}
+
+#triple_function_result
+{
+  padding-bottom: 5px;
+  width: 160px;
 }
 
 /* =============================== RIGHT USER TOOLS ============================== */

@@ -66,7 +66,7 @@ function load_lessons_standard_parts_and_interactions()
 {
   generate_standard_parts_and_interactions('./../../../../../../../../../../../');
   display_lesson_nav();
-  set_biblio_links();
+  set_notes_links();
 
   //Necessary for reveal_or_hide_user_toolbar_button_subchoices(id) to work
   //at the very first click
@@ -83,15 +83,15 @@ function load_lessons_standard_parts_and_interactions()
 }
 
 /* ~~~~~~~ secondary functions for load_lessons_standard_parts_and_interactions() ~~~~~~~ */
-function set_biblio_links()
+function set_notes_links()
 {
-  let biblio_links = document.getElementsByClassName("biblio_link");
+  let notes_links = document.getElementsByClassName("notes_link");
 
-  for(let i = 0; i < biblio_links.length; i++)
+  for(let i = 0; i < notes_links.length; i++)
   {
     let index = i + 1;
-    biblio_links[i].appendChild(document.createTextNode(index));
-    biblio_links[i].setAttribute("id", "biblio_link_" + index);
+    notes_links[i].appendChild(document.createTextNode(index));
+    notes_links[i].setAttribute("id", "notes_link_" + index);
   }
 }
 

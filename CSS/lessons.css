@@ -161,17 +161,15 @@ li
 
 
 /* ==================================== LESSON =================================== */
-.biblio_link
-{
-  bottom: 10px;
-  font-size: 14px;
-  position: relative;
-}
-
 .diagram
 {
   display: block;
   margin: 0 auto;
+}
+
+.formula
+{
+  display: inline-block;
 }
 
 .graph
@@ -211,6 +209,18 @@ li
   font-size: 28px;
   text-align: center;
   margin-bottom: 50px;
+}
+
+aside .notes_link
+{
+  font-size: 12px;
+}
+
+.notes_link
+{
+  bottom: 10px;
+  font-size: 14px;
+  position: relative;
 }
 
 .notice

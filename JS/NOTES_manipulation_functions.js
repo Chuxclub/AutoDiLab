@@ -46,7 +46,7 @@ function set_lesson_links()
   for(let i = 0; i < lesson_links.length; i++)
   {
     let index = i + 1;
-    lesson_links[i].href = lesson_links[i].href + "#biblio_link_" + index;
+    lesson_links[i].href = lesson_links[i].href + "#notes_link_" + index;
   }
 }
 
