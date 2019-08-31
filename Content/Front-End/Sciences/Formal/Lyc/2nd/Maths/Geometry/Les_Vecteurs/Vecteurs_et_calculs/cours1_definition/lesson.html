@@ -1,0 +1,281 @@
+<!-- /!\/!\/!\ THIS COMMENT MUST BE REMOVED IN THE FINAL HTML FILE /!\/!\/!\ -->
+<!-- Edit what's designated by the arrows, delete them when done -->
+<!-- /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\  -->
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+
+==>      <title> - AutoDiLab</title>
+
+        <meta charset="utf-8">
+
+        <!-- Font Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+        <link href="./../../../../../../../../../../../CSS/open-dyslexia_font/stylesheet.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/adl.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_header.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/homepage_modules/home_footer.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./../../../../../../../../../../../CSS/lessons_print.css" title="main"/>
+        <link rel="stylesheet" type="text/css" href="./lesson.css" title="main"/>
+
+        <!-- Scripts -->
+        <script src="./../../../../../../../../../../../JS/ADL_elements_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/ADL_WEBPAGES_STANDARD_PARTS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/DOM_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/FOUND_LESSONS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HOME_NAV_BAR_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/HTML_ELEMENTS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/LESSONS_manipulation_functions.js"></script>
+        <script src="./../../../../../../../../../../../JS/TOOLBOX.js"></script>
+        <script src="./lesson.js"></script>
+
+    </head>
+
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\ BEGINNING OF DOCUMENT /!\/!\/!\ -->
+<!-- ***************************************** -->
+
+<body onload="load_lessons_standard_parts_and_interactions()">
+
+<!-- =============== HEADER =============== -->
+
+    <header>
+    </header>
+
+
+
+
+    <!-- =============== CHAPTER NAV BAR (Top) =============== -->
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="chapter_navigation">
+
+      <div id="chapter_nav_bar">
+        <h3>
+          <a href="./../../../found_lessons.html">
+==>            Titre du chapitre (pas de la leçon!)
+          </a>
+        </h3>
+
+          <div class="chapter_bar_row">
+
+            <div class="chapter_bar_header">
+            </div>
+
+==>            <a href="./lesson.html"
+            class="chapter_bar_cell"
+==>            onmouseover="display_chapter_title(this, 'Quelle est la différence entre apprendre et comprendre?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours2_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Comment mémoriser plus vite?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours3_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Comment mémoriser plus longtemps?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours4_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Faut-il travailler beaucoup pour être le premier de la classe?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours5_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Faut-il être très intelligent pour être le premier de la classe?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours6_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'Quel est le point commun entre toutes ces techniques?')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+            <a href = "./../cours7_/lesson.html"
+            class="chapter_bar_cell"
+            onmouseover="display_chapter_title(this, 'En résumé...')"
+            onmouseout="remove_chapter_title(this)">
+            </a>
+
+          </div>
+
+      </div>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+    <!-- =============== LESSON NAV BAR (Left) =============== -->
+<div id="core_services_container">
+
+    <!-- ~~~~~~ Beginning of nav ~~~~~~ -->
+    <nav id="lesson_navigation">
+
+      <a href="./../../../../../../../../../../../home.html">
+        <img src="./../../../../../../../../../../../Icons/icons8-home-page-64.png"
+             alt="Icône pour le retour à la page d'accueil"
+             class="home_icon"
+             onmouseover="highlight_chosen_button(this)"
+             onclick="button_pressure_effect(this)"
+             onmouseout="remove_highlight_effect(this)"
+             title="Retourner à la page d'accueil"/>
+      </a>
+    <!-- ~~~~~~ End of nav ~~~~~~ -->
+    </nav>
+
+
+    <!-- =============== LESSON CONTENT =============== -->
+
+    <div id="lesson">
+      <h2 class="lesson_main_title">
+==>        Titre de la leçon
+
+==>        <a href="./lesson.pdf"> <!-- Generate PDF file when done -->
+          <img src="./../../../../../../../../../../../Icons/icons8-pdf-64.png"
+               alt="pdf download button"
+               class="pdf_icon"
+               onmouseover="highlight_chosen_button(this)"
+               onclick="button_pressure_effect(this)"
+               onmouseout="remove_highlight_effect(this)"
+               title="Téléchargez ce cours sous format pdf"/>
+        </a>
+      </h2>
+
+      <div id="pre_requisites">
+        <h4 id="pre_requisites_title">Ce que vous devez avoir compris avant de lire ce cours:</h4>
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+
+      <article>
+==>            <h3 id="number_machine">Partie 1</h3>
+            <p>
+              <!-- <a href="./notes.html" class="notes_link"></a> -->
+            </p>
+
+            <!-- <img src="./Sandwich_machine.png"
+                 alt="Schéma d'une machine à sandwich"
+                 class="diagram"
+                 title="Image réalisée à l'aide de [...]"/> -->
+
+            <!-- <aside class="notice">
+                <h6 id="notice"></h6>
+                <p>
+                </p>
+            </aside> -->
+      </article>
+
+      <article>
+            <h3 id="various_number_machines">Partie 2</h3>
+            <p>
+            </p>
+      </article>
+
+      <article>
+            <h3 id="conclusion">Conclusion</h3>
+            <p>
+            </p>
+      </article>
+
+<!-- ~~~~~~~~ Boutons de navigation en bas de la leçon ~~~~~~~~ -->
+
+==>      <a href="./../cours1_/lesson.html" class="previous_lesson_button">
+        <div>
+==>          Titre leçon précédente
+        </div>
+
+        <img src="./../../../../../../../../../../../Icons/icons8-previous-arrow-24.png" alt="Bouton pour aller vers la leçon précédente"/>
+      </a>
+
+==>      <a href="./../cours2_/lesson.html" class="next_lesson_button">
+        <div>
+==>          Titre leçon suivante
+        </div>
+
+        <img src="./../../../../../../../../../../../Icons/icons8-next-arrow-24.png" alt="Bouton pour aller vers la prochaine leçon"/>
+      </a>
+
+    </div>
+
+
+    <!-- =============== USER TOOLS (Right) =============== -->
+
+      <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
+==>      <div id="user_tools">
+        <a onclick="reveal_or_hide_user_toolbar_button_subchoices(this, 'cours_subchoices')"
+           class="user_toolbar_button">
+          <h2>Cours</h2>
+        </a>
+                <div id="cours_subchoices">
+                  <a class="user_toolbar_button_subchoices">
+                    <h3>Format texte</h3>
+                  </a>
+                  <!-- <a href="https://youtu.be/f5YnZs6zX1g"
+                     class="user_toolbar_button_subchoices">
+                    <h3>Format vidéo</h3>
+                  </a> -->
+                </div>
+
+        <!-- <a onclick="reveal_or_hide_user_toolbar_button_subchoices(this, 'exercices_subchoices')"
+           class="user_toolbar_button">
+           <h2>Exercices</h2>
+        </a>
+                <div id="exercices_subchoices">
+                  <a href="https://chingatome.fr/chapitre/2nd/generalite-sur-les-fonctions" class="user_toolbar_button_subchoices">
+                    <h3>Format texte</h3>
+                  </a>
+                </div> -->
+
+        <div id="lesson_contextual_information">
+==>            <p>Auteur: Florian Legendre</p>
+==>            <p>Dernière modification: 09/08/2019</p>
+            <a href="https://fr.tipeee.com/autodilab"
+               class="tipeee_button">
+               <figure onmouseover="highlight_chosen_button(this)"
+                       onclick="button_pressure_effect(this)"
+                       onmouseout="remove_highlight_effect(this)">
+                  <img src="./../../../../../../../../../../../Icons/tipeee-tip-btn.png"
+                       alt="Icônes cliquables menant vers la page Tipeee de l'auteur du cours"
+                       id="tipeee_button_pic2"/>
+                  <img src="./../../../../../../../../../../../Icons/icons8-gift-64.png"
+                       alt="Icônes cliquables menant vers la page Tipeee de l'auteur du cours"
+                       id="tipeee_button_pic1"
+                       title="Récompenser l'auteur pour son cours"/>
+                </figure>
+            </a>
+        </div>
+      </div>
+
+</div>
+
+<!-- =============== FOOTER =============== -->
+
+<footer>
+</footer>
+
+
+<!-- ====================================== -->
+
+</body>
+
+<!-- ***************************************** -->
+<!-- /!\/!\/!\/!\ END OF DOCUMENT /!\/!\/!\/!\ -->
+<!-- ***************************************** -->
+
+</html>

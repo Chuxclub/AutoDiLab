@@ -1,0 +1,43 @@
+/* /!\/!\/!\ THIS COMMENT MUST BE REMOVED IN THE FINAL HTML FILE /!\/!\/!\
+Edit what's designated by the arrows, delete them when done
+/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\ */
+
+/* ********************************************************** */
+/* /!\/!\/!\ SCOPE: SPECIFIC TO THE TARGETED LESSON /!\/!\/!\ */
+/* ********************************************************** */
+
+
+/* =================================== HEADER  =================================== */
+
+/* ====================== TOP NAV BAR (Chapter navigation)  ====================== */
+
+.chapter_bar_header
+{
+==>  grid-column: 1 / span 5;
+}
+
+.chapter_bar_row
+{
+==>  grid-template-columns: repeat(5, 45px);
+  grid-template-rows: repeat(2, 20px);
+  max-width: 300px;
+}
+
+.chapter_cell_title
+{
+  font-size: 10px;
+}
+
+/* ====================== LEFT NAV BAR (Lesson navigation) ======================= */
+
+/* ==================================== LESSON =================================== */
+
+.diagram
+{
+  width: 40vw;
+  height: auto;
+}
+
+/* =============================== RIGHT USER TOOLS ============================== */
+
+/* =================================== FOOTER ==================================== */
