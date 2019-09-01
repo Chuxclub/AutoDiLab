@@ -8,7 +8,7 @@
 
     <head>
 
-==>      <title> - AutoDiLab</title>
+      <title>Qu'est-ce qu'un vecteur? - AutoDiLab</title>
 
         <meta charset="utf-8">
 
@@ -63,7 +63,7 @@
       <div id="chapter_nav_bar">
         <h3>
           <a href="./../../../found_lessons.html">
-==>            Titre du chapitre (pas de la leçon!)
+            Vecteurs et calculs :
           </a>
         </h3>
 
@@ -72,47 +72,46 @@
             <div class="chapter_bar_header">
             </div>
 
-==>            <a href="./lesson.html"
+            <a href="./lesson.html"
             class="chapter_bar_cell"
-==>            onmouseover="display_chapter_title(this, 'Quelle est la différence entre apprendre et comprendre?')"
+            onmouseover="display_chapter_title(this, 'Qu\'est-ce qu\'un vecteur?')"
             onmouseout="remove_chapter_title(this)">
             </a>
 
-            <a href = "./../cours2_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'Comment mémoriser plus vite?')"
+            <a
+            class="chapter_bar_cell unavailable"
+            onmouseover="display_unavailable_chapter_title(this, 'Que signifient les coordonnées d\'un vecteur?')"
             onmouseout="remove_chapter_title(this)">
             </a>
+            <!-- href = "./../cours2_coordonnees/lesson.html" -->
 
-            <a href = "./../cours3_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'Comment mémoriser plus longtemps?')"
+            <a
+            class="chapter_bar_cell unavailable"
+            onmouseover="display_unavailable_chapter_title(this, 'Qu\'est-ce que deux vecteurs égaux?')"
             onmouseout="remove_chapter_title(this)">
             </a>
+            <!-- href = "./../cours3_egalite/lesson.html" -->
 
-            <a href = "./../cours4_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'Faut-il travailler beaucoup pour être le premier de la classe?')"
+            <a
+            class="chapter_bar_cell unavailable"
+            onmouseover="display_unavailable_chapter_title(this, 'Qu\'est-ce que la somme de deux vecteurs?')"
             onmouseout="remove_chapter_title(this)">
             </a>
+            <!-- href = "./../cours4_somme/lesson.html" -->
 
-            <a href = "./../cours5_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'Faut-il être très intelligent pour être le premier de la classe?')"
+            <a
+            class="chapter_bar_cell unavailable"
+            onmouseover="display_unavailable_chapter_title(this, 'Qu\'est-ce que la soustraction de deux vecteurs?')"
             onmouseout="remove_chapter_title(this)">
             </a>
+            <!-- href = "./../cours5_soustraction/lesson.html" -->
 
-            <a href = "./../cours6_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'Quel est le point commun entre toutes ces techniques?')"
+            <a
+            class="chapter_bar_cell unavailable"
+            onmouseover="display_unavailable_chapter_title(this, 'Qu\'est-ce que la multiplication de deux vecteurs?')"
             onmouseout="remove_chapter_title(this)">
             </a>
-
-            <a href = "./../cours7_/lesson.html"
-            class="chapter_bar_cell"
-            onmouseover="display_chapter_title(this, 'En résumé...')"
-            onmouseout="remove_chapter_title(this)">
-            </a>
+            <!-- href = "./../cours6_multiplication/lesson.html" -->
 
           </div>
 
@@ -143,9 +142,9 @@
 
     <div id="lesson">
       <h2 class="lesson_main_title">
-==>        Titre de la leçon
+        Qu'est-ce qu'un vecteur?
 
-==>        <a href="./lesson.pdf"> <!-- Generate PDF file when done -->
+        <a href="./lesson.pdf"> <!-- Generate PDF file when done -->
           <img src="./../../../../../../../../../../../Icons/icons8-pdf-64.png"
                alt="pdf download button"
                class="pdf_icon"
@@ -159,20 +158,145 @@
       <div id="pre_requisites">
         <h4 id="pre_requisites_title">Ce que vous devez avoir compris avant de lire ce cours:</h4>
         <ul>
-          <li></li>
+          <li>Aucun pré-requis est nécessaire pour comprendre ce cours</li>
         </ul>
       </div>
 
       <article>
-==>            <h3 id="number_machine">Partie 1</h3>
+            <h3 id="number_machine">Les vecteurs comme déplacements</h3>
             <p>
+              Aujourd’hui, pour les besoins de ce cours, je suis allé avec mon
+              micro à la main dans le self d’un lycée Poitevin. Voici un bref
+              extrait de ce que j’ai pu enregistrer :
               <!-- <a href="./notes.html" class="notes_link"></a> -->
             </p>
 
-            <!-- <img src="./Sandwich_machine.png"
-                 alt="Schéma d'une machine à sandwich"
-                 class="diagram"
-                 title="Image réalisée à l'aide de [...]"/> -->
+            <p class="transcript">
+              - Du coup t’as fait quoi Tom ce matin ?
+            </p>
+
+            <p class="transcript">
+              - J’suis allé en maths, c’était naze… Après on est allé au gymnase
+                pour faire du badminton, c’était naze aussi. Et toi Paul?
+            </p>
+
+            <p class="transcript">
+              - On est allé au gymnase pour le badminton aussi avant vous, puis
+                on a continué le théâtre en Français. Le prof est complètement barré !
+                Il veut qu’on joue une pièce que nous aurons écrits
+                ensemble la semaine prochaine !
+            </p>
+
+            <p class="transcript">
+              - Sérieux ?
+            </p>
+
+            <p class="transcript">
+              - Ouai…
+            </p>
+
+            <p>
+              Cette discussion tout à fait authentique nous intéresse pour notre
+              étude des vecteurs. Pourquoi ? Parce que les vecteurs peuvent, entre
+              autres choses, représenter des déplacements ! Ils ne font pas que ça
+              bien sûr, mais en attendant il est très utile dans un premier temps
+              pour comprendre intuitivement ce qui va suivre de les voir ainsi.
+            </p>
+
+            <p>
+              Voyons ainsi le déplacement de Tom ce matin :
+            </p>
+
+            <a href="./Toms_path.png">
+              <img src="./Toms_path.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Schéma du déplacement de Tom ce matin
+              </span>
+            </a>
+
+            <p>
+              Et de Paul :
+            </p>
+
+            <a href="./Pauls_path.png">
+              <img src="./Pauls_path.png"
+                   alt="Schéma du déplacement de Paul ce matin"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Schéma du déplacement de Paul ce matin
+              </span>
+            </a>
+
+            <p>
+              Les flèches que vous voyez sur ces schémas représentent des
+              déplacements sur une certaine distance et dans une certaine direction.
+              Ces flèches sont des vecteurs<a href="./notes.html" class="notes_link"></a>.
+            </p>
+
+            <p>
+              Donnons maintenant des noms aux vecteurs de Tom :
+            </p>
+
+            <a href="./Toms_path_named1.png">
+              <img src="./Toms_path_named1.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Schéma du déplacement de Tom ce matin
+              </span>
+            </a>
+
+            <p>
+              Le vecteur <img src="./vector_a.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="formula"
+                   title="Cliquez pour agrandir"/>
+              représente le déplacement de Tom du cours de maths au gymnase.
+              Enfin, le vecteur <img src="./vector_b.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="formula"
+                   title="Cliquez pour agrandir"/>
+              représente le déplacement de Tom du gymnase au self.
+            </p>
+
+            <p>
+              On peut nommer différemment les vecteurs de Tom, d’une manière
+              peut-être un peu plus claire, avec les lettres qui représentent
+              les points de départ et d’arrivée :
+            </p>
+
+            <a href="./Toms_path_named2.png">
+              <img src="./Toms_path_named2.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Schéma du déplacement de Tom ce matin
+              </span>
+            </a>
+
+            <p>
+              Le vecteur <img src="./vector_CG.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="formula_big"
+                   title="Cliquez pour agrandir"/>
+              représente alors aussi le déplacement de Tom de la
+              Classe au Gymnase et le vecteur <img src="./vector_GS.png"
+                   alt="Schéma du déplacement de Tom ce matin"
+                   class="formula_big"
+                   title="Cliquez pour agrandir"/>
+              le déplacement de Tom du Gymnase au Self (remarquez que les le ‘C’
+              correspond au ‘C’ de classe, le ‘G’ au ‘G’ de gymnase, etc.)
+            </p>
 
             <!-- <aside class="notice">
                 <h6 id="notice"></h6>
@@ -182,30 +306,160 @@
       </article>
 
       <article>
-            <h3 id="various_number_machines">Partie 2</h3>
+            <h3 id="various_number_machines">Les trois critères...</h3>
             <p>
+              Définie de manière un peu plus mathématique un vecteur est un déplacement
+              d’un point, que nous avions appelé Tom jusqu’ici, défini selon trois
+              critères :
+            </p>
+
+            <ol>
+              <li>
+                Sa longueur (on dit aussi sa norme)
+              </li>
+
+              <li>
+                Sa direction
+              </li>
+
+              <li>
+                Son sens
+              </li>
+            </ol>
+
+            <p>
+              Là, normalement c’est le moment où vous me demandez :
+              « c’est quoi la différence entre la direction et le sens ? »
+            </p>
+
+            <p>
+              Très très bonne question ! En effet il est crucial pour vous de
+              comprendre cette différence si vous voulez bien vous entendre avec
+              les vecteurs.
+            </p>
+
+            <p>
+              Dans la vie de tous les jours, direction et sens c’est… La même chose.
+              En mathématiques cependant on a besoin de faire une distinction…
+              Sans cette distinction on risque d’écrire des choses aussi fausses
+              que si nous disions que 2 + 2 = 682…
+            </p>
+
+            <p>
+              Le mieux est encore que je vous montre la différence :
+            </p>
+
+            <a href="./horizontal_lines.png">
+              <img src="./horizontal_lines.png"
+                   alt="Deux lignes horizontales"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Deux lignes dont la direction est horizontale
+              </span>
+            </a>
+
+            <p>
+              Ces deux lignes ont la même direction (elles sont horizontales).
+              Mais on n’a pas donné de sens au déplacement. Rappelez-vous : un
+              vecteur est un déplacement d’un point donné vers un autre !
+            </p>
+
+            <a href="./horizontal_lines_dir.png">
+              <img src="./horizontal_lines_dir.png"
+                   alt="Deux lignes horizontales avec un sens opposé"
+                   class="diagram"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Deux lignes dont la direction est horizontale avec un sens opposé
+              </span>
+            </a>
+
+            <p>
+              Ces deux lignes ont toujours la même direction (ils sont horizontaux)
+              mais ont maintenant un sens opposé (l’une d’entre elles va de la
+              gauche vers la droite tandis que l’autre va de la droite vers la
+              gauche).
+            </p>
+
+            <p>
+              Même exemple ici :
+            </p>
+
+            <a href="./vertical_lines.png">
+              <img src="./vertical_lines.png"
+                   alt="Deux lignes verticales"
+                   class="diagram_big"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Deux lignes dont la direction est verticale
+              </span>
+            </a>
+
+            <p>
+              Ces deux lignes ont la même direction (elles sont verticales).
+              Maintenant donnons-leur un sens :
+            </p>
+
+            <a href="./vertical_lines_dir.png">
+              <img src="./vertical_lines_dir.png"
+                   alt="Deux lignes verticales"
+                   class="diagram_big"
+                   title="Cliquez pour agrandir"/>
+              <span class="img_caption"
+                    title="Réalisé avec le logiciel Krita">
+                    Deux lignes dont la direction est verticale
+              </span>
+            </a>
+
+            <p>
+              Ces deux lignes ont toujours la même direction (elles sont verticales)
+              mais ont maintenant un sens opposé (l’une d’entre elles va de bas en haut
+              et l’autre de haut en bas).
+            </p>
+
+            <p>
+              En d’autres termes, chez les vecteurs la direction nous dit si le
+              déplacement est horizontal, vertical ou en diagonal et le sens nous
+              dit d’où on part et vers où on va.
             </p>
       </article>
 
       <article>
             <h3 id="conclusion">Conclusion</h3>
             <p>
+              Cette définition du vecteur par ces trois critères est extrêmement
+              importante : c’est elle qui permet de déterminer si deux vecteurs
+              (deux déplacements) sont égaux. Or c’est cette égalité qui permet
+              ensuite de faire des calculs comme : ajouter et soustraire des
+              déplacements (et donc des vecteurs) ou encore de multiplier ces
+              déplacements. Et ce sont ces mêmes calculs qui permettent de modéliser,
+              pour le physicien, des déplacements de planètes, de satellites,
+              des forces, etc.
+            </p>
+
+            <p>
+              Bref ces trois petits critères de rien du tout ont permis de mettre
+              les satellites en orbite grâce auxquels vous lisez aujourd’hui ce
+              site : respect quoi !
+            </p>
+
+            <p>
+              Mais avant d’en apprendre davantage sur l’égalité de vecteurs et le
+              calcul vectoriel nous allons avoir besoin d’un outil fondamental :
+              les coordonnées de vecteurs.
             </p>
       </article>
 
 <!-- ~~~~~~~~ Boutons de navigation en bas de la leçon ~~~~~~~~ -->
 
-==>      <a href="./../cours1_/lesson.html" class="previous_lesson_button">
+      <a class="next_lesson_button unavailable">
+        <!-- href="./../cours2_coordonnees/lesson.html" -->
         <div>
-==>          Titre leçon précédente
-        </div>
-
-        <img src="./../../../../../../../../../../../Icons/icons8-previous-arrow-24.png" alt="Bouton pour aller vers la leçon précédente"/>
-      </a>
-
-==>      <a href="./../cours2_/lesson.html" class="next_lesson_button">
-        <div>
-==>          Titre leçon suivante
+          Que signifient les coordonnées d'un vecteur?
         </div>
 
         <img src="./../../../../../../../../../../../Icons/icons8-next-arrow-24.png" alt="Bouton pour aller vers la prochaine leçon"/>
@@ -217,7 +471,7 @@
     <!-- =============== USER TOOLS (Right) =============== -->
 
       <!-- Chatroom, Friends bar, contribute buttons, rules, etc. -->
-==>      <div id="user_tools">
+      <div id="user_tools">
         <a onclick="reveal_or_hide_user_toolbar_button_subchoices(this, 'cours_subchoices')"
            class="user_toolbar_button">
           <h2>Cours</h2>
@@ -243,8 +497,8 @@
                 </div> -->
 
         <div id="lesson_contextual_information">
-==>            <p>Auteur: Florian Legendre</p>
-==>            <p>Dernière modification: 09/08/2019</p>
+            <p>Auteur: Florian Legendre</p>
+            <p>Dernière modification: 01/09/2019</p>
             <a href="https://fr.tipeee.com/autodilab"
                class="tipeee_button">
                <figure onmouseover="highlight_chosen_button(this)"

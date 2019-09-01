@@ -13,12 +13,12 @@ Edit what's designated by the arrows, delete them when done
 
 .chapter_bar_header
 {
-  grid-column: 1 / span 6;
+==>  grid-column: 1 / span 5;
 }
 
 .chapter_bar_row
 {
-  grid-template-columns: repeat(6, 45px);
+==>  grid-template-columns: repeat(5, 45px);
   grid-template-rows: repeat(2, 20px);
   max-width: 300px;
 }
@@ -32,42 +32,12 @@ Edit what's designated by the arrows, delete them when done
 
 /* ==================================== LESSON =================================== */
 
-.img_caption
-{
-  padding-bottom: 20px;
-}
-
 .diagram
 {
+  width: 40vw;
   height: auto;
-  width: 30vw;
 }
 
-.diagram_big
-{
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  width: 8vw;
-}
-
-.formula
-{
-  height: auto;
-  width: 22px;
-}
-
-.formula_big
-{
-  height: auto;
-  width: 26px;
-}
-
-.transcript
-{
-  font-family: monospace !important;
-  font-style: italic;
-}
 /* =============================== RIGHT USER TOOLS ============================== */
 
 /* =================================== FOOTER ==================================== */

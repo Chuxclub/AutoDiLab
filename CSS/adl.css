@@ -8,6 +8,11 @@
   display: none;
 }
 
+*[class~="txt_red"]
+{
+  color: red;
+}
+
 a
 {
   color: blue;

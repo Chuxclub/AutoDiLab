@@ -32,7 +32,7 @@ h2, h3, h4, h5, h6
   color: #6A7BCA;
 }
 
-li
+ul li
 {
   list-style: disc;
 }
@@ -198,7 +198,7 @@ li
   padding: 10px 0 40px 0;
 }
 
-#lesson article p, #lesson ul li
+#lesson article p, #lesson li
 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;

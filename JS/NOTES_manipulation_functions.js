@@ -123,6 +123,15 @@ function display_chapter_title(chosen_cell, title)
   title_container.appendChild(document.createTextNode(title));
 }
 
+function display_unavailable_chapter_title(chosen_cell, title)
+{
+  let chapter_bar_header = chosen_cell.parentNode.firstElementChild;
+  let title_container = chapter_bar_header.appendChild(document.createElement("h4"));
+
+  title_container.setAttribute("class", "chapter_cell_title unavailable");
+  title_container.appendChild(document.createTextNode(title));
+}
+
 function remove_chapter_title(chosen_cell)
 {
   let chapter_bar_header = chosen_cell.parentNode.firstElementChild;
